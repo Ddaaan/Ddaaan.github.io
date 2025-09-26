@@ -44,14 +44,14 @@ bio: My research interests include distributed robotics, mobile computing and pr
 social:
   - icon: envelope
     icon_pack: fas
-    mailto: de2572@naver.com
-    #link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
+    #mailto: de2572@naver.com
+    link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
   - icon: github
     icon_pack: fab
     link: https://github.com/Ddaaan
   
-  - icon: velog
-    icon_pack: fab
+  - icon: link
+    icon_pack: fas
     link: https://velog.io/@daaaan/posts
 
 # Link to a PDF of your resume/CV from the About widget.
