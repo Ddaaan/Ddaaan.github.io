@@ -24,7 +24,7 @@ author: admin
 저는 **Django 기반의 백엔드**와 **Docker·CI/CD 파이프라인**을 중심으로
 서비스를 설계·구현합니다.
 
-- ⚙️ **Stack:** Django, Python(FastAPI) 
-- 🧪 **DevOps:** Docker, Nginx
+⚙️ **Stack:** Django, Python(FastAPI) 
+🧪 **DevOps:** Docker, Nginx
 
 Check out my [resumé](/about/) and portfolio below 😍
