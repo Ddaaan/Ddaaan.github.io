@@ -34,8 +34,12 @@ marketing:
 header:
   navbar:
     enable: true
-    align: r
-    show_logo: false
+    align: l
+    show_logo: true
+    logo:
+      img: 'img/logo.png'
+      img_dark: 'img/logo_dark.png'
+
     show_language: false
     show_day_night: true
     show_search: true
