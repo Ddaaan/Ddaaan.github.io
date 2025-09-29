@@ -37,8 +37,8 @@ header:
     align: l
     show_logo: true
     logo:
-      img: 'img/logo.png'
-      img_dark: 'img/logo_dark.png'
+      image: "img/logo.png"
+      image_dark: "img/logo_dark.png"
 
     show_language: false
     show_day_night: true
