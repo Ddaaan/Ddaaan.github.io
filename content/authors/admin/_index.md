@@ -64,6 +64,9 @@ social:
 #email: ""
 ---
 
-백엔드 개발자 최다은입니다. <br>
+백엔드 개발자 최다은입니다. <br><br>
+
+학력 : 전북대학교 IT정보공학과 <br>
+메일주소 : de2572@naver.com
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.
