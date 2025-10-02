@@ -25,12 +25,12 @@ experience:
   - title: 학부연구생
     company: 분산컴퓨팅 연구실
     company_url: ''
-    company_logo: ''     
-    location: ''         
+    company_logo: ''
+    location: ''
     date_start: '2024-03-01'
-    date_end: ''         
-    description: |2-
-    • 연구 주제: LLM 분산 추론/오프로딩
+    date_end: ''
+    description: |1-
+      • 연구 주제: LLM 분산 추론/오프로딩
 
   - title: 전남교육청 설문조사 홈페이지 구현 및 운영
     company: 전남교육청
