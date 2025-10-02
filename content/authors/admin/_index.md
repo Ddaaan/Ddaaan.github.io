@@ -64,6 +64,6 @@ social:
 #email: ""
 ---
 
-안녕하세요. 백엔드 개발자 최다은입니다. <br>
+백엔드 개발자 최다은입니다. <br>
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.
