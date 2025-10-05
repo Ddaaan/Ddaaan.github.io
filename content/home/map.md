@@ -2,9 +2,11 @@
 widget: blank
 headless: true
 active: true
-weight: 2000          # 맨 아래 가도록 큰 숫자
-title: "📍 위치"
+weight: 2000
+title: ""            # ← 제목 숨김
 ---
+
+<h3 style="font-size:1.1rem; margin: 0 0 12px;">📍 위치</h3>
 
 <div style="width:100%;max-width:1200px;margin:0 auto;">
   <iframe
