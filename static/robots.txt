@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ddaaan.github.io/sitemap.xml
