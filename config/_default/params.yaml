@@ -99,8 +99,8 @@ features:
       index_name: ""
       show_logo: false
   map:
-    provider: ''
-    api_key: ''
+    provider: openstreetmap   
+    api_key: ""
     zoom: 15
 
 extensions:
