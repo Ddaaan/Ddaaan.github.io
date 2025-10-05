@@ -16,9 +16,8 @@ appearance:
 marketing:
   seo:
     site_type: Person
-    local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo blog theme powered by Wowchemy website builder.'
+    org_name: "전북대학교 IT정보공학과"
+    description: "전북대 IT정보공학과 최다은 포트폴리오 | 백엔드 개발자"
     twitter: 'GetResearchDev'
   analytics:
     google_analytics: ''
