@@ -18,7 +18,7 @@ marketing:
     site_type: Person
     org_name: "전북대학교 IT정보공학과"
     description: "전북대 IT정보공학과 최다은 포트폴리오 | 백엔드 개발자"
-    image: "images/og-default.png"
+    image: "images/og-v3.png"
     twitter: "GetResearchDev"
   analytics:
     google_analytics: ''
@@ -111,4 +111,4 @@ extensions:
   academicons:
     enable: false
 
-og_image: "images/og-default.png"
+og_image: "images/og-v3.png"
