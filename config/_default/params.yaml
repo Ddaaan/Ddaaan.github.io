@@ -39,7 +39,7 @@ header:
       image: "img/logo.png"
       image_dark: "img/logo_dark.png"
 
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: false
