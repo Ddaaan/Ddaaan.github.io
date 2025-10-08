@@ -3,8 +3,18 @@
 #   Documentation: https://docs.hugoblox.com/reference/language/
 
 # Default language
+ko:
+  languageCode: ko-kr
+  languageName: "한국어"
+  weight: 1
+  title: "최다은 포트폴리오"
+
 en:
   languageCode: en-us
+  languageName: "English"
+  weight: 2
+  title: "Daeun Portfolio"
+
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   #contentDir: content/en
 
@@ -20,3 +30,4 @@ en:
 #      - name: 传
 #        url: '#about'
 #        weight: 1
+
