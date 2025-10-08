@@ -1,0 +1,15 @@
+{{/* Choose OG image: page > site > default */}}
+{{ $og := .Params.og_image
+  | default .Params.image
+  | default (site.Params.og_image)
+  | default (site.Params.marketing.seo.image)
+  | default "images/og-v3.png" }}
+
+{{/* Absolute URL is safer for Kakao/Twitter */}}
+{{ $ogAbs := $og | absURL }}
+
+<meta property="og:image" content="{{ $ogAbs }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ $ogAbs }}">
