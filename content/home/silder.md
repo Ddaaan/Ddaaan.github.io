@@ -37,7 +37,7 @@ title: ""
   const imgs = Array.from(root.querySelectorAll('img'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 3000;
+  const INTERVAL = 2000; //이미지 슬라이더 넘어가는 시간
 
   imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
