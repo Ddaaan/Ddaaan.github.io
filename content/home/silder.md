@@ -19,6 +19,17 @@ title: ""
   .dda-slider .dot.active{background:#fff}
 </style>
 
+<div class="dda-slider" id="ddaSlider">
+  <div class="slides">
+    <img src="/uploads/slider1.jpg" alt="slide 1" class="active">
+    <img src="/uploads/slider2.jpg" alt="slide 2">
+    <img src="/uploads/slider3.jpg" alt="slide 3">
+  </div>
+  <button class="ctrl prev" aria-label="Previous">‹</button>
+  <button class="ctrl next" aria-label="Next">›</button>
+  <div class="dots"></div>
+</div>
+
 <script>
 (function(){
   const root = document.getElementById('ddaSlider');
@@ -27,7 +38,7 @@ title: ""
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
   const INTERVAL = 3000;
-  
+
   imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
     d.className = 'dot' + (idx===0 ? ' active' : '');
