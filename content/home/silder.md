@@ -19,29 +19,19 @@ title: ""
   .dda-slider .dot.active{background:#fff}
 </style>
 
-<div class="dda-slider" id="ddaSlider">
-  <div class="slides">
-    <img src="/uploads/slider1.jpg" alt="slide 1" class="active">
-    <img src="/uploads/slider2.jpg" alt="slide 2">
-    <img src="/uploads/slider3.jpg" alt="slide 3">
-  </div>
-  <button class="ctrl prev" aria-label="Previous">‹</button>
-  <button class="ctrl next" aria-label="Next">›</button>
-  <div class="dots"></div>
-</div>
-
 <script>
 (function(){
   const root = document.getElementById('ddaSlider');
   if(!root) return;
   const imgs = Array.from(root.querySelectorAll('img'));
   const dotsWrap = root.querySelector('.dots');
-  let i = 0;
-
+  let i = 0, timer = null;
+  const INTERVAL = 3000;
+  
   imgs.forEach((_, idx)=>{
-    const d=document.createElement('span');
-    d.className='dot' + (idx===0?' active':'');
-    d.addEventListener('click', ()=>go(idx));
+    const d = document.createElement('span');
+    d.className = 'dot' + (idx===0 ? ' active' : '');
+    d.addEventListener('click', ()=>go(idx, true));
     dotsWrap.appendChild(d);
   });
   const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
@@ -50,16 +40,25 @@ title: ""
     imgs.forEach((im,k)=>im.classList.toggle('active', k===idx));
     dots.forEach((d,k)=>d.classList.toggle('active', k===idx));
   }
-  function go(idx){
+  function go(idx, manual=false){
     i = (idx + imgs.length) % imgs.length;
     show(i);
+    if (manual) restart();
   }
   function next(){ go(i+1); }
   function prev(){ go(i-1); }
 
-  root.querySelector('.next').addEventListener('click', next);
-  root.querySelector('.prev').addEventListener('click', prev);
+  root.querySelector('.next').addEventListener('click', ()=>go(i+1, true));
+  root.querySelector('.prev').addEventListener('click', ()=>go(i-1, true));
+
+  function start(){ stop(); timer = setInterval(next, INTERVAL); }
+  function stop(){ if (timer) { clearInterval(timer); timer = null; } }
+  function restart(){ start(); }
+
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
 
   show(0);
+  start();
 })();
 </script>
