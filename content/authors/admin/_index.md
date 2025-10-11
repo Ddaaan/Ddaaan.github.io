@@ -20,6 +20,10 @@ organizations:
 # Short bio (displayed in user profile at end of posts)
 bio: 전북대학교 IT정보공학과 재학 중인 백엔드 개발자입니다.
 
+# 검색 키워드
+tags: ["전북대학교", "JBNU", "최다은"]
+keywords: ["전북대학교", "JBNU", "최다은"]
+
 #interests:
 #- Artificial Intelligence
 #- Computational Linguistics
