@@ -6,19 +6,19 @@ title: 최다은
 superuser: true
 
 # Role/position
-role: ''
+role: '백엔드 개발자'
 
 # Status emoji
 status:
   icon: ☕️
 
 # Organizations/Affiliations
-#organizations:
-#- name: 腾讯
-#  url: ""
+organizations:
+  - name: "전북대학교"
+    url: "https://www.jbnu.ac.kr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: 전북대학교 IT정보공학과 재학 중인 백엔드 개발자입니다.
 
 #interests:
 #- Artificial Intelligence
