@@ -1,0 +1,2 @@
+{{/* content/*.md 의 front matter에 있는 .Params.items 를 넘겨서 partial 렌더 */}}
+{{ partial "cards/portfolio-grid.html" (dict "items" .Page.Params.items) }}
