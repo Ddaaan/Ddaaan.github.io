@@ -22,6 +22,4 @@ items:
     tags: ["Scheduling","CI"]
 ---
 
-{{< rawhtml >}}
-{{ partial "cards/portfolio-grid.html" (dict "items" .Params.items) }}
-{{< /rawhtml >}}
+{{< cards-grid >}}

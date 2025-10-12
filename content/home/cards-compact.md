@@ -7,7 +7,7 @@ title: "Quick Links"
 items:
   - title: GitHub
     subtitle: @Ddaaan
-    image: "/img/logo.png"   # 또는 작은 사각 썸네일
+    image: "/img/logo.png"
     link: "https://github.com/Ddaaan"
   - title: Resumé (PDF)
     subtitle: 최신 이력서
@@ -19,6 +19,4 @@ items:
     link: "/sections/jbnu/"
 ---
 
-{{< rawhtml >}}
-{{ partial "cards/compact-links.html" (dict "items" .Params.items) }}
-{{< /rawhtml >}}
+{{< cards-compact >}}
