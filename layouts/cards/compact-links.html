@@ -1,0 +1,22 @@
+<style>
+.compact-list{max-width:1000px;margin:0 auto;display:grid;gap:10px}
+.compact-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid rgba(180,180,180,.25);border-radius:12px;background:var(--card-bg,rgba(255,255,255,.03));transition:background .15s ease, transform .1s ease}
+.compact-item:hover{background:rgba(255,255,255,.06);transform:translateY(-1px)}
+.compact-thumb{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.compact-title{font-weight:700}
+.compact-sub{opacity:.8;font-size:.9rem}
+.chev{margin-left:auto;opacity:.6}
+</style>
+
+<div class="compact-list">
+  {{ range .items }}
+  <a class="compact-item" href="{{ .link | relURL }}">
+    {{ with .image }}<img class="compact-thumb" src="{{ . | relURL }}" alt="">{{ end }}
+    <div>
+      <div class="compact-title">{{ .title }}</div>
+      {{ with .subtitle }}<div class="compact-sub">{{ . }}</div>{{ end }}
+    </div>
+    <span class="chev">›</span>
+  </a>
+  {{ end }}
+</div>
