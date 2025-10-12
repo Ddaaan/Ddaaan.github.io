@@ -1,2 +1,29 @@
-{{/* content/*.md 의 front matter에 있는 .Params.items 를 넘겨서 partial 렌더 */}}
-{{ partial "cards/portfolio-grid.html" (dict "items" .Page.Params.items) }}
+<style>
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:1200px;margin:0 auto}
+.card{background:var(--card-bg,rgba(255,255,255,.04));border:1px solid rgba(180,180,180,.2);border-radius:14px;overflow:hidden;transition:transform .15s, box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.18)}
+.card-img{aspect-ratio:16/9;object-fit:cover;width:100%;display:block}
+.card-body{padding:14px}
+.card-title{font-weight:700;font-size:1.05rem;margin:0 0 6px}
+.card-sub{opacity:.8;font-size:.9rem;margin:0 0 8px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.75rem;padding:2px 8px;border-radius:9999px;border:1px solid rgba(180,180,180,.35);opacity:.85}
+</style>
+
+<div class="cards-grid">
+  {{- $items := .Page.Params.items -}}
+  {{- range $items }}
+  <a class="card" href="{{ .link | relURL }}">
+    {{ with .image }}<img class="card-img" src="{{ . | relURL }}" alt="">{{ end }}
+    <div class="card-body">
+      <div class="card-title">{{ .title }}</div>
+      {{ with .subtitle }}<div class="card-sub">{{ . }}</div>{{ end }}
+      {{ with .tags }}
+      <div class="card-tags">
+        {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </a>
+  {{- end }}
+</div>
