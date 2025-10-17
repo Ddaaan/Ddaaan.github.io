@@ -23,8 +23,8 @@ item:
     date_end: ""
     description: |2-
       **최우수상**
-    certificate_url: "/uploads/awards/award-2025-capstone.jpg"
-    url: "/uploads/awards/award-2025-capstone.jpg"
+    certificate_url: "/uploads/awards/award-2025-capstone.png"
+    url: "/uploads/awards/award-2025-capstone.png"
 
   - title: "전북대학교 ACM ICPC 경시대회"
     organization: 전북대학교
@@ -33,8 +33,8 @@ item:
     date_end: ""
     description: |2-
       **동상**
-    certificate_url: "/uploads/awards/award-2023-icpc-bronze.jpg"
-    url: "/uploads/awards/award-2023-icpc-bronze.jpg"
+    certificate_url: "/uploads/awards/award-2023-icpc-bronze.png"
+    url: "/uploads/awards/award-2023-icpc-bronze.png"
 
   - title: "전북대학교 ACM ICPC 경시대회"
     organization: 전북대학교
@@ -43,8 +43,8 @@ item:
     date_end: ""
     description: |2-
       **금상 (전국대회 출전)**
-    certificate_url: "/uploads/awards/award-2022-icpc-gold.jpg"
-    url: "/uploads/awards/award-2022-icpc-gold.jpg"
+    certificate_url: "/uploads/awards/award-2022-icpc-gold.png"
+    url: "/uploads/awards/award-2022-icpc-gold.png"
 
   - title: "2021 동계 기업의 달인되기 프로그램"
     organization: 전북대학교 취업지원과
@@ -53,8 +53,8 @@ item:
     date_end: ""
     description: |2-
       **우수상**
-    certificate_url: "/uploads/awards/award-2021-winter-program.jpg"
-    url: "/uploads/awards/award-2021-winter-program.jpg"
+    # certificate_url: "/uploads/awards/award-2021-winter-program.jpg"
+    # url: "/uploads/awards/award-2021-winter-program.jpg"
 
 design:
   columns: "1"
