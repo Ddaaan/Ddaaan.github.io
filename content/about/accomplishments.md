@@ -57,5 +57,6 @@ item:
     # url: "/uploads/awards/award-2021-winter-program.jpg"
 
 design:
-  columns: "1"
+  columns: '1'
+  css_class: awards
 ---

@@ -115,3 +115,104 @@ ul.network-icon .big-icon {
 .wg-about .portrait-title h3 {
   font-size: 0.8rem;
 }
+
+
+/* ===== Awards section polish ===== */
+.awards {
+  /* 섹션 여백 살짝 줄이기 */
+  padding-top: 0.5rem;
+
+  /* 카드 기본 */
+  .card {
+    border-radius: 16px;
+    border: 1px solid rgba(180,180,180,.18);
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 좌측 포인트 라인 */
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(180deg, #ffd166, #ef476f);
+    opacity: .9;
+  }
+
+  /* hover 효과 */
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,.24);
+    border-color: rgba(255,255,255,.22);
+    background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+  }
+
+  /* 제목/메타 가독성 */
+  .card-title a,
+  .card-title {
+    font-weight: 800;
+    letter-spacing: .1px;
+  }
+  .card-subtitle,
+  .text-muted,
+  .meta,
+  small {
+    opacity: .85 !important;
+  }
+
+  /* 수상명(설명) 강조 */
+  .card p,
+  .card .article-style {
+    margin-top: .4rem;
+    font-size: .98rem;
+  }
+  .card p strong {
+    background: linear-gradient(90deg,#ffd166 0%,#ef476f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* 버튼(증서 보기) */
+  .btn,
+  a.btn {
+    border-radius: 9999px;
+    padding: .45rem 1rem;
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,.35);
+    background: rgba(255,255,255,.06);
+    color: #fff;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+  }
+  .btn:hover {
+    background: rgba(255,255,255,.14);
+    border-color: rgba(255,255,255,.55);
+    box-shadow: 0 6px 16px rgba(0,0,0,.25);
+    transform: translateY(-1px);
+  }
+
+  /* 카드 간 간격 */
+  .col-12.mb-4,
+  .col-lg-12.mb-4,
+  .mb-4 {
+    margin-bottom: 1.2rem !important;
+  }
+}
+
+/* 라이트 모드 대비 (있으면 자동 적용) */
+html.light .awards .card {
+  background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.01));
+  border-color: rgba(0,0,0,.08);
+}
+html.light .awards .btn {
+  background: rgba(0,0,0,.04);
+  color: #111;
+  border-color: rgba(0,0,0,.18);
+}
+html.light .awards .btn:hover {
+  background: rgba(0,0,0,.08);
+  border-color: rgba(0,0,0,.35);
+}
