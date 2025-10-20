@@ -17,7 +17,7 @@ items:
     link: "/project/capston/"
     tags: ["Streamlit","Flask","Rag","Docker"]
 
-    - title: 시각장애인을 위한 캔 음료 구별 어플리케이션
+  - title: 시각장애인을 위한 캔 음료 구별 어플리케이션
     subtitle: 2023.09 - 2023.12
     image: "/uploads/slider2.jpg"
     link: "/project/cancheck/"
