@@ -6,22 +6,16 @@ weight: 14
 title: "Projects"
 items:
   - title: 전남교육청 설문 시스템
-    subtitle: 2024.08–11 · Django/Deploy
+    subtitle: 2024.08 – 2024.11
     image: "/uploads/slider1.jpg"
     link: "/project/jne-survey/"
-    tags: ["Django","Docker","GitHub Actions"]
+    tags: ["Django","HTML","CSS","Nginx"]
 
-  - title: LLM 임베딩 검색 PoC
-    subtitle: 2024 · FastAPI/Vector
+  - title: 통합 데이터 기반 분석/한글 보고서 생성 시스템
+    subtitle: 2025.03 - 2025.06
     image: "/uploads/slider2.jpg"
-    link: "/project/embedding-search/"
-    tags: ["FastAPI","PGVector","LLM"]
-  
-  - title: 분산추론 실험 자동화
-    subtitle: 2024 · Edge–Cloud
-    image: "/uploads/slider3.jpg"
-    link: "/project/edge-infer/"
-    tags: ["Scheduling","CI"]
+    link: "/project/capston/"
+    tags: ["Streamlit","Flask","Rag","Docker"]
 ---
 
 {{< cards-grid >}}
