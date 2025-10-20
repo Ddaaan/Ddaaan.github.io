@@ -1,42 +1,28 @@
 ---
-# A section created with the Portfolio widget.
-# This section displays content from `content/project/`.
-# See https://docs.hugoblox.com/widget/portfolio/
+# Projects 섹션 (포트폴리오 위젯만 사용)
 widget: portfolio
-
-# This file represents a page section.
 headless: true
+active: true
+weight: 14
 
-# Order that this section appears on the page.
-weight: 20
-
-title: ''
-subtitle: ''
+title: "Projects"
+subtitle: ""
 
 content:
-  # Page type to display. E.g. project.
-  page_type: project
-
-  # Default filter index (e.g. 0 corresponds to the first `filter_button` instance below).
+  page_type: project         # content/project/ 아래의 페이지 자동 로드
   filter_default: 0
-
-  # Filter toolbar (optional).
-  # Add or remove as many filters (`filter_button` instances) as you like.
-  # To show all items, set `tag` to "*".
-  # To filter by a specific tag, set `tag` to an existing tag name.
-  # To remove the toolbar, delete the entire `filter_button` block.
   filter_button:
     - name: All
-      tag: '*'
+      tag: "*"
     - name: Web
-      tag: Web
+      tag: "Web"
     - name: Embedded
-      tag: IoT
+      tag: "IoT"
 
 design:
-  columns: '1'
-  view: masonry
+  columns: "1"
+  view: masonry              # 그리드 스타일 (cards-grid 느낌)
   flip_alt_rows: true
   background: {}
-  spacing: {padding: [0, 0, 0, 0]}
+  spacing: { padding: [0,0,0,0] }
 ---
