@@ -232,7 +232,7 @@ html.light .awards .btn:hover {
 .btn-primary:focus {
   background-color: var(--bs-warning, #f59e0b); /* ← hover 때 바뀔 색 */
   border-color: var(--bs-warning, #f59e0b);
-  color: #111;                                  /* 가독성 */
+  color: #111;
   transform: translateY(-1px);
 }
 
