@@ -17,6 +17,12 @@ items:
     link: "/project/capston/"
     tags: ["Streamlit","Flask","Rag","Docker"]
 
+  - title: 소상공인을 위한 실시간 매출 부스팅 플랫폼 NearDeal
+    subtitle: 2025.09 - 
+    image: "/uploads/slider1.jpg"
+    link: "/project/neardeal/"
+    tags: ["React","Spring Boot","MySQL","Vercel"]
+
   - title: 시각장애인을 위한 캔 음료 구별 어플리케이션
     subtitle: 2023.09 - 2023.12
     image: "/uploads/slider2.jpg"

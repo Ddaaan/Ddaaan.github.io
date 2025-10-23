@@ -5,7 +5,7 @@ summary: "소상공인을 위한 실시간 매출 부스팅 플랫폼 — React,
 featured:
   image: "uploads/neardeal/main.png"
   alt: "NearDeal 서비스 메인화면"
-tags: ["React","Spring Boot","MySQL","Vercel","O2O Platform"]
+tags: ["React","Spring Boot","MySQL","Vercel"]
 links:
   - name: GitHub
     url: "https://github.com/dodohy25n/NearDeal_Server"
