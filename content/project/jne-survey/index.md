@@ -21,7 +21,7 @@ links:
 [http://jndedu-school-democracy.kr/](http://jndedu-school-democracy.kr/)  
 *(현재 호스팅 종료)*
 
-{{< figure src="project/jne-survey/traffic.png" alt="트레픽통계" >}}
+{{< figure src="static/project/jne-survey/traffic.png" alt="트레픽통계" >}}
 
 ---
 
@@ -39,8 +39,8 @@ links:
 - 학교별, 지역별, 학교급별 통계 조회  
 - 문항별·파트별 통계 시각화 및 다운로드 기능  
 
-{{< figure src="project/jne-survey/main.png" alt="메인화면" >}}
-{{< figure src="project/jne-survey/webpage.png" alt="설문조사 참여 화면" >}}
+{{< figure src="static/project/jne-survey/main.png" alt="메인화면" >}}
+{{< figure src="static/project/jne-survey/webpage.png" alt="설문조사 참여 화면" >}}
 
 ---
 
