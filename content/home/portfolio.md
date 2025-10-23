@@ -1,4 +1,4 @@
----
+<!-- ---
 # Projects 섹션 (포트폴리오 위젯만 사용)
 widget: portfolio
 headless: true
@@ -25,4 +25,4 @@ design:
   flip_alt_rows: true
   background: {}
   spacing: { padding: [0,0,0,0] }
----
+--- -->
