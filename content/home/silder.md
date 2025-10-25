@@ -7,20 +7,23 @@ title: ""
 ---
 
 <style>
+  /* 화면 양옆으로 꽉 차게 만드는 래퍼(컨테이너 여백 무시) */
   .dda-bleed{
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;   /* 컨테이너 좌우 여백 무시하고 화면 전체로 */
+    margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-    background: #0b0b0e; 
-    padding: 16px 0;      
-    overflow: hidden;     
+    background: transparent; 
+    padding: 0;  
+    overflow: hidden;
   }
 
+  /* 슬라이더 */
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
-  .dda-slider .slides{position:relative;height:clamp(220px, 28vw, 420px);} /* 반응형 높이 */
+  /* 높이 ↑ : 필요시 수치만 더 키워도 됨 */
+  .dda-slider .slides{position:relative;height:clamp(260px, 34vw, 520px);} 
   .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
   .dda-slider img.active{opacity:1}
   .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px}
@@ -29,6 +32,7 @@ title: ""
   .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center}
   .dda-slider .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
   .dda-slider .dot.active{background:#fff}
+
 </style>
 
 <div class="dda-bleed">
@@ -51,7 +55,7 @@ title: ""
   const imgs = Array.from(root.querySelectorAll('img'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 2000; // 자동전환 간격(ms)
+  const INTERVAL = 2000;
 
   imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
