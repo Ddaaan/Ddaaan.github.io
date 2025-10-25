@@ -38,16 +38,19 @@ ul.network-icon .big-icon{font-size:1.5rem;}
 /* ==========================================================
    Purple Navbar + Intro band (Light & Dark)
    ========================================================== */
+/* 공통 기본값(다크 기본값 포함) */
 :root{
   --dda-purple:#7c3aed;--dda-purple-700:#6d28d9;--dda-purple-300:#a78bfa;
   --dda-tint-1:rgba(124,58,237,.16);--dda-tint-2:rgba(124,58,237,.12);
   --dda-hi-1:rgba(167,139,250,.28);--dda-hi-2:rgba(124,58,237,.20);
+
+  /* ✅ 원하는 다크 네비바 값(기본값으로 선언) */
   --dda-nav-solid:rgba(32,24,64,.88);
   --dda-nav-grad-top:rgba(124,58,237,.18);
   --dda-nav-grad-btm:rgba(124,58,237,.12);
 }
 
-/* ⚙️ Light Mode */
+/* ⚙️ Light Mode에서만 변수 바꿈 */
 html:not(.dark){
   --dda-tint-1:rgba(139,92,246,.12);
   --dda-tint-2:rgba(139,92,246,.06);
@@ -58,19 +61,19 @@ html:not(.dark){
   --dda-nav-grad-btm:rgba(124,58,237,.06);
 }
 
-/* Navbar (공통 설정) */
+/* Navbar (공통 설정: 변수로만 색을 그리도록 강제) */
 .navbar,.navbar.scrolled,.navbar--dark,.navbar--light{
   position:sticky;top:0;z-index:1000;
   background:
     linear-gradient(180deg,var(--dda-nav-grad-top),var(--dda-nav-grad-btm)),
-    var(--dda-nav-solid)!important;
+    var(--dda-nav-solid) !important;
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   border-bottom:1px solid rgba(0,0,0,.06);
   box-shadow:0 8px 18px rgba(0,0,0,.1);
   min-height:62px;
 }
 
-/* ✅ Light mode navbar */
+/* ✅ Light mode navbar(시각 톤 미세조정) */
 html:not(.dark) .navbar,
 html:not(.dark) .navbar.scrolled,
 html:not(.dark) .navbar--light{
@@ -96,32 +99,21 @@ html:not(.dark) body .navbar a *{
   fill:#1e1e1e !important;
   transition:color .2s ease, opacity .2s ease, text-shadow .2s ease;
 }
-
 html:not(.dark) body .navbar .nav-link:hover,
 html:not(.dark) body .navbar .dropdown-item:hover,
-html:not(.dark) body .navbar .nav-icons .nav-link:hover{
-  color:#5b21b6 !important;
-}
+html:not(.dark) body .navbar .nav-icons .nav-link:hover{color:#5b21b6 !important;}
 html:not(.dark) body .navbar .nav-link.active,
-html:not(.dark) body .navbar .dropdown-item.active{
-  color:#7c3aed !important;
-}
-
+html:not(.dark) body .navbar .dropdown-item.active{color:#7c3aed !important;}
 html:not(.dark) body .navbar .navbar-toggler,
-html:not(.dark) body .navbar .navbar-toggler-icon{
-  filter:none !important;
-  color:#1e1e1e !important;
-}
+html:not(.dark) body .navbar .navbar-toggler-icon{filter:none !important;color:#1e1e1e !important;}
 
-/* 🌙 Dark mode navbar (원래 진한 보라 느낌 복원) */
+/* 🌙 Dark mode: 변수 기반 톤 유지 + 약간의 보더/그림자 */
 html.dark .navbar,
 html.dark .navbar.scrolled,
 html.dark .navbar--dark{
-  background:
-    linear-gradient(180deg, rgba(38,22,75,.94) 0%, rgba(24,18,48,.96) 100%),
-    rgba(24,18,48,.96) !important;
-  border-bottom:1px solid rgba(255,255,255,.05);
-  box-shadow:0 8px 18px rgba(0,0,0,.4);
+  /* 배경은 위 공통 규칙에서 이미 변수로 그림. 여기선 보더/그림자만 보강 */
+  border-bottom:1px solid rgba(255,255,255,.05) !important;
+  box-shadow:0 8px 18px rgba(0,0,0,.4) !important;
   -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
 }
 
@@ -143,18 +135,11 @@ html.dark body .navbar a *{
 /* 🌙 Hover/Active 강조 */
 html.dark body .navbar .nav-link:hover,
 html.dark body .navbar .dropdown-item:hover,
-html.dark body .navbar .nav-icons .nav-link:hover{
-  color:#a78bfa !important;
-}
+html.dark body .navbar .nav-icons .nav-link:hover{color:#a78bfa !important;}
 html.dark body .navbar .nav-link.active,
-html.dark body .navbar .dropdown-item.active{
-  color:#c4b5fd !important;
-}
+html.dark body .navbar .dropdown-item.active{color:#c4b5fd !important;}
 
-
-
-
-/* Light text color enforcement */
+/* Light text color enforcement (옵션) */
 html.light body .navbar,html.light body .navbar *{color:inherit}
 html.light body .navbar .navbar-brand,
 html.light body .navbar .navbar-brand *,
@@ -174,7 +159,7 @@ html.light body .navbar .dropdown-item.active{color:var(--dda-purple)!important}
 html.light body .navbar .navbar-toggler,
 html.light body .navbar .navbar-toggler-icon{filter:none!important;color:#111827!important}
 
-/* Dark text color */
+/* Dark text color (모듈 호환용) */
 html:not(.light) .navbar .nav-link,
 html:not(.light) .navbar .dropdown-item,
 html:not(.light) .navbar .navbar-brand,
