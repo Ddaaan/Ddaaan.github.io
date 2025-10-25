@@ -1,11 +1,12 @@
 ---
-# An instance of the Contact widget.
-# Documentation: https://docs.hugoblox.com/getting-started/page-builder/
-widget: contact
-active: false
+widget: blank
+active: true
 headless: true
-weight: 50
-title: "Contact"
+weight: 70
+title: "연락처"
 id: contact
-
 ---
+
+<center>
+  <strong>이메일</strong> · <a href="mailto:de2572@naver.com">de2572@naver.com</a>
+</center>
