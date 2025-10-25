@@ -8,7 +8,7 @@ id: home-experience
 
 content:
   filters:
-    folders: ["experience/cards"]
+    folders: ["experience"]
   count: 3
   sort_by: "Date"
   sort_ascending: false
