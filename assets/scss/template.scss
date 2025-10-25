@@ -1,57 +1,68 @@
 /* ==========================================================
    Base (body, article, footer)
    ========================================================== */
-body{background:#f7fafc;}
-.article-container{background:#fff;border-radius:15px;}
-.dark .article-container{background:#1f2733;}
-.page-footer{background:#f7fafc;}
-.dark .page-footer{background:#1a202c}
+body { background: #f7fafc; }
+.article-container { background: #fff; border-radius: 15px; }
+.dark .article-container { background: #1f2733; }
+.page-footer { background: #f7fafc; }
+.dark .page-footer { background: #1a202c; }
 
 /* Avatar & about */
-.avatar{max-width:225px;max-height:225px;height:auto;width:auto;}
-.wg-about .avatar{max-width:200px;max-height:200px;height:auto;width:auto;}
-.wg-about .portrait-title h2{font-size:1rem;}
-.wg-about .portrait-title h3{font-size:.8rem;}
-.dark .portrait-title h3{color:rgba(255,255,255,.9);font-weight:700;}
-.dark .portrait-title h2{color:#fff;font-weight:700;}
-#profile .network-icon{margin-top:.5rem;}
-ul.network-icon .big-icon{font-size:1.5rem;}
+.avatar { max-width:225px; max-height:225px; height:auto; width:auto; }
+.wg-about .avatar { max-width:200px; max-height:200px; height:auto; width:auto; }
+.wg-about .portrait-title h2 { font-size:1rem; }
+.wg-about .portrait-title h3 { font-size:.8rem; }
+.dark .portrait-title h3 { color:rgba(255,255,255,.9); font-weight:700; }
+.dark .portrait-title h2 { color:#fff; font-weight:700; }
+#profile .network-icon { margin-top:.5rem; }
+ul.network-icon .big-icon { font-size:1.5rem; }
 
 /* Section spacing (global) */
-.home-section{padding:1rem 0;}
-.home-section.wg-about-avatar{padding:0;}
-.home-section header{margin-bottom:1em;}
-.home-section>.content{width:45em;max-width:calc(100% - 4em);margin:0 auto;}
-.home-section>.content>:last-child{margin-bottom:0;}
+.home-section { padding:1rem 0; }
+.home-section.wg-about-avatar { padding:0; }
+.home-section header { margin-bottom:1em; }
+.home-section>.content { width:45em; max-width:calc(100% - 4em); margin:0 auto; }
+.home-section>.content>:last-child { margin-bottom:0; }
 
 /* Cards */
-.card-simple{margin-top:1.8rem;border-radius:15px;}
-.dark .card-simple{background:#1f2733;}
+.card-simple { margin-top:1.8rem; border-radius:15px; }
+.dark .card-simple { background:#1f2733; }
 
-/* Buttons – smooth hover & primary/outline-primary swap */
-.btn,a.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .1s ease}
-.btn:hover,a.btn:hover{transform:translateY(-1px)}
-.btn-primary,a.btn.btn-primary{background:var(--bs-primary,#4f46e5);border-color:var(--bs-primary,#4f46e5);color:#fff}
-.btn-primary:hover,.btn-primary:focus{background:var(--bs-warning,#f59e0b);border-color:var(--bs-warning,#f59e0b);color:#111}
-.btn-outline-primary:hover,a.btn.btn-outline-primary:hover{background:var(--bs-warning,#f59e0b);border-color:var(--bs-warning,#f59e0b);color:#111}
+/* Buttons */
+.btn, a.btn { transition:background-color .2s ease, border-color .2s ease, color .2s ease, transform .1s ease; }
+.btn:hover, a.btn:hover { transform:translateY(-1px); }
+.btn-primary, a.btn.btn-primary {
+  background:var(--bs-primary,#4f46e5);
+  border-color:var(--bs-primary,#4f46e5);
+  color:#fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background:var(--bs-warning,#f59e0b);
+  border-color:var(--bs-warning,#f59e0b);
+  color:#111;
+}
 
 /* ==========================================================
    Purple Navbar + Intro band (Light & Dark)
    ========================================================== */
-/* 공통 기본값(다크 기본값 포함) */
-:root{
-  --dda-purple:#7c3aed;--dda-purple-700:#6d28d9;--dda-purple-300:#a78bfa;
-  --dda-tint-1:rgba(124,58,237,.16);--dda-tint-2:rgba(124,58,237,.12);
-  --dda-hi-1:rgba(167,139,250,.28);--dda-hi-2:rgba(124,58,237,.20);
+/* 🌙 기본 변수 */
+:root {
+  --dda-purple:#7c3aed;
+  --dda-purple-700:#6d28d9;
+  --dda-purple-300:#a78bfa;
+  --dda-tint-1:rgba(124,58,237,.16);
+  --dda-tint-2:rgba(124,58,237,.12);
+  --dda-hi-1:rgba(167,139,250,.28);
+  --dda-hi-2:rgba(124,58,237,.20);
 
-  /* ✅ 원하는 다크 네비바 값(기본값으로 선언) */
-  --dda-nav-solid:rgba(32,24,64,.88);
-  --dda-nav-grad-top:rgba(124,58,237,.18);
-  --dda-nav-grad-btm:rgba(124,58,237,.12);
+  /* ✅ 다크 기본 네비바 값 */
+  --dda-nav-solid: rgba(16,13,28,.86);
+  --dda-nav-grad-top: rgba(124,58,237,.10);
+  --dda-nav-grad-btm: rgba(12,10,22,0);
 }
 
-/* ⚙️ Light Mode에서만 변수 바꿈 */
-html:not(.dark){
+/* ⚙️ Light Mode */
+html:not(.dark) {
   --dda-tint-1:rgba(139,92,246,.12);
   --dda-tint-2:rgba(139,92,246,.06);
   --dda-hi-1:rgba(196,181,253,.26);
@@ -61,28 +72,30 @@ html:not(.dark){
   --dda-nav-grad-btm:rgba(124,58,237,.06);
 }
 
-/* Navbar (공통 설정: 변수로만 색을 그리도록 강제) */
-.navbar,.navbar.scrolled,.navbar--dark,.navbar--light{
-  position:sticky;top:0;z-index:1000;
+/* Navbar 공통 */
+.navbar, .navbar.scrolled, .navbar--dark, .navbar--light {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background:
-    linear-gradient(180deg,var(--dda-nav-grad-top),var(--dda-nav-grad-btm)),
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
     var(--dda-nav-solid) !important;
-  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(0,0,0,.06);
-  box-shadow:0 8px 18px rgba(0,0,0,.1);
-  min-height:62px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,.1);
+  min-height: 62px;
 }
 
-/* ✅ Light mode navbar(시각 톤 미세조정) */
+/* ✅ Light mode navbar */
 html:not(.dark) .navbar,
 html:not(.dark) .navbar.scrolled,
-html:not(.dark) .navbar--light{
+html:not(.dark) .navbar--light {
   background:
     linear-gradient(180deg, rgba(235,229,255,.92) 0%, rgba(247,244,255,.90) 100%),
     rgba(255,255,255,.90) !important;
-  border-bottom:1px solid rgba(0,0,0,.05);
-  box-shadow:0 4px 12px rgba(0,0,0,.05);
-  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
 /* ✅ Light mode text/icons */
@@ -91,102 +104,70 @@ html:not(.dark) body .navbar .navbar-brand *,
 html:not(.dark) body .navbar .navbar-nav .nav-link,
 html:not(.dark) body .navbar .nav-link,
 html:not(.dark) body .navbar .dropdown-item,
-html:not(.dark) body .navbar .nav-icons .nav-link,
-html:not(.dark) body .navbar .navbar-text,
-html:not(.dark) body .navbar a,
-html:not(.dark) body .navbar a *{
+html:not(.dark) body .navbar .nav-icons .nav-link {
   color:#1e1e1e !important;
   fill:#1e1e1e !important;
-  transition:color .2s ease, opacity .2s ease, text-shadow .2s ease;
 }
-html:not(.dark) body .navbar .nav-link:hover,
-html:not(.dark) body .navbar .dropdown-item:hover,
-html:not(.dark) body .navbar .nav-icons .nav-link:hover{color:#5b21b6 !important;}
-html:not(.dark) body .navbar .nav-link.active,
-html:not(.dark) body .navbar .dropdown-item.active{color:#7c3aed !important;}
-html:not(.dark) body .navbar .navbar-toggler,
-html:not(.dark) body .navbar .navbar-toggler-icon{filter:none !important;color:#1e1e1e !important;}
+html:not(.dark) body .navbar .nav-link:hover { color:#5b21b6 !important; }
+html:not(.dark) body .navbar .nav-link.active { color:#7c3aed !important; }
 
-/* 🌙 Dark mode: 변수 기반 톤 유지 + 약간의 보더/그림자 */
+/* 🌙 Dark mode navbar: 배경을 intro와 자연스럽게 일체화 */
 html.dark .navbar,
 html.dark .navbar.scrolled,
-html.dark .navbar--dark{
-  /* 배경은 위 공통 규칙에서 이미 변수로 그림. 여기선 보더/그림자만 보강 */
-  border-bottom:1px solid rgba(255,255,255,.05) !important;
-  box-shadow:0 8px 18px rgba(0,0,0,.4) !important;
-  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+html.dark .navbar--dark {
+  border-bottom: 1px solid rgba(255,255,255,.03) !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
-/* 🌙 Dark mode: 글자 색상 복원 */
+/* 🌙 Dark mode text */
 html.dark body .navbar .navbar-brand,
-html.dark body .navbar .navbar-brand *,
-html.dark body .navbar .navbar-nav .nav-link,
 html.dark body .navbar .nav-link,
-html.dark body .navbar .dropdown-item,
-html.dark body .navbar .nav-icons .nav-link,
-html.dark body .navbar .navbar-text,
-html.dark body .navbar a,
-html.dark body .navbar a *{
+html.dark body .navbar a {
   color:#fff !important;
   fill:#fff !important;
-  transition:color .2s ease, opacity .2s ease, text-shadow .2s ease;
 }
+html.dark body .navbar .nav-link:hover { color:#a78bfa !important; }
+html.dark body .navbar .nav-link.active { color:#c4b5fd !important; }
 
-/* 🌙 Hover/Active 강조 */
-html.dark body .navbar .nav-link:hover,
-html.dark body .navbar .dropdown-item:hover,
-html.dark body .navbar .nav-icons .nav-link:hover{color:#a78bfa !important;}
-html.dark body .navbar .nav-link.active,
-html.dark body .navbar .dropdown-item.active{color:#c4b5fd !important;}
-
-/* Light text color enforcement (옵션) */
-html.light body .navbar,html.light body .navbar *{color:inherit}
-html.light body .navbar .navbar-brand,
-html.light body .navbar .navbar-brand *,
-html.light body .navbar .navbar-nav .nav-link,
-html.light body .navbar .nav-link,
-html.light body .navbar .dropdown-item,
-html.light body .navbar .nav-icons .nav-link,
-html.light body .navbar .navbar-text,
-html.light body .navbar a,html.light body .navbar a *{
-  color:#111827!important;fill:#111827!important;transition:color .15s ease,opacity .15s ease,text-shadow .15s ease
-}
-html.light body .navbar .nav-link:hover,
-html.light body .navbar .dropdown-item:hover,
-html.light body .navbar .nav-icons .nav-link:hover{color:var(--dda-purple-700)!important}
-html.light body .navbar .nav-link.active,
-html.light body .navbar .dropdown-item.active{color:var(--dda-purple)!important}
-html.light body .navbar .navbar-toggler,
-html.light body .navbar .navbar-toggler-icon{filter:none!important;color:#111827!important}
-
-/* Dark text color (모듈 호환용) */
-html:not(.light) .navbar .nav-link,
-html:not(.light) .navbar .dropdown-item,
-html:not(.light) .navbar .navbar-brand,
-html:not(.light) .navbar .nav-icons .nav-link{color:rgba(255,255,255,.94)!important}
-html:not(.light) .navbar .nav-link:hover,
-html:not(.light) .navbar .dropdown-item:hover{color:#fff!important;text-shadow:0 0 12px rgba(167,139,250,.55)}
-html:not(.light) .navbar .nav-link.active{color:#fff!important;text-shadow:0 0 14px rgba(124,58,237,.7)}
-.navbar .navbar-brand img{filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
-.navbar .nav-icons .nav-link{opacity:.95}.navbar .nav-icons .nav-link:hover{opacity:1}
-
-/* Intro band (About) */
+/* ==========================================================
+   Intro band
+   ========================================================== */
 .home-section.intro-wide,
 .home-section#about.intro-wide,
-.home-section#intro.intro-wide{position:relative;padding:3rem 0 3.2rem!important;overflow:hidden;background:transparent!important}
-.home-section.intro-wide::before{content:"";position:absolute;inset:0;z-index:0;background:
-  radial-gradient(900px 600px at 82% 18%,var(--dda-hi-1),transparent 60%),
-  radial-gradient(820px 560px at 10% 88%,var(--dda-hi-2),transparent 65%),
-  linear-gradient(135deg,var(--dda-tint-1) 0%,rgba(124,58,237,.05) 35%,rgba(124,58,237,.02) 65%,transparent 100%)}
-.home-section.intro-wide>.container,
-.home-section#about.intro-wide>.container,
-.home-section#intro.intro-wide>.container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px;background:none!important;border:none!important;box-shadow:none!important}
-.home-section#about{background:linear-gradient(180deg,rgba(139,92,246,.08),rgba(139,92,246,.05),transparent 80%)!important;border-radius:0 0 18px 18px}
-.home-section#about+.home-section{margin-top:.6rem}
-.home-section.intro-wide a{color:var(--dda-purple)}
-.home-section.intro-wide a:hover{color:var(--dda-purple-700)}
-.home-section.intro-wide .network-icon a{color:var(--dda-purple-300)}
-.home-section.intro-wide .network-icon a:hover{color:var(--dda-purple)}
+.home-section#intro.intro-wide {
+  position: relative;
+  padding: 3rem 0 3.2rem !important;
+  overflow: hidden;
+  background: transparent !important;
+}
+.home-section.intro-wide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(900px 600px at 82% 18%, var(--dda-hi-1), transparent 60%),
+    radial-gradient(820px 560px at 10% 88%, var(--dda-hi-2), transparent 65%),
+    linear-gradient(135deg, var(--dda-tint-1) 0%, rgba(124,58,237,.05) 35%, rgba(124,58,237,.02) 65%, transparent 100%);
+}
+.home-section.intro-wide>.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.home-section#about {
+  background: linear-gradient(180deg, rgba(139,92,246,.08), rgba(139,92,246,.05), transparent 80%) !important;
+  border-radius: 0 0 18px 18px;
+}
+.home-section.intro-wide a { color: var(--dda-purple); }
+.home-section.intro-wide a:hover { color: var(--dda-purple-700); }
+.home-section.intro-wide .network-icon a { color: var(--dda-purple-300); }
+.home-section.intro-wide .network-icon a:hover { color: var(--dda-purple); }
+
 
 /* ==========================================================
    Layout width / gutters (site-wide) + Projects
