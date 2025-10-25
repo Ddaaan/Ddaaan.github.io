@@ -243,34 +243,35 @@ html.light{
    Publications - Light 모드 가독성 강화
    ============================ */
 html.light .home-section#publications .stream-item .article-title,
-html.light .home-section#publications .stream-item .article-title a{
-  color:#0f172a !important;      /* 진한 텍스트 */
-  text-shadow:none !important;   /* 희미해 보이는 효과 제거 */
+html.light .home-section#publications .stream-item .article-title a {
+  color: #111827 !important;
+  text-shadow: none !important;
 }
 
 html.light .home-section#publications .stream-item .article-metadata,
-html.light .home-section#publications .stream-item .article-style,
-html.light .home-section#publications .stream-item .article-style small,
-html.light .home-section#publications .stream-item .stream-meta{
-  color:#374151 !important;      /* 본문/메타 텍스트 */
-  opacity:1 !important;
+html.light .home-section#publications .stream-item .stream-meta,
+html.light .home-section#publications .stream-item .article-style small {
+  color: #334155 !important;
+  opacity: 1 !important;
 }
 
-/* 버튼(PDF 등) – 더 선명하게 */
+/* PDF 버튼 색상 명확히 */
 html.light .home-section#publications .stream-item .btn,
-html.light .home-section#publications .stream-item a.btn{
-  background:#e9d5ff !important; /* 연보라 배경 */
-  border-color:#7c3aed !important;
-  color:#312e81 !important;      /* 진한 보라 텍스트 */
-  box-shadow:none !important;
+html.light .home-section#publications .stream-item a.btn {
+  background: #ede9fe !important;
+  border-color: #7c3aed !important;
+  color: #4c1d95 !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
 }
 
 html.light .home-section#publications .stream-item .btn:hover,
-html.light .home-section#publications .stream-item a.btn:hover{
-  background:#7c3aed !important; /* 호버 시 진보라 */
-  border-color:#7c3aed !important;
-  color:#fff !important;
+html.light .home-section#publications .stream-item a.btn:hover {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #fff !important;
 }
+
 
 
 /* ==========================================================
