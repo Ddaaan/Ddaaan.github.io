@@ -17,9 +17,13 @@ main:
     url: /about/accomplishments/
     weight: 40
 
+  - name: 논문
+    url: /home/publications/
+    weight: 50
+
   - name: 연락처
     url: "/about/contact/"
-    weight: 50
+    weight: 60
 
   # ── '소개' 드롭다운 항목들
   - name: 학력
