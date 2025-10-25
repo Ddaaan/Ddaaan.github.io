@@ -4,7 +4,7 @@ active: true
 headless: true
 weight: 25
 title: "경험"
-id: home-experience
+id: experience
 
 items:
   - title: 미국 연수 프로그램
