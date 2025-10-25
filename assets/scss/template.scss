@@ -294,94 +294,113 @@ html.light .home-section#about {
 
 
 /* ==========================================================
-    Intro band (full-bleed, purple brand)
+   Daeun – Purple UI polish (Navbar + Intro full-bleed band)
    ========================================================== */
 
-/* 브랜드 컬러 */
-:root {
-  --dda-purple: #7c3aed;       /* primary */
-  --dda-purple-700: #6d28d9;   /* darker */
-  --dda-purple-300: #a78bfa;   /* light accent */
+/* --- Brand palette (공통 변수) --- */
+:root{
+  --dda-purple:      #7c3aed;          /* primary */
+  --dda-purple-700:  #6d28d9;          /* hover/darker */
+  --dda-purple-300:  #a78bfa;          /* light accent */
 
-  --dda-band-tint: rgba(124,58,237,.10);  /* 다크 모드용 밴드 틴트 */
-  --dda-band-hi:   rgba(167,139,250,.25); /* 하이라이트 */
-  --dda-band-hi2:  rgba(124,58,237,.18);  /* 하이라이트 2 */
-  --dda-band-shadow: rgba(0,0,0,.22);     /* 가장자리 음영 */
+  /* tints for dark mode */
+  --dda-tint-1: rgba(124,58,237,.14);
+  --dda-tint-2: rgba(124,58,237,.10);
+  --dda-hi-1:   rgba(167,139,250,.25);
+  --dda-hi-2:   rgba(124,58,237,.18);
+  --dda-edge:   transparent;          /* 상/하 가장자리 그림자 제거 */
+}
+html.light{
+  /* tints for light mode */
+  --dda-tint-1: rgba(139,92,246,.12);
+  --dda-tint-2: rgba(139,92,246,.08);
+  --dda-hi-1:   rgba(196,181,253,.32);
+  --dda-hi-2:   rgba(139,92,246,.20);
+  --dda-edge:   transparent;
 }
 
-html.light {
-  --dda-band-tint: rgba(139,92,246,.14);  /* 라이트 모드용 틴트 */
-  --dda-band-hi:   rgba(196,181,253,.35);
-  --dda-band-hi2:  rgba(139,92,246,.22);
-  --dda-band-shadow: rgba(0,0,0,.08);
+/* -------------------------------
+   Navbar : 보라 톤 투명 그라데 + 블러
+   (배경 밴드와 자연스러운 연결)
+-------------------------------- */
+.navbar,
+.navbar.scrolled,
+.navbar--dark,
+.navbar--light{
+  background: linear-gradient(180deg, var(--dda-tint-1), var(--dda-tint-2)) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 2px 10px rgba(0,0,0,.08);     /* 얕은 그림자만 */
 }
 
-/* 섹션을 풀-블리드 밴드로 */
+/* 링크 hover/active 컬러 */
+.navbar a,
+.navbar .dropdown-item{
+  transition: color .15s ease, opacity .15s ease;
+}
+.navbar a:hover{ color: var(--dda-purple-300) !important; }
+.navbar .active > a,
+.navbar .nav-link.active{ color: var(--dda-purple) !important; }
+
+/* -------------------------------
+   Intro : 좌우 가득(풀-블리드) 보라 밴드
+   - 상/하 그림자 제거, 은은한 라디얼 하이라이트
+   - 컨테이너는 배경/테두리 제거
+-------------------------------- */
 .home-section.intro-wide,
 .home-section#about.intro-wide,
-.home-section#intro.intro-wide {
+.home-section#intro.intro-wide{
   position: relative;
-  padding: 3.2rem 0 3.4rem !important;
-  overflow: hidden; /* 밴드 효과가 섹션 밖으로 새지 않도록 */
+  padding: 3rem 0 3.2rem !important;
+  overflow: hidden;
+  background: transparent !important;  /* 기존 섹션 배경 무효화 */
 }
 
-/* 배경 밴드: 보라 그라데 + 은은한 라디얼 하이라이트 + 얕은 질감 */
-.home-section.intro-wide::before {
+/* 밴드 배경 – 얕은 보라 그라데 + 라디얼 하이라이트 */
+.home-section.intro-wide::before{
   content:"";
   position:absolute;
   inset:0;
-  z-index: 0;
+  z-index:0;
   background:
-    /* 오른쪽 상단 하이라이트 */
-    radial-gradient(900px 600px at 86% 20%, var(--dda-band-hi), transparent 60%),
-    /* 왼쪽 하단 보라 하이라이트 */
-    radial-gradient(800px 600px at 8% 90%, var(--dda-band-hi2), transparent 65%),
-    /* 부드러운 대각 그라데(보라→투명) */
-    linear-gradient(135deg, var(--dda-band-tint) 0%, rgba(124,58,237,0.06) 35%, rgba(124,58,237,0.02) 65%, transparent 100%),
-    /* 아주 옅은 세로 그라데로 깊이감 */
-    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 40%, rgba(0,0,0,.04) 100%);
-  /* 밴드 상하 가장자리 얕은 그림자 */
-  box-shadow: inset 0 14px 28px var(--dda-band-shadow), inset 0 -14px 28px var(--dda-band-shadow);
+    radial-gradient(900px 600px at 82% 18%, var(--dda-hi-1), transparent 60%),
+    radial-gradient(820px 560px at 10% 88%, var(--dda-hi-2), transparent 65%),
+    linear-gradient(135deg, var(--dda-tint-1) 0%, rgba(124,58,237,0.05) 35%, rgba(124,58,237,0.02) 65%, transparent 100%);
+  /* ⛔ 이전 버전의 진한 상/하 inset shadow 제거 */
+  box-shadow: inset 0 0 0 var(--dda-edge), inset 0 0 0 var(--dda-edge);
+  /* 상/하 엣지를 아주 살짝만 페이드시키고 싶다면 아래 주석 해제
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+  */
 }
 
-/* 안쪽 컨테이너: 배경/테두리 제거, 가운데 정렬만 */
+/* 내용 컨테이너 – 가운데 정렬, 배경/테두리 모두 제거 */
 .home-section.intro-wide > .container,
 .home-section#about.intro-wide > .container,
-.home-section#intro.intro-wide > .container {
+.home-section#intro.intro-wide > .container{
   position: relative;
-  z-index: 1;                 /* 배경 위에 올라오게 */
+  z-index: 1;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 22px;            /* 좌우 살짝 여백만 */
-  background: none;
-  border: none;
-  box-shadow: none;
+  padding: 0 24px;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-/* 타이틀/텍스트 미세 강조 - 보라 톤과 조화 */
+/* 텍스트/아이콘 보라 계열 보정 */
 .home-section.intro-wide h1,
-.home-section.intro-wide h2 {
-  letter-spacing: .2px;
-}
-.home-section.intro-wide a { color: var(--dda-purple); }
-.home-section.intro-wide a:hover { color: var(--dda-purple-700); }
+.home-section.intro-wide h2{ letter-spacing: .2px; }
+.home-section.intro-wide a{ color: var(--dda-purple); }
+.home-section.intro-wide a:hover{ color: var(--dda-purple-700); }
+.home-section.intro-wide .network-icon a{ color: var(--dda-purple-300); }
+.home-section.intro-wide .network-icon a:hover{ color: var(--dda-purple); }
 
-/* 인사 한 줄(오렌지 그라데 쓰던 부분)을 보라 브랜드로 치환하고 싶다면
-   아래 주석 해제
-.about .article-style strong,
-.about .article-style b {
-  background: linear-gradient(90deg, var(--dda-purple-300), var(--dda-purple));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-}
-*/
+/* 다음 섹션과 간격 가볍게 */
+.home-section.intro-wide + .home-section{ margin-top: .7rem; }
 
-/* 아이콘도 은은히 보라 기색 */
-.home-section.intro-wide .network-icon a { color: var(--dda-purple-300); }
-.home-section.intro-wide .network-icon a:hover { color: var(--dda-purple); }
+/* 버튼은 살짝만 떠오르게 */
+.btn, a.btn{ transition: transform .12s ease; }
+.btn:hover, a.btn:hover{ transform: translateY(-1px); }
 
-/* 섹션 하단과 다음 섹션 사이 간격 조금만 */
-.home-section.intro-wide + .home-section { margin-top: .6rem; }
-
-/* 라이트/다크 모두 가독성 유지되도록 버튼 대비는 유지 */
-.btn, a.btn { transition: transform .12s ease; }
-.btn:hover, a.btn:hover { transform: translateY(-1px); }
