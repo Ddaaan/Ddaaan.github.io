@@ -2,13 +2,25 @@
 widget: blank
 headless: true
 active: true
-weight: 16
+weight: 20
 title: ""
 ---
 
 <style>
-  .dda-slider{position:relative;max-width:1200px;margin:0 auto;border-radius:12px;overflow:hidden}
-  .dda-slider .slides{position:relative;height:360px}
+  .dda-bleed{
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;   /* 컨테이너 좌우 여백 무시하고 화면 전체로 */
+    margin-right: -50vw;
+    width: 100vw;
+    background: #0b0b0e; 
+    padding: 16px 0;      
+    overflow: hidden;     
+  }
+
+  .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
+  .dda-slider .slides{position:relative;height:clamp(220px, 28vw, 420px);} /* 반응형 높이 */
   .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
   .dda-slider img.active{opacity:1}
   .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px}
@@ -19,15 +31,17 @@ title: ""
   .dda-slider .dot.active{background:#fff}
 </style>
 
-<div class="dda-slider" id="ddaSlider">
-  <div class="slides">
-    <img src="/uploads/slider1.jpg" alt="slide 1" class="active">
-    <img src="/uploads/slider2.jpg" alt="slide 2">
-    <img src="/uploads/slider3.jpg" alt="slide 3">
+<div class="dda-bleed">
+  <div class="dda-slider" id="ddaSlider">
+    <div class="slides">
+      <img src="/uploads/slider1.jpg" alt="slide 1" class="active">
+      <img src="/uploads/slider2.jpg" alt="slide 2">
+      <img src="/uploads/slider3.jpg" alt="slide 3">
+    </div>
+    <button class="ctrl prev" aria-label="Previous">‹</button>
+    <button class="ctrl next" aria-label="Next">›</button>
+    <div class="dots"></div>
   </div>
-  <button class="ctrl prev" aria-label="Previous">‹</button>
-  <button class="ctrl next" aria-label="Next">›</button>
-  <div class="dots"></div>
 </div>
 
 <script>
@@ -37,7 +51,7 @@ title: ""
   const imgs = Array.from(root.querySelectorAll('img'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 2000; //이미지 슬라이더 넘어가는 시간
+  const INTERVAL = 2000; // 자동전환 간격(ms)
 
   imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
