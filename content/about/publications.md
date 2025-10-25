@@ -8,10 +8,11 @@ id: publications
 
 content:
   filters:
-    folders: ["publication"]
-  sort_by: "weight"
-  sort_ascending: false
+    folders:
+      - publication
   count: 20
+  sort_by: "Date"
+  sort_ascending: false
 
 design:
   view: card
