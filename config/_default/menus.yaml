@@ -21,7 +21,7 @@ main:
     weight: 50
 
   - name: 수상
-    url: accomplishments/
+    url: /accomplishments/
     weight: 60
 
   - name: 연락처
