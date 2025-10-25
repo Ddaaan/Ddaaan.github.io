@@ -239,6 +239,40 @@ html.light{
 .home-section#publications .stream-item .btn-links{margin-top:.6rem}
 .home-section#publications{padding-bottom:2.2rem}
 
+/* ============================
+   Publications - Light 모드 가독성 강화
+   ============================ */
+html.light .home-section#publications .stream-item .article-title,
+html.light .home-section#publications .stream-item .article-title a{
+  color:#0f172a !important;      /* 진한 텍스트 */
+  text-shadow:none !important;   /* 희미해 보이는 효과 제거 */
+}
+
+html.light .home-section#publications .stream-item .article-metadata,
+html.light .home-section#publications .stream-item .article-style,
+html.light .home-section#publications .stream-item .article-style small,
+html.light .home-section#publications .stream-item .stream-meta{
+  color:#374151 !important;      /* 본문/메타 텍스트 */
+  opacity:1 !important;
+}
+
+/* 버튼(PDF 등) – 더 선명하게 */
+html.light .home-section#publications .stream-item .btn,
+html.light .home-section#publications .stream-item a.btn{
+  background:#e9d5ff !important; /* 연보라 배경 */
+  border-color:#7c3aed !important;
+  color:#312e81 !important;      /* 진한 보라 텍스트 */
+  box-shadow:none !important;
+}
+
+html.light .home-section#publications .stream-item .btn:hover,
+html.light .home-section#publications .stream-item a.btn:hover{
+  background:#7c3aed !important; /* 호버 시 진보라 */
+  border-color:#7c3aed !important;
+  color:#fff !important;
+}
+
+
 /* ==========================================================
    Awards (flattened – CSS only)
    ========================================================== */
