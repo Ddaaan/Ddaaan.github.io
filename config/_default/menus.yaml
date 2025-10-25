@@ -48,39 +48,39 @@
 
 
 main:
-  - name: Home
+  - name: 홈
     url: /
     weight: 10
 
-  - name: About
+  - name: 소개
     url: about/
     weight: 20
 
-  - name: Projects
+  - name: 프로젝트
     url: projects/
     weight: 30
 
-  - name: Contact
+  - name: 연락처
     url: "#contact"     
     weight: 40
 
   # ── About 의 하위 메뉴들
-  - name: Education
+  - name: 학력
     url: about/#education          
     parent: About
     weight: 21
 
-  - name: Experience
+  - name: 경험
     url: about/#experience        
     parent: About
     weight: 22
 
-  - name: Awards
+  - name: 수상
     url: about/#accomplishments  
     parent: About
     weight: 23
 
-  - name: Résumé (PDF)
-    url: files/resume.pdf        
-    parent: About
-    weight: 24
+  # - name: Résumé (PDF)
+  #   url: files/resume.pdf        
+  #   parent: About
+  #   weight: 24
