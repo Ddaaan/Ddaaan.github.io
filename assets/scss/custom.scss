@@ -5,3 +5,11 @@
   --color-secondary: #ffd166;     /* 포인트색 */
   --color-accent: #06d6a0;        /* 하이라이트 */
 }
+
+/* 홈 - 경험 섹션 타이틀 가운데 정렬 */
+#home-experience .section-heading,
+#home-experience .section-title,
+#home-experience h1,
+#home-experience h2 {
+  text-align: center;
+}
