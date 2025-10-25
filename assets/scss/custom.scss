@@ -70,7 +70,7 @@ ul.network-icon .big-icon { font-size:1.5rem; }
 }
 
 /* ⚙️ Light Mode */
-html:not(.dark) {
+body:not(.dark) {
   --dda-tint-1:rgba(139,92,246,.12);
   --dda-tint-2:rgba(139,92,246,.06);
   --dda-hi-1:rgba(196,181,253,.26);
@@ -83,7 +83,7 @@ html:not(.dark) {
 }
 
 /* 🌙 Dark Mode — 네비바를 진한 보라로 */
-html.dark {
+body.dark {
   /* 단색 느낌의 진보라 배경 + 은은한 보라 그라디언트 */
   --dda-nav-solid: #4c1d95;                         /* indigo-900 계열 */
   --dda-nav-grad-top: rgba(124,58,237,.32);         /* 상단 연보라 글로우 */
@@ -102,9 +102,9 @@ html.dark {
 }
 
 /* ✅ Light mode navbar */
-html:not(.dark) .navbar,
-html:not(.dark) .navbar.scrolled,
-html:not(.dark) .navbar--light {
+body:not(.dark) .navbar,
+body:not(.dark) .navbar.scrolled,
+body:not(.dark) .navbar--light {
   background:
     linear-gradient(180deg, rgba(235,229,255,.92) 0%, rgba(247,244,255,.90) 100%),
     rgba(255,255,255,.90) !important;
@@ -113,22 +113,22 @@ html:not(.dark) .navbar--light {
 }
 
 /* ✅ Light mode text/icons */
-html:not(.dark) body .navbar .navbar-brand,
-html:not(.dark) body .navbar .navbar-brand *,
-html:not(.dark) body .navbar .navbar-nav .nav-link,
-html:not(.dark) body .navbar .nav-link,
-html:not(.dark) body .navbar .dropdown-item,
-html:not(.dark) body .navbar .nav-icons .nav-link {
+body:not(.dark) .navbar .navbar-brand,
+body:not(.dark) .navbar .navbar-brand *,
+body:not(.dark) .navbar .navbar-nav .nav-link,
+body:not(.dark) .navbar .nav-link,
+body:not(.dark) .navbar .dropdown-item,
+body:not(.dark) .navbar .nav-icons .nav-link {
   color:#1e1e1e !important;
   fill:#1e1e1e !important;
 }
-html:not(.dark) body .navbar .nav-link:hover { color:#5b21b6 !important; }
-html:not(.dark) body .navbar .nav-link.active { color:#7c3aed !important; }
+body:not(.dark) body .navbar .nav-link:hover { color:#5b21b6 !important; }
+body:not(.dark) body .navbar .nav-link.active { color:#7c3aed !important; }
 
 /* 🌙 Dark mode navbar: 보라 배경 + 흰 글씨 */
-html.dark .navbar,
-html.dark .navbar.scrolled,
-html.dark .navbar--dark {
+body.dark .navbar,
+body.dark .navbar.scrolled,
+body.dark .navbar--dark {
   background:
     linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
     var(--dda-nav-solid) !important;
@@ -139,20 +139,20 @@ html.dark .navbar--dark {
 }
 
 /* 🌙 Dark mode text (흰색) */
-html.dark body .navbar .navbar-brand,
-html.dark body .navbar .nav-link,
-html.dark body .navbar a {
+body.dark .navbar .navbar-brand,
+body.dark .navbar .nav-link,
+body.dark .navbar a {
   color:#fff !important;
   fill:#fff !important;
 }
 
 /* 다크 모드 hover/active 컬러 보정(보라 톤) */
-html.dark body .navbar .nav-link:hover { color:#c4b5fd !important; }  /* 연보라 */
-html.dark body .navbar .nav-link.active { color:#e9d5ff !important; } /* 더 밝은 보라 */
+body.dark body .navbar .nav-link:hover { color:#c4b5fd !important; }  /* 연보라 */
+body.dark body .navbar .nav-link.active { color:#e9d5ff !important; } /* 더 밝은 보라 */
 
 /* 햄버거/토글 아이콘이 어두우면 흰색 보정 */
-html.dark .navbar .navbar-toggler,
-html.dark .navbar .navbar-toggler-icon { filter: invert(1) brightness(1.2); }
+body.dark .navbar .navbar-toggler,
+body.dark .navbar .navbar-toggler-icon { filter: invert(1) brightness(1.2); }
 
 /* ==========================================================
    Intro band
