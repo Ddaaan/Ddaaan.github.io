@@ -3,41 +3,36 @@ main:
   - name: 홈
     url: /
     weight: 10
-    identifier: home
 
   - name: 소개
-    url: /about/
+    url: about/
     weight: 20
-    identifier: about
 
   - name: 프로젝트
-    url: /project/
+    url: project/
     weight: 30
-    identifier: projects
 
   - name: 수상
     url: /about/accomplishments/
     weight: 40
-    identifier: awards
 
   - name: 연락처
     url: "/about/contact/"
     weight: 50
-    identifier: contact
 
   # ── '소개' 드롭다운 항목들
   - name: 학력
-    url: /about/#education
+    url: about/#education
     parent: about
     weight: 21
 
   - name: 경력
-    url: /about/#work
+    url: about/#work
     parent: about
     weight: 22
 
   - name: 경험
-    url: /about/#experience
+    url: about/#experience
     parent: about
     weight: 23
 

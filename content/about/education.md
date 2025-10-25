@@ -5,7 +5,6 @@ active: true
 
 weight: 20
 title: 학력
-widget_id: education
 
 experience:
   - title: 전북대학교

@@ -11,7 +11,6 @@ weight: 40
 
 title: 경험
 subtitle:
-slug: "experience"
 
 # Date format for experience
 #   Refer to https://docs.hugoblox.com/customization/#date-format
