@@ -19,7 +19,7 @@ items:
 
   - title: SW 전공 멘토링
     subtitle: "알고리즘 멘토링 · 2023.10–11"
-    image: "/uploads/experience/mentor.jpg"
+    image: "/uploads/experience/mentor.png"
     link: "/experience/"
 ---
 {{< cards-grid >}}
