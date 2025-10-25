@@ -6,11 +6,21 @@ date_format: Jan 2006
 sections:
   - block: experience
     content:
-      title: "🗂️ 경험 모아보기"
+      title: "교내외 활동"
       items:
+        - title: "UNLV 미국 연수"
+          company: "전북대학교 SW중심대학사업단"
+          company_url: "https://swuniv.jbnu.ac.kr/main/"
+          company_logo: ""
+          location: ""
+          date_start: "2025-07-15"
+          date_end: "2025-08-04"
+          description: |-
+            - UNLV AI Workshop
+
         - title: "학부연구생"
           company: "분산컴퓨팅 연구실"
-          company_url: ""
+          company_url: "https://sites.google.com/view/dongkikanglab/home"
           company_logo: ""
           location: ""
           date_start: "2024-03-01"
@@ -41,8 +51,8 @@ sections:
             - 알고리즘 스터디 참여
 
         - title: "SW 전공 멘토링"
-          company: "전북대학교"
-          company_url: ""
+          company: "전북대학교 SW중심대학사업단"
+          company_url: "https://swuniv.jbnu.ac.kr/main/"
           company_logo: ""
           location: ""
           date_start: "2023-10-01"
@@ -51,8 +61,8 @@ sections:
             - 알고리즘 멘토링 진행 (멘토)
 
         - title: "C언어 교육 프로그램 멘토"
-          company: "전북대학교"
-          company_url: ""
+          company: "전북대학교 컴퓨터인공지능학부"
+          company_url: "https://csai.jbnu.ac.kr/csai/index.do"
           company_logo: ""
           location: ""
           date_start: "2023-11-01"
@@ -61,8 +71,8 @@ sections:
             - C 언어 기초/실습 지도
 
         - title: "SW 교육 봉사"
-          company: "전북대학교"
-          company_url: ""
+          company: "전북대학교 SW중심대학사업단"
+          company_url: "https://swuniv.jbnu.ac.kr/main/"
           company_logo: ""
           location: ""
           date_start: "2023-07-01"
