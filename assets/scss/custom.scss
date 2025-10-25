@@ -500,3 +500,42 @@ html.light .awards .card p strong {
   text-align: justify;
   text-justify: inter-word;
 }
+
+
+/* 1) 프로젝트 상세 페이지 본문 */
+.article-style p,
+.article-style li { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
+
+/* 2) 소개(about) 섹션 본문 */
+#about p { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
+
+/* 3) 프로젝트 목록 페이지의 설명(카드/문단) */
+#projects p,
+#projects .card-text { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
+
+/* 4) 경험(experience) 섹션 본문 */
+#experience p { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
+
+/* 5) 논문/퍼블리케이션 */
+#publications p { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
+
+/* 6) 수상(accomplishments) */
+#accomplishments p { 
+  text-align: justify; 
+  text-justify: inter-word; 
+}
