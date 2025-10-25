@@ -1,4 +1,4 @@
 ---
-title: "경험"
+title: ""
 type: widget_page
 ---
