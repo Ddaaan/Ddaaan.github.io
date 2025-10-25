@@ -519,8 +519,8 @@ html:not(.light) .navbar .nav-link.active{
 .home-section > .container,
 .navbar > .container,
 .footer > .container {
-  width: min(100%, var(--site-max-lg));
-  max-width: min(100%, var(--site-max-lg));
+  width: 100%;
+  max-width: var(--site-max-lg);
   padding-left: var(--site-gutter);
   padding-right: var(--site-gutter);
 }
