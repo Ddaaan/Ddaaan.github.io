@@ -55,6 +55,7 @@ main:
   - name: 소개
     url: about/
     weight: 20
+    identifier: about
 
   - name: 프로젝트
     url: projects/
@@ -67,17 +68,17 @@ main:
   # ── About 의 하위 메뉴들
   - name: 학력
     url: about/#education          
-    parent: About
+    parent: about
     weight: 21
 
   - name: 경험
     url: about/#experience        
-    parent: About
+    parent: about
     weight: 22
 
   - name: 수상
     url: about/#accomplishments  
-    parent: About
+    parent: about
     weight: 23
 
   # - name: Résumé (PDF)
