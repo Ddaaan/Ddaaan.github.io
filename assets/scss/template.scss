@@ -572,26 +572,30 @@ html:not(.light) .navbar .nav-link.active{
   --pub-border:    rgba(255,255,255,.10);
   --pub-muted:     rgba(255,255,255,.72);
   --pub-emph:      #ffffff;
-  --pub-accent:    #7c3aed;     
-  --pub-accent-2:  #a78bfa;  
+  --pub-accent:    #7c3aed;        /* violet-600 */
+  --pub-accent-2:  #a78bfa;        /* violet-300 */
   --pub-btn-bg:    rgba(124,58,237,.10);
   --pub-btn-bd:    rgba(167,139,250,.45);
-  --pub-btn-tx:    #dcd7fe;
+  --pub-btn-tx:    #dcd7fe;        /* violet-200 */
   --pub-shadow:    0 6px 22px rgba(0,0,0,.18);
   --pub-shadow-h:  0 12px 32px rgba(0,0,0,.28);
 }
+
+/* ── 라이트 모드 : 대비 강화(글자 진하게, 버튼 가독성 ↑) ── */
 html.light{
-  --pub-bg:        rgba(124,58,237,.05);
+  /* 카드 배경을 거의 화이트로, 아주 은근한 보라 틴트 */
+  --pub-bg:        rgba(255,255,255,.96);
   --pub-border:    rgba(0,0,0,.10);
-  --pub-muted:     #4b5563; 
-  --pub-emph:      #0f172a;    
-  --pub-accent:    #7c3aed;
-  --pub-accent-2:  #6d28d9;
-  --pub-btn-bg:    rgba(124,58,237,.08);
-  --pub-btn-bd:    rgba(124,58,237,.35);
-  --pub-btn-tx:    #1f2937;  
-  --pub-shadow:    0 6px 18px rgba(0,0,0,.08);
-  --pub-shadow-h:  0 10px 26px rgba(0,0,0,.14);
+  --pub-muted:     #475569;        /* slate-600 */
+  --pub-emph:      #0f172a;        /* slate-900 */
+  --pub-accent:    #7c3aed;        /* violet-600 */
+  --pub-accent-2:  #6d28d9;        /* violet-700 */
+  /* 버튼은 연보라 배경 + 진한 텍스트로 뚜렷하게 */
+  --pub-btn-bg:    #ede9fe;        /* violet-100 */
+  --pub-btn-bd:    #c4b5fd;        /* violet-300 */
+  --pub-btn-tx:    #312e81;        /* indigo-900 */
+  --pub-shadow:    0 8px 18px rgba(0,0,0,.08);
+  --pub-shadow-h:  0 12px 26px rgba(0,0,0,.14);
 }
 
 /* 섹션 제목 간격 살짝 */
@@ -607,8 +611,7 @@ html.light{
   margin: 0 0 14px 0;
   border-radius: 16px;
   border: 1px solid var(--pub-border);
-  background:
-    linear-gradient(180deg, var(--pub-bg), transparent 140%);
+  background: linear-gradient(180deg, var(--pub-bg), color-mix(in oklab, var(--pub-bg) 70%, transparent) 140%);
   box-shadow: var(--pub-shadow);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
   overflow: hidden;
@@ -644,7 +647,7 @@ html.light{
 .home-section#publications .stream-item .article-style small,
 .home-section#publications .stream-item .stream-meta{
   color: var(--pub-muted);
-  opacity: .92;
+  opacity: .95;
   font-size: .94rem;
 }
 
@@ -652,20 +655,22 @@ html.light{
 .home-section#publications .stream-item .btn,
 .home-section#publications .stream-item a.btn{
   display: inline-flex; align-items: center; gap:.35rem;
-  padding: .35rem .7rem;
+  padding: .38rem .78rem;
   border-radius: 9999px;
   border: 1px solid var(--pub-btn-bd);
   background: var(--pub-btn-bg);
   color: var(--pub-btn-tx);
   font-weight: 700;
-  font-size: .86rem;
+  font-size: .9rem;
   line-height: 1;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
 }
+
+/* hover 시 라이트/다크 공통으로 선명한 보라 버튼 */
 .home-section#publications .stream-item .btn:hover{
   transform: translateY(-1px);
   border-color: var(--pub-accent);
-  background: color-mix(in oklab, var(--pub-btn-bg) 40%, var(--pub-accent) 60%);
+  background: color-mix(in oklab, var(--pub-btn-bg) 30%, var(--pub-accent) 70%);
   box-shadow: 0 6px 16px rgba(124,58,237,.25);
   color: #fff;
 }
@@ -679,12 +684,6 @@ html.light{
 /* 항목 사이 여백(버튼 영역 포함) */
 .home-section#publications .stream-item .btn-links{
   margin-top: .55rem;
-}
-
-/* 모바일에서 여백/폰트 약간 키움 */
-@media (max-width: 640px){
-  .home-section#publications .stream-item{ padding:16px 16px; }
-  .home-section#publications .stream-item .article-title{ font-size:1.125rem; }
 }
 
 /* Publications 섹션 자체의 아래 여백 약간 축소 */
