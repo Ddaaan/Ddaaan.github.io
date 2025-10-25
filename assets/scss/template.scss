@@ -468,3 +468,31 @@ html:not(.light) .navbar .nav-link.active{
 /* 버튼 작게 띄우기 */
 .btn, a.btn{ transition: transform .12s ease; }
 .btn:hover, a.btn:hover{ transform: translateY(-1px); }
+
+
+/* === Projects 카드를 조금 더 넓게: 한 줄 3장 유지하지만 각 카드 폭↑ === */
+.section.projects-wide .container {
+  /* 기본 1100px 안팎 → 1360~1440px 정도로 넓게 (원하는 값으로 조절) */
+  max-width: 1440px;
+}
+
+/* 칩(태그)들이 줄바꿈 안 나게 보정 */
+.section.projects-wide .btn,
+.section.projects-wide .badge,
+.section.projects-wide .article-tags .btn,
+.section.projects-wide .article-tags .badge {
+  white-space: nowrap;         /* 한 줄 유지 */
+  font-size: 0.88rem;          /* (선택) 살짝 키우거나 줄이기 */
+  line-height: 1.1;
+}
+
+/* 칩 사이 간격 조금만 조정(선택) */
+.section.projects-wide .article-tags > * + * {
+  margin-left: .35rem;
+}
+
+/* 카드 가로 여백(그리드 간격) 살짝 줄이거나 늘리고 싶을 때 (선택) */
+.section.projects-wide .row {
+  row-gap: 1.25rem;
+  column-gap: 1.25rem;
+}

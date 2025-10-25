@@ -6,6 +6,7 @@ weight: 14
 title: "Projects"
 design:
   columns: '1'
+class: projects-wide
 items:
   - title: 전남교육청 설문 시스템
     subtitle: 2024.08 – 2024.11
