@@ -6,12 +6,11 @@ widget: experience
 # This file represents a page section.
 
 active: true
-active: true
 headless: true
 # Order that this section appears on the page.
-weight: 40
+weight: 10
 
-title: 경험
+title: "경험"
 id: experience
 
 # Date format for experience

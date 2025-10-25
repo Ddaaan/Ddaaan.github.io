@@ -3,11 +3,8 @@ widget: accomplishments
 active: true
 headless: true
 weight: 10
-
 title: "🏆 수상"
 subtitle: ""
-
-# Date format
 date_format: Jan 2006
 
 item:
