@@ -3,7 +3,7 @@ widget: blank
 headless: true
 active: true
 weight: 14
-title: "Projects"
+title: "프로젝트"
 design:
   columns: '1'
 class: projects-wide
