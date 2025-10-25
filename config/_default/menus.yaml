@@ -35,14 +35,3 @@ main:
     url: files/resume.pdf        
     parent: About
     weight: 24
-
-  # ── Projects 의 하위 메뉴들
-  - name: Web
-    url: projects/#web
-    parent: Projects
-    weight: 31
-
-  - name: Embedded
-    url: projects/#embedded
-    parent: Projects
-    weight: 32
