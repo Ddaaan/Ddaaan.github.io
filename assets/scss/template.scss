@@ -294,63 +294,94 @@ html.light .home-section#about {
 
 
 /* ==========================================================
-   🎨 Intro section pastel gradient background (universal)
+    Intro band (full-bleed, purple brand)
    ========================================================== */
 
-/* 변수 설정 */
+/* 브랜드 컬러 */
 :root {
-  --intro-border: rgba(255, 255, 255, 0.14);
-  --intro-surface: rgba(255, 255, 255, 0.06);
+  --dda-purple: #7c3aed;       /* primary */
+  --dda-purple-700: #6d28d9;   /* darker */
+  --dda-purple-300: #a78bfa;   /* light accent */
+
+  --dda-band-tint: rgba(124,58,237,.10);  /* 다크 모드용 밴드 틴트 */
+  --dda-band-hi:   rgba(167,139,250,.25); /* 하이라이트 */
+  --dda-band-hi2:  rgba(124,58,237,.18);  /* 하이라이트 2 */
+  --dda-band-shadow: rgba(0,0,0,.22);     /* 가장자리 음영 */
 }
 
 html.light {
-  --intro-border: rgba(0, 0, 0, 0.1);
-  --intro-surface: rgba(255, 255, 255, 0.75);
+  --dda-band-tint: rgba(139,92,246,.14);  /* 라이트 모드용 틴트 */
+  --dda-band-hi:   rgba(196,181,253,.35);
+  --dda-band-hi2:  rgba(139,92,246,.22);
+  --dda-band-shadow: rgba(0,0,0,.08);
 }
 
-/* 공통 intro 카드 적용 (id가 intro든 about이든 자동 대응) */
-.home-section#about,
-.home-section#intro,
-.home-section.intro-card {
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
+/* 섹션을 풀-블리드 밴드로 */
+.home-section.intro-wide,
+.home-section#about.intro-wide,
+.home-section#intro.intro-wide {
+  position: relative;
+  padding: 3.2rem 0 3.4rem !important;
+  overflow: hidden; /* 밴드 효과가 섹션 밖으로 새지 않도록 */
 }
 
-/* 카드 배경 컨테이너 */
-.home-section#about > .container,
-.home-section#intro > .container,
-.home-section.intro-card > .container {
-  max-width: 1080px;
+/* 배경 밴드: 보라 그라데 + 은은한 라디얼 하이라이트 + 얕은 질감 */
+.home-section.intro-wide::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 0;
+  background:
+    /* 오른쪽 상단 하이라이트 */
+    radial-gradient(900px 600px at 86% 20%, var(--dda-band-hi), transparent 60%),
+    /* 왼쪽 하단 보라 하이라이트 */
+    radial-gradient(800px 600px at 8% 90%, var(--dda-band-hi2), transparent 65%),
+    /* 부드러운 대각 그라데(보라→투명) */
+    linear-gradient(135deg, var(--dda-band-tint) 0%, rgba(124,58,237,0.06) 35%, rgba(124,58,237,0.02) 65%, transparent 100%),
+    /* 아주 옅은 세로 그라데로 깊이감 */
+    linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0) 40%, rgba(0,0,0,.04) 100%);
+  /* 밴드 상하 가장자리 얕은 그림자 */
+  box-shadow: inset 0 14px 28px var(--dda-band-shadow), inset 0 -14px 28px var(--dda-band-shadow);
+}
+
+/* 안쪽 컨테이너: 배경/테두리 제거, 가운데 정렬만 */
+.home-section.intro-wide > .container,
+.home-section#about.intro-wide > .container,
+.home-section#intro.intro-wide > .container {
+  position: relative;
+  z-index: 1;                 /* 배경 위에 올라오게 */
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 36px 36px 48px;
-  border-radius: 24px;
-  border: 1px solid var(--intro-border);
-  background:
-    radial-gradient(800px 600px at 15% 20%, rgba(196, 181, 253, 0.25), transparent 60%),
-    radial-gradient(1000px 700px at 85% 15%, rgba(186, 230, 253, 0.20), transparent 60%),
-    radial-gradient(800px 700px at 12% 90%, rgba(244, 114, 182, 0.18), transparent 70%),
-    linear-gradient(180deg, var(--intro-surface), rgba(255, 255, 255, 0));
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  padding: 0 22px;            /* 좌우 살짝 여백만 */
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
-/* 라이트 모드용 */
-html.light .home-section#about > .container,
-html.light .home-section#intro > .container,
-html.light .home-section.intro-card > .container {
-  border-color: rgba(0, 0, 0, 0.08);
-  background:
-    radial-gradient(800px 600px at 15% 20%, rgba(196, 181, 253, 0.35), transparent 60%),
-    radial-gradient(1000px 700px at 85% 15%, rgba(186, 230, 253, 0.28), transparent 60%),
-    radial-gradient(800px 700px at 12% 90%, rgba(252, 213, 241, 0.3), transparent 70%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+/* 타이틀/텍스트 미세 강조 - 보라 톤과 조화 */
+.home-section.intro-wide h1,
+.home-section.intro-wide h2 {
+  letter-spacing: .2px;
 }
+.home-section.intro-wide a { color: var(--dda-purple); }
+.home-section.intro-wide a:hover { color: var(--dda-purple-700); }
 
-/* 내부 요소 간격 */
-.home-section#about .article-container,
-.home-section#intro .article-container,
-.home-section.intro-card .article-container {
-  gap: 0.25rem;
+/* 인사 한 줄(오렌지 그라데 쓰던 부분)을 보라 브랜드로 치환하고 싶다면
+   아래 주석 해제
+.about .article-style strong,
+.about .article-style b {
+  background: linear-gradient(90deg, var(--dda-purple-300), var(--dda-purple));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
+*/
+
+/* 아이콘도 은은히 보라 기색 */
+.home-section.intro-wide .network-icon a { color: var(--dda-purple-300); }
+.home-section.intro-wide .network-icon a:hover { color: var(--dda-purple); }
+
+/* 섹션 하단과 다음 섹션 사이 간격 조금만 */
+.home-section.intro-wide + .home-section { margin-top: .6rem; }
+
+/* 라이트/다크 모두 가독성 유지되도록 버튼 대비는 유지 */
+.btn, a.btn { transition: transform .12s ease; }
+.btn:hover, a.btn:hover { transform: translateY(-1px); }

@@ -10,8 +10,10 @@ weight: 10
 
 author: admin
 
+# design:
+#   css_class: intro-card
 design:
-  css_class: intro-card
+  css_class: intro-wide
 #design:
 #  background:
 #    color: '#090a0b'
