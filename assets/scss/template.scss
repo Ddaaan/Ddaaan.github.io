@@ -243,3 +243,122 @@ a.btn.btn-outline-primary:hover {
   border-color: var(--bs-warning, #f59e0b);
   color: #111;
 }
+
+
+/* ===================== Purple theme polish ===================== */
+/* 색 팔레트 (다크/라이트 공통 변수) */
+:root {
+  --dda-primary: #7c3aed;     /* violet-600 */
+  --dda-primary-700: #6d28d9; /* hover */
+  --dda-accent:  #a78bfa;     /* violet-300 */
+  --dda-grad-a:  #a78bfa;     /* gradient start */
+  --dda-grad-b:  #8b5cf6;     /* mid */
+  --dda-grad-c:  #6d28d9;     /* end */
+
+  --dda-surface: rgba(255,255,255,.05);
+  --dda-border:  rgba(180,180,180,.18);
+  --dda-shadow:  0 2px 10px rgba(0,0,0,.12);
+}
+
+/* ---------- 공통: 링크/아이콘/하이라이트 ---------- */
+a, a:visited { color: var(--dda-primary); transition: color .2s ease; }
+a:hover { color: var(--dda-primary-700); }
+
+/* 소셜 아이콘 */
+.network-icon a { color: var(--dda-accent); }
+.network-icon a:hover { color: var(--dda-primary); }
+
+/* 섹션 제목 아래 얇은 그라데 라인 */
+.section-heading, .home-section h1, .home-section h2 {
+  position: relative;
+}
+.section-heading::after, .home-section h1::after, .home-section h2::after {
+  content:""; display:block; height:3px; width:60px; margin:.35rem 0 0 0;
+  background: linear-gradient(90deg,var(--dda-grad-a),var(--dda-grad-b),var(--dda-grad-c));
+  border-radius:999px;
+}
+
+/* ---------- 히어로(인트로) 텍스트 포인트 ---------- */
+/* 인사 문장(주황 그라데)을 보라 그라데로 치환 */
+.about .article-style strong,
+.about .article-style b {
+  background: linear-gradient(90deg,var(--dda-grad-a),var(--dda-grad-b),var(--dda-grad-c));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+/* ---------- 버튼 ---------- */
+.btn, a.btn {
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .1s ease;
+}
+
+/* 기본 프라이머리 */
+.btn-primary, a.btn.btn-primary {
+  background: var(--dda-primary);
+  border-color: var(--dda-primary);
+  color:#fff;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--dda-primary-700);
+  border-color: var(--dda-primary-700);
+  color:#fff;
+  transform: translateY(-1px);
+}
+
+/* 아웃라인 */
+.btn-outline-primary, a.btn.btn-outline-primary {
+  border-color: var(--dda-primary);
+  color: var(--dda-primary);
+  background: transparent;
+}
+.btn-outline-primary:hover {
+  background: var(--dda-primary);
+  color:#fff;
+}
+
+/* Quick Links/카드 안 버튼도 동일하게 */
+.card .btn, .card a.btn { border-radius: 9999px; }
+
+/* ---------- 카드(프로젝트/어워즈 공통 살짝만) ---------- */
+.card {
+  border: 1px solid var(--dda-border);
+  background: var(--dda-surface);
+  box-shadow: var(--dda-shadow);
+}
+.card:hover {
+  border-color: rgba(255,255,255,.24);
+  box-shadow: 0 10px 30px rgba(0,0,0,.22);
+}
+
+/* 프로젝트 카드 태그 Pill 색 */
+.badge, .badge-outline, .btn-tag {
+  border-radius: 9999px;
+  border-color: rgba(255,255,255,.28) !important;
+}
+.badge:hover, .btn-tag:hover {
+  border-color: var(--dda-accent) !important;
+}
+
+/* ---------- 슬라이더 점/컨트롤 색 ---------- */
+.dda-slider .dot.active { background: var(--dda-primary); }
+.dda-slider .ctrl { background: rgba(124,58,237,.35); }
+
+/* ---------- 네비게이션 호버 언더라인 ---------- */
+.navbar .navbar-nav > .nav-item > .nav-link {
+  position: relative;
+}
+.navbar .nav-link::after {
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
+  background: linear-gradient(90deg,var(--dda-grad-a),var(--dda-grad-c));
+  opacity:0; transform: scaleX(.4); transition: all .18s ease;
+}
+.navbar .nav-link:hover::after, .navbar .nav-link.active::after {
+  opacity:1; transform: scaleX(1);
+}
+
+/* ---------- 라이트 모드 대비 ---------- */
+html.light {
+  --dda-surface: rgba(0,0,0,.03);
+  --dda-border:  rgba(0,0,0,.10);
+  --dda-shadow:  0 1px 8px rgba(0,0,0,.06);
+}
