@@ -1,4 +1,6 @@
 ---
-title: "프로젝트"
+title: ""
 type: widget_page
+design:
+  show_title: false
 ---

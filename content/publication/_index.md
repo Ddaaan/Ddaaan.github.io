@@ -1,4 +1,6 @@
 ---
-title: "논문 및 발표"
+title: ""
 type: widget_page
+design:
+  show_title: false
 ---
