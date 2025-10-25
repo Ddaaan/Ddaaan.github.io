@@ -1,5 +1,5 @@
 ---
-widget: accomplishments
+widget: education
 active: true
 headless: true
 weight: 20
