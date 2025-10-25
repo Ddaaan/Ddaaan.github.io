@@ -1,6 +1,7 @@
 ---
 widget: accomplishments
 active: true
+headless: true
 weight: 20
 title: "학력"
 id: education 
