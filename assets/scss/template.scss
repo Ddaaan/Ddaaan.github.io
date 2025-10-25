@@ -42,13 +42,12 @@ ul.network-icon .big-icon{font-size:1.5rem;}
   --dda-purple:#7c3aed;--dda-purple-700:#6d28d9;--dda-purple-300:#a78bfa;
   --dda-tint-1:rgba(124,58,237,.16);--dda-tint-2:rgba(124,58,237,.12);
   --dda-hi-1:rgba(167,139,250,.28);--dda-hi-2:rgba(124,58,237,.20);
-  /* 다크 모드 기본 네비바 값 */
   --dda-nav-solid:rgba(32,24,64,.88);
   --dda-nav-grad-top:rgba(124,58,237,.18);
   --dda-nav-grad-btm:rgba(124,58,237,.12);
 }
 
-/* ⚠️ 라이트 모드: 이 테마는 html.light가 아니라 html:not(.dark)을 사용 */
+/* ⚙️ Light Mode */
 html:not(.dark){
   --dda-tint-1:rgba(139,92,246,.12);
   --dda-tint-2:rgba(139,92,246,.06);
@@ -59,7 +58,7 @@ html:not(.dark){
   --dda-nav-grad-btm:rgba(124,58,237,.06);
 }
 
-/* Navbar (공통) */
+/* Navbar (공통 설정) */
 .navbar,.navbar.scrolled,.navbar--dark,.navbar--light{
   position:sticky;top:0;z-index:1000;
   background:
@@ -71,7 +70,7 @@ html:not(.dark){
   min-height:62px;
 }
 
-/* ✅ 라이트 모드: 더 부드러운 배경 + 검정 글자 */
+/* ✅ Light mode navbar */
 html:not(.dark) .navbar,
 html:not(.dark) .navbar.scrolled,
 html:not(.dark) .navbar--light{
@@ -83,7 +82,7 @@ html:not(.dark) .navbar--light{
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
 }
 
-/* 라이트 모드: 네비바 텍스트/아이콘 색 */
+/* ✅ Light mode text/icons */
 html:not(.dark) body .navbar .navbar-brand,
 html:not(.dark) body .navbar .navbar-brand *,
 html:not(.dark) body .navbar .navbar-nav .nav-link,
@@ -98,23 +97,60 @@ html:not(.dark) body .navbar a *{
   transition:color .2s ease, opacity .2s ease, text-shadow .2s ease;
 }
 
-/* 라이트 모드: hover/active */
 html:not(.dark) body .navbar .nav-link:hover,
 html:not(.dark) body .navbar .dropdown-item:hover,
 html:not(.dark) body .navbar .nav-icons .nav-link:hover{
-  color:#5b21b6 !important; /* 보라 톤 hover */
+  color:#5b21b6 !important;
 }
 html:not(.dark) body .navbar .nav-link.active,
 html:not(.dark) body .navbar .dropdown-item.active{
-  color:#7c3aed !important; /* active violet-600 */
+  color:#7c3aed !important;
 }
 
-/* 라이트 모드: 햄버거/토글 아이콘 */
 html:not(.dark) body .navbar .navbar-toggler,
 html:not(.dark) body .navbar .navbar-toggler-icon{
   filter:none !important;
   color:#1e1e1e !important;
 }
+
+/* 🌙 Dark mode navbar (원래 진한 보라 느낌 복원) */
+html.dark .navbar,
+html.dark .navbar.scrolled,
+html.dark .navbar--dark{
+  background:
+    linear-gradient(180deg, rgba(38,22,75,.94) 0%, rgba(24,18,48,.96) 100%),
+    rgba(24,18,48,.96) !important;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  box-shadow:0 8px 18px rgba(0,0,0,.4);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+}
+
+/* 🌙 Dark mode: 글자 색상 복원 */
+html.dark body .navbar .navbar-brand,
+html.dark body .navbar .navbar-brand *,
+html.dark body .navbar .navbar-nav .nav-link,
+html.dark body .navbar .nav-link,
+html.dark body .navbar .dropdown-item,
+html.dark body .navbar .nav-icons .nav-link,
+html.dark body .navbar .navbar-text,
+html.dark body .navbar a,
+html.dark body .navbar a *{
+  color:#fff !important;
+  fill:#fff !important;
+  transition:color .2s ease, opacity .2s ease, text-shadow .2s ease;
+}
+
+/* 🌙 Hover/Active 강조 */
+html.dark body .navbar .nav-link:hover,
+html.dark body .navbar .dropdown-item:hover,
+html.dark body .navbar .nav-icons .nav-link:hover{
+  color:#a78bfa !important;
+}
+html.dark body .navbar .nav-link.active,
+html.dark body .navbar .dropdown-item.active{
+  color:#c4b5fd !important;
+}
+
 
 
 
