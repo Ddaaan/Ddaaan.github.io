@@ -309,27 +309,99 @@ html.light .home-section#publications .stream-item a.btn:hover {
 
 
 /* ==========================================================
-   Awards (flattened – CSS only)
+   Awards (flattened – CSS only, purple gradient accent)
    ========================================================== */
-.awards{padding-top:.5rem}
+.awards { padding-top: .5rem; }
+
 .awards .card{
-  border-radius:16px;border:1px solid rgba(180,180,180,.18);
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));
-  box-shadow:0 2px 10px rgba(0,0,0,.12);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
-  position:relative;overflow:hidden
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(180,180,180,.18);
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
 }
-.awards .card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,#ffd166,#ef476f);opacity:.9}
-.awards .card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.24);border-color:rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04))}
-.awards .card-title,.awards .card-title a{font-weight:800;letter-spacing:.1px}
-.awards .card-subtitle,.awards .text-muted,.awards .meta,.awards small{opacity:.85!important}
-.awards .card p,.awards .card .article-style{margin-top:.4rem;font-size:.98rem}
-.awards .card p strong{background:linear-gradient(90deg,#ffd166 0%,#ef476f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.awards .btn,.awards a.btn{border-radius:9999px;padding:.45rem 1rem;font-weight:700;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#fff;transition:transform .12s ease,box-shadow .12s ease,background .12s ease,border-color .12s ease}
-.awards .btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.55);box-shadow:0 6px 16px rgba(0,0,0,.25);transform:translateY(-1px)}
-.awards .col-12.mb-4,.awards .col-lg-12.mb-4,.awards .mb-4{margin-bottom:1.2rem!important}
-html.light .awards .card{background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));border-color:rgba(0,0,0,.08)}
-html.light .awards .btn{background:rgba(0,0,0,.04);color:#111;border-color:rgba(0,0,0,.18)}
-html.light .awards .btn:hover{background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.35)}
+
+/* 왼쪽 컬러 띠: 연보라 → 보라 */
+.awards .card::before{
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;     /* top:0; right:auto; bottom:0; left:0 */
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--dda-purple-300, #c4b5fd),  /* 연보라 */
+    var(--dda-purple, #7c3aed)       /* 보라 */
+  );
+  opacity: .95;
+}
+
+/* Hover 효과 */
+.awards .card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.24);
+  border-color: rgba(124, 58, 237, .35); /* 보라 톤 */
+  background: linear-gradient(180deg, rgba(167,139,250,.07), rgba(167,139,250,.04));
+}
+
+.awards .card-title,
+.awards .card-title a{
+  font-weight: 800;
+  letter-spacing: .1px;
+}
+
+.awards .card-subtitle,
+.awards .text-muted,
+.awards .meta,
+.awards small{ opacity: .85 !important; }
+
+.awards .card p,
+.awards .card .article-style{ margin-top: .4rem; font-size: .98rem; }
+
+/* 강조 텍스트 그라데이션(원하면 유지) */
+.awards .card p strong{
+  background: linear-gradient(90deg, #ffd166 0%, #ef476f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 버튼 */
+.awards .btn,
+.awards a.btn{
+  border-radius: 9999px;
+  padding: .45rem 1rem;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.35);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+}
+.awards .btn:hover{
+  background: rgba(255,255,255,.14);
+  border-color: rgba(255,255,255,.55);
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transform: translateY(-1px);
+}
+
+/* 카드 간격 */
+.awards .col-12.mb-4,
+.awards .col-lg-12.mb-4,
+.awards .mb-4{ margin-bottom: 1.2rem !important; }
+
+/* 라이트 모드 미세 조정 */
+html.light .awards .card{
+  background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.01));
+  border-color: rgba(0,0,0,.08);
+}
+html.light .awards .btn{
+  background: rgba(0,0,0,.04);
+  color: #111;
+  border-color: rgba(0,0,0,.18);
+}
+html.light .awards .btn:hover{
+  background: rgba(0,0,0,.08);
+  border-color: rgba(0,0,0,.35);
+}
 
 
