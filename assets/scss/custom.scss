@@ -487,3 +487,16 @@ html.light .awards .card p strong {
 
 /* 여백 보정(선택) */
 #publications .section-heading { margin-bottom: 0 !important; }
+
+
+
+/* ==========================================================
+    experience 페이지
+========================================================== */
+/* 경험 섹션 설명 텍스트 양쪽 정렬 */
+#experience .experience-description,
+#experience p,
+.section-experience p {
+  text-align: justify;
+  text-justify: inter-word;
+}
