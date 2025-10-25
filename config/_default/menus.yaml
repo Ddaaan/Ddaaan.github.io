@@ -1,47 +1,86 @@
+# main:
+#   # ── 상단 메인 메뉴
+#   - name: 홈
+#     url: /
+#     weight: 10
+
+#   - name: 소개
+#     url: /about/
+#     weight: 20
+#     identifier: about
+
+#   - name: 프로젝트
+#     url: project/
+#     weight: 30
+
+#   - name: 수상
+#     url: /about/accomplishments/
+#     weight: 40
+
+#   - name: 논문
+#     url: /home/publications/
+#     weight: 50
+
+#   - name: 연락처
+#     url: "/about/contact/"
+#     weight: 60
+
+#   # ── '소개' 드롭다운 항목들
+#   - name: 학력
+#     url: about/#education
+#     parent: about
+#     weight: 21
+
+#   - name: 경력
+#     url: about/#work
+#     parent: about
+#     weight: 22
+
+#   - name: 경험
+#     url: about/#experience
+#     parent: about
+#     weight: 23
+
+#   # - name: 이력서 (PDF)
+#   #   url: /files/resume.pdf
+#   #   parent: about
+#   #   weight: 23
+
+
 main:
-  # ── 상단 메인 메뉴
-  - name: 홈
+  - name: Home
     url: /
     weight: 10
 
-  - name: 소개
-    url: /about/
+  - name: About
+    url: about/
     weight: 20
-    identifier: about
 
-  - name: 프로젝트
-    url: project/
+  - name: Projects
+    url: projects/
     weight: 30
 
-  - name: 수상
-    url: /about/accomplishments/
+  - name: Contact
+    url: "#contact"     
     weight: 40
 
-  - name: 논문
-    url: /home/publications/
-    weight: 50
-
-  - name: 연락처
-    url: "/about/contact/"
-    weight: 60
-
-  # ── '소개' 드롭다운 항목들
-  - name: 학력
-    url: about/#education
-    parent: about
+  # ── About 의 하위 메뉴들
+  - name: Education
+    url: about/#education          
+    parent: About
     weight: 21
 
-  - name: 경력
-    url: about/#work
-    parent: about
+  - name: Experience
+    url: about/#experience        
+    parent: About
     weight: 22
 
-  - name: 경험
-    url: about/#experience
-    parent: about
+  - name: Awards
+    url: about/#accomplishments  
+    parent: About
     weight: 23
 
-  # - name: 이력서 (PDF)
-  #   url: /files/resume.pdf
-  #   parent: about
-  #   weight: 23
+  - name: Résumé (PDF)
+    url: files/resume.pdf        
+    parent: About
+    weight: 24
