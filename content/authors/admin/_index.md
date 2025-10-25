@@ -1,4 +1,5 @@
 ---
+images: ["https://ddaaan.github.io/uploads/og-default.png"]
 # Display name
 title: 최다은
 
