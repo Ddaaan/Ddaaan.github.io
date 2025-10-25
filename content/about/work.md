@@ -1,7 +1,7 @@
 ---
 widget: experience
 active: true
-headless: true
+
 weight: 30
 title: "경력"
 id: work
