@@ -8,6 +8,10 @@ main:
     weight: 20
     identifier: about
 
+  # - name: 경험
+  #   url: project/
+  #   weight: 30
+
   - name: 프로젝트
     url: project/
     weight: 30
@@ -30,10 +34,15 @@ main:
     parent: about
     weight: 21
 
+  - name: 경력
+    url: about/#work         
+    parent: about
+    weight: 22
+
   - name: 경험
     url: about/#experience        
     parent: about
-    weight: 22
+    weight: 23
 
   # - name: Résumé (PDF)
   #   url: files/resume.pdf        
