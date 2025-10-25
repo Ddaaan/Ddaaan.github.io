@@ -15,49 +15,18 @@ title: ""
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-    background: transparent; 
-    padding: 0;  
+    background: transparent;
+    padding: 0;
     overflow: hidden;
   }
 
-  /* 슬라이더 */
+  /* 슬라이더 (이미지 전용) */
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
-  .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px);}
+  .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px)}
   .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
   .dda-slider img.active{opacity:1}
 
-  /* 오버레이 (투명 레이어) */
-  .dda-slider .overlay {
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
-    z-index:2;
-    opacity:0;
-    transition:opacity .6s ease;
-  }
-  .dda-slider .overlay.active {opacity:1;}
-
-  /* 텍스트 오버레이 */
-  .dda-slider .caption {
-    position:absolute;
-    z-index:3;
-    bottom:12%;
-    left:8%;
-    color:#fff;
-    text-shadow:0 2px 6px rgba(0,0,0,.4);
-    font-weight:700;
-  }
-  .dda-slider .caption h2{
-    font-size:clamp(1.2rem,2.4vw,2.1rem);
-    margin:0 0 .4rem;
-  }
-  .dda-slider .caption p{
-    font-size:clamp(.9rem,1.3vw,1.1rem);
-    margin:0;
-    opacity:.9;
-  }
-
-  /* 컨트롤 */
+  /* 컨트롤/도트 */
   .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
   .dda-slider .prev{left:12px}
   .dda-slider .next{right:12px}
@@ -66,61 +35,32 @@ title: ""
   .dda-slider .dot.active{background:#fff}
 </style>
 
-<div class="slides">
-  <!-- 1. 보라빛 감성: 코드와 상상력 -->
-  <div class="slide">
-    <img src="/uploads/hero/ai-purple-01.jpg" alt="Beyond Code – Purple Abstract" class="active">
-    <div class="overlay active"></div>
-    <div class="caption">
-      <h2>코드와 상상력의 경계를 넘다</h2>
-      <p>Beyond Code, Into Imagination</p>
+<div class="dda-bleed">
+  <div class="dda-slider" id="ddaSlider">
+    <div class="slides">
+      <img src="/uploads/hero/ai-purple-01.jpg" alt="Slide 1" class="active">
+      <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Slide 2">
+      <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Slide 3">
+      <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Slide 4">
     </div>
-  </div>
 
-  <!-- 2. AI의 세계: 협력 지능 -->
-  <div class="slide">
-    <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Collaborative Intelligence across devices">
-    <div class="overlay"></div>
-    <div class="caption">
-      <h2>협력하는 지능</h2>
-      <p>Collaborative Intelligence at the Edge</p>
-    </div>
-  </div>
-
-  <!-- 3. 오프로딩/엣지-클라우드 -->
-  <div class="slide">
-    <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Edge–Cloud Offloading Bridge">
-    <div class="overlay"></div>
-    <div class="caption">
-      <h2>엣지와 클라우드를 잇다</h2>
-      <p>Bridging Edge & Cloud for AI</p>
-    </div>
-  </div>
-
-  <!-- 4. 개발자 브랜드: 호기심으로 만든다 -->
-  <div class="slide">
-    <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Create with Curiosity">
-    <div class="overlay"></div>
-    <div class="caption">
-      <h2>호기심으로 만드는 미래</h2>
-      <p>Created by Curiosity</p>
-    </div>
+    <button class="ctrl prev" aria-label="Previous">‹</button>
+    <button class="ctrl next" aria-label="Next">›</button>
+    <div class="dots"></div>
   </div>
 </div>
-
 
 <script>
 (function(){
   const root = document.getElementById('ddaSlider');
   if(!root) return;
-  const slides = Array.from(root.querySelectorAll('.slide'));
-  const imgs = slides.map(s => s.querySelector('img'));
-  const overlays = slides.map(s => s.querySelector('.overlay'));
+  const imgs = Array.from(root.querySelectorAll('.slides img'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
   const INTERVAL = 3000;
 
-  slides.forEach((_, idx)=>{
+  // dots 생성
+  imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
     d.className = 'dot' + (idx===0 ? ' active' : '');
     d.addEventListener('click', ()=>go(idx, true));
@@ -129,10 +69,7 @@ title: ""
   const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
 
   function show(idx){
-    imgs.forEach((im,k)=>{
-      im.classList.toggle('active', k===idx);
-      overlays[k].classList.toggle('active', k===idx);
-    });
+    imgs.forEach((im,k)=>im.classList.toggle('active', k===idx));
     dots.forEach((d,k)=>d.classList.toggle('active', k===idx));
   }
   function go(idx, manual=false){
