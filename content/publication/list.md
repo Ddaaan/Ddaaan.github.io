@@ -1,5 +1,5 @@
 ---
-widget: collection
+widget: publication
 active: true
 headless: true
 weight: 10
@@ -9,8 +9,6 @@ id: publications
 content:
   filters:
     folders: ["publication"]
-  sort_by: "Date"
-  sort_ascending: false
 
 design:
   view: card                  # card/compact/minimal/list 중 택1
