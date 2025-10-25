@@ -61,9 +61,13 @@ main:
     url: projects/
     weight: 30
 
-  - name: 연락처
-    url: "#contact"     
+  - name: 논문
+    url: publications/
     weight: 40
+
+  - name: 연락처
+    url: contact/
+    weight: 50
 
   # ── About 의 하위 메뉴들
   - name: 학력
