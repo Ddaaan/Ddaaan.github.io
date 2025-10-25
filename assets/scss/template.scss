@@ -144,7 +144,7 @@ html:not(.light) .navbar .nav-link.active{color:#fff!important;text-shadow:0 0 1
 /* ==========================================================
    Publications (Light/Dark 가독성 강화)
    ========================================================== */
-.home-section#publications>.container{max-width:1240px;padding-left:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5));padding-right:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5))}
+.home-section#publications>.container{max-width:1280px;padding-left:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5));padding-right:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5))}
 :root{
   --pub-bg:rgba(255,255,255,.04);--pub-border:rgba(255,255,255,.10);
   --pub-muted:rgba(255,255,255,.78);--pub-emph:#fff;
