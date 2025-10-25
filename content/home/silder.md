@@ -33,10 +33,14 @@ title: ""
     position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
 
-  /* ✅ 진한 오버레이 */
+  /* ✅ 보라 그라데이션 오버레이 */
   .dda-slider .overlay{
     position:absolute;inset:0;z-index:2;
-    background:linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.80));
+    background:linear-gradient(
+      180deg,
+      rgba(124,58,237,0.55) 0%,     /* 연보라 */
+      rgba(88,28,135,0.75) 100%     /* 진보라 */
+    );
   }
 
   /* ✅ 중앙 배치 + 흰색 텍스트 */
@@ -45,21 +49,21 @@ title: ""
     left:50%; top:50%; transform:translate(-50%, -50%);
     text-align:center; color:#fff;
     font-weight:700;
-    text-shadow:0 3px 12px rgba(0,0,0,.65);
+    text-shadow:0 3px 12px rgba(0,0,0,.6);
     padding:0 1rem; max-width:min(92vw, 900px);
   }
 
   .dda-slider .caption h2{
     margin:0 0 .4rem;
     font-size:clamp(1.3rem, 2.6vw, 2rem);
-    color:#fff !important;          /* 완전 흰색 고정 */
-    text-shadow:0 3px 12px rgba(0,0,0,.75);
+    color:#fff !important;
+    text-shadow:0 4px 16px rgba(0,0,0,.75);
   }
 
   .dda-slider .caption p{
     margin:0;
     font-size:clamp(.9rem, 1.4vw, 1.1rem);
-    color:#f9f9f9 !important;       /* 약간 밝은 회백색 */
+    color:#fdfdfd !important;
     opacity:1;
   }
 
@@ -130,7 +134,7 @@ title: ""
   const slides = Array.from(root.querySelectorAll('.slide'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 3000; // 자동 전환 시간(ms)
+  const INTERVAL = 3000;
 
   slides.forEach((_, idx)=>{
     const d = document.createElement('span');
