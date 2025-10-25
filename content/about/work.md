@@ -1,11 +1,9 @@
 ---
 widget: experience
-headless: true
 active: true
-
-weight: 30
-title: 경력
-widget_id: work
+weight: 40
+title: "경력"
+id: work
 
 experience:
   - title: 백엔드 개발 인턴

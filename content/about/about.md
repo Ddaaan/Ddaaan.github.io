@@ -1,10 +1,11 @@
 ---
 widget: about.avatar
-headless: true
 active: true
+headless: true
 weight: 10
 
-title: 안녕하세요
-author: admin
-widget_id: about
+author: "admin"
+
+design:
+  show_title: false
 ---

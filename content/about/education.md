@@ -1,10 +1,9 @@
 ---
-widget: experience
-headless: true
+widget: accomplishments
 active: true
-
 weight: 20
-title: 학력
+title: "학력"
+id: education 
 
 experience:
   - title: 전북대학교

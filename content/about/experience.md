@@ -7,10 +7,10 @@ widget: experience
 headless: true
 active: true
 # Order that this section appears on the page.
-weight: 40
+weight: 30
 
 title: 경험
-subtitle:
+id: experience
 
 # Date format for experience
 #   Refer to https://docs.hugoblox.com/customization/#date-format
