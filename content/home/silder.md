@@ -37,17 +37,49 @@ title: ""
 <div class="dda-bleed">
   <div class="dda-slider" id="ddaSlider">
     <div class="slides">
-      <img src="/uploads/hero/ai-purple-01.jpg" alt="Slide 1" class="active">
-      <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Slide 2">
-      <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Slide 3">
-      <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Slide 4">
+      <!-- 1 -->
+      <div class="slide">
+        <img src="/uploads/hero/ai-purple-01.jpg" alt="Beyond Code – Purple Abstract" class="active">
+        <div class="overlay active"></div>
+        <div class="caption">
+          <h2>코드와 상상력의 경계를 넘다</h2>
+          <p>Beyond Code, Into Imagination</p>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="slide">
+        <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Collaborative Intelligence">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>협력하는 지능</h2>
+          <p>Collaborative Intelligence at the Edge</p>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="slide">
+        <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Edge–Cloud Bridge">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>엣지와 클라우드를 잇다</h2>
+          <p>Bridging Edge & Cloud for AI</p>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="slide">
+        <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Create with Curiosity">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>호기심으로 만드는 미래</h2>
+          <p>Created by Curiosity</p>
+        </div>
+      </div>
     </div>
-
     <button class="ctrl prev" aria-label="Previous">‹</button>
     <button class="ctrl next" aria-label="Next">›</button>
     <div class="dots"></div>
   </div>
 </div>
+
 
 <script>
 (function(){
