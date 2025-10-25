@@ -16,7 +16,7 @@ main:
     identifier: projects
 
   - name: 수상
-    url: /about/accomplishments 
+    url: /about/accomplishments/
     weight: 40
     identifier: awards
 
