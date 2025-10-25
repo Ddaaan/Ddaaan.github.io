@@ -12,7 +12,7 @@ content:
     category: ""
     publication_type: ""
   count: 10
-  sort_by: "date"
+  sort_by: "Date"
   sort_ascending: false
 
 design:
