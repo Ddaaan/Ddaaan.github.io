@@ -11,7 +11,7 @@ experience:
     company: 공과대학
     company_url: https://www.jbnu.ac.kr
     location: 전북, 대한민국
-    date_start: "2021-03"
+    date_start: "2021-03-02"
     date_end: ""  
     description: |
       - IT정보공학과

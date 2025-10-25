@@ -11,8 +11,8 @@ experience:
     company: ㈜케이테크
     company_url: ""
     location: 전주
-    date_start: "2023-12"
-    date_end: "2024-02"
+    date_start: "2023-12-26"
+    date_end: "2024-02-14"
     description: |
       - Java 백엔드
 ---
