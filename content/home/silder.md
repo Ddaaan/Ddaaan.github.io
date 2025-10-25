@@ -24,7 +24,7 @@ title: ""
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
   .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px)}
 
-  /* 슬라이드(이미지+오버레이+캡션 묶음) */
+  /* 슬라이드 */
   .dda-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
   .dda-slider .slide.active{opacity:1}
 
@@ -33,23 +33,19 @@ title: ""
     position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
 
-  /* ✅ 보라 그라데이션 오버레이 */
+  /* ✅ 흰색 오버레이 (은은한 밝은 효과) */
   .dda-slider .overlay{
     position:absolute;inset:0;z-index:2;
-    background:linear-gradient(
-      180deg,
-      rgba(124,58,237,0.55) 0%,     /* 연보라 */
-      rgba(88,28,135,0.75) 100%     /* 진보라 */
-    );
+    background:linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.75));
   }
 
-  /* ✅ 중앙 배치 + 흰색 텍스트 */
+  /* ✅ 중앙 흰색 텍스트 */
   .dda-slider .caption{
     position:absolute;z-index:3;
     left:50%; top:50%; transform:translate(-50%, -50%);
     text-align:center; color:#fff;
     font-weight:700;
-    text-shadow:0 3px 12px rgba(0,0,0,.6);
+    text-shadow:0 2px 12px rgba(0,0,0,.45);
     padding:0 1rem; max-width:min(92vw, 900px);
   }
 
@@ -57,13 +53,13 @@ title: ""
     margin:0 0 .4rem;
     font-size:clamp(1.3rem, 2.6vw, 2rem);
     color:#fff !important;
-    text-shadow:0 4px 16px rgba(0,0,0,.75);
+    text-shadow:0 4px 14px rgba(0,0,0,.65);
   }
 
   .dda-slider .caption p{
     margin:0;
     font-size:clamp(.9rem, 1.4vw, 1.1rem);
-    color:#fdfdfd !important;
+    color:#f9f9f9 !important;
     opacity:1;
   }
 
