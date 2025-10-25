@@ -8,25 +8,25 @@ main:
     weight: 20
     identifier: about
 
-  # - name: 경험
-  #   url: project/
-  #   weight: 30
+  - name: 경험
+    url: experience/
+    weight: 30
 
   - name: 프로젝트
     url: project/
-    weight: 30
+    weight: 40
 
   - name: 논문
     url: publication/
-    weight: 40
+    weight: 50
 
   - name: 수상
     url: accomplishments/
-    weight: 50
+    weight: 60
 
   - name: 연락처
     url: contact/
-    weight: 60
+    weight: 70
 
   # ── About 의 하위 메뉴들
   - name: 학력
