@@ -1,4 +1,4 @@
----
+<!-- ---
 widget: "blank"
 headless: true
 active: true
@@ -21,4 +21,4 @@ items:
     link: "/sections/jbnu/"
 ---
 
-{{< cards-compact >}}
+{{< cards-compact >}} -->
