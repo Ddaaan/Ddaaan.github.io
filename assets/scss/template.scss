@@ -294,59 +294,93 @@ html.light .home-section#about {
 
 
 /* ==========================================================
-   Daeun – Purple UI polish (Navbar + Intro full-bleed band)
+   Purple UI v2 (stronger navbar, tuned light bg)
    ========================================================== */
 
-/* --- Brand palette (공통 변수) --- */
+/* ---- Brand palette ---- */
 :root{
-  --dda-purple:      #7c3aed;          /* primary */
-  --dda-purple-700:  #6d28d9;          /* hover/darker */
-  --dda-purple-300:  #a78bfa;          /* light accent */
+  --dda-purple:       #7c3aed;
+  --dda-purple-700:   #6d28d9;
+  --dda-purple-300:   #a78bfa;
 
-  /* tints for dark mode */
-  --dda-tint-1: rgba(124,58,237,.14);
-  --dda-tint-2: rgba(124,58,237,.10);
-  --dda-hi-1:   rgba(167,139,250,.25);
-  --dda-hi-2:   rgba(124,58,237,.18);
-  --dda-edge:   transparent;          /* 상/하 가장자리 그림자 제거 */
+  /* base tints (dark mode 기준) */
+  --dda-tint-1: rgba(124,58,237,.16);
+  --dda-tint-2: rgba(124,58,237,.12);
+  --dda-hi-1:   rgba(167,139,250,.28);
+  --dda-hi-2:   rgba(124,58,237,.20);
 }
+
+/* 라이트 모드: 배경을 ‘조금 더 진하게’ */
 html.light{
-  /* tints for light mode */
-  --dda-tint-1: rgba(139,92,246,.12);
-  --dda-tint-2: rgba(139,92,246,.08);
-  --dda-hi-1:   rgba(196,181,253,.32);
-  --dda-hi-2:   rgba(139,92,246,.20);
-  --dda-edge:   transparent;
+  --dda-tint-1: rgba(139,92,246,.20);  /* ↑ 0.12 → 0.20 */
+  --dda-tint-2: rgba(139,92,246,.14);  /* ↑ 0.08 → 0.14 */
+  --dda-hi-1:   rgba(196,181,253,.40); /* ↑ 0.32 → 0.40 */
+  --dda-hi-2:   rgba(139,92,246,.26);  /* ↑ 0.20 → 0.26 */
 }
 
 /* -------------------------------
-   Navbar : 보라 톤 투명 그라데 + 블러
-   (배경 밴드와 자연스러운 연결)
+   NAVBAR : 더 짙은 대비 + 살짝 테두리
 -------------------------------- */
 .navbar,
 .navbar.scrolled,
 .navbar--dark,
 .navbar--light{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* 진한 보라 그라데에 가벼운 유리블러 */
   background: linear-gradient(180deg, var(--dda-tint-1), var(--dda-tint-2)) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  box-shadow: 0 2px 10px rgba(0,0,0,.08);     /* 얕은 그림자만 */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* 테두리/그림자 강화 */
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.18),         /* 외곽 그림자 */
+    inset 0 -1px 0 rgba(255,255,255,.06);/* 안쪽 라인 */
+
+  /* 높이/간격 살짝 키워서 존재감 */
+  min-height: 64px;
 }
 
-/* 링크 hover/active 컬러 */
-.navbar a,
-.navbar .dropdown-item{
-  transition: color .15s ease, opacity .15s ease;
+html.light .navbar,
+html.light .navbar.scrolled,
+html.light .navbar--dark,
+html.light .navbar--light{
+  /* 라이트에선 더 또렷한 경계 */
+  border-bottom-color: rgba(0,0,0,.10);
+  box-shadow:
+    0 10px 22px rgba(93,63,211,.12),
+    inset 0 -1px 0 rgba(0,0,0,.06);
 }
-.navbar a:hover{ color: var(--dda-purple-300) !important; }
-.navbar .active > a,
-.navbar .nav-link.active{ color: var(--dda-purple) !important; }
+
+/* 네비 항목 컬러/호버 */
+.navbar .nav-link,
+.navbar .dropdown-item{
+  transition: color .15s ease, opacity .15s ease, text-shadow .15s ease;
+}
+.navbar .nav-link:hover,
+.navbar .dropdown-item:hover{
+  color: var(--dda-purple-300) !important;
+  text-shadow: 0 0 10px rgba(167,139,250,.35);
+}
+.navbar .nav-link.active{
+  color: #fff !important;
+  text-shadow: 0 0 12px rgba(124,58,237,.55);
+}
+html.light .navbar .nav-link.active{
+  color: var(--dda-purple) !important;
+  text-shadow: 0 0 6px rgba(139,92,246,.35);
+}
+
+/* 로고/아이콘 살짝 강조 */
+.navbar .navbar-brand img{ filter: drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
+.navbar .nav-icons .nav-link{ opacity:.95; }
+.navbar .nav-icons .nav-link:hover{ opacity:1; }
 
 /* -------------------------------
-   Intro : 좌우 가득(풀-블리드) 보라 밴드
-   - 상/하 그림자 제거, 은은한 라디얼 하이라이트
-   - 컨테이너는 배경/테두리 제거
+   INTRO(about) : 풀-블리드 보라 밴드
 -------------------------------- */
 .home-section.intro-wide,
 .home-section#about.intro-wide,
@@ -354,10 +388,10 @@ html.light{
   position: relative;
   padding: 3rem 0 3.2rem !important;
   overflow: hidden;
-  background: transparent !important;  /* 기존 섹션 배경 무효화 */
+  background: transparent !important;
 }
 
-/* 밴드 배경 – 얕은 보라 그라데 + 라디얼 하이라이트 */
+/* 보라 밴드(라디얼 하이라이트 + 대각 그라데) */
 .home-section.intro-wide::before{
   content:"";
   position:absolute;
@@ -366,16 +400,10 @@ html.light{
   background:
     radial-gradient(900px 600px at 82% 18%, var(--dda-hi-1), transparent 60%),
     radial-gradient(820px 560px at 10% 88%, var(--dda-hi-2), transparent 65%),
-    linear-gradient(135deg, var(--dda-tint-1) 0%, rgba(124,58,237,0.05) 35%, rgba(124,58,237,0.02) 65%, transparent 100%);
-  /* ⛔ 이전 버전의 진한 상/하 inset shadow 제거 */
-  box-shadow: inset 0 0 0 var(--dda-edge), inset 0 0 0 var(--dda-edge);
-  /* 상/하 엣지를 아주 살짝만 페이드시키고 싶다면 아래 주석 해제
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
-  */
+    linear-gradient(135deg, var(--dda-tint-1) 0%, rgba(124,58,237,.06) 35%, rgba(124,58,237,.02) 65%, transparent 100%);
 }
 
-/* 내용 컨테이너 – 가운데 정렬, 배경/테두리 모두 제거 */
+/* 내용 컨테이너는 배경/테두리 제거 */
 .home-section.intro-wide > .container,
 .home-section#about.intro-wide > .container,
 .home-section#intro.intro-wide > .container{
@@ -389,18 +417,19 @@ html.light{
   box-shadow: none !important;
 }
 
-/* 텍스트/아이콘 보라 계열 보정 */
+/* 텍스트 보라 톤 보정 */
 .home-section.intro-wide h1,
-.home-section.intro-wide h2{ letter-spacing: .2px; }
+.home-section.intro-wide h2{ letter-spacing:.2px; }
 .home-section.intro-wide a{ color: var(--dda-purple); }
 .home-section.intro-wide a:hover{ color: var(--dda-purple-700); }
 .home-section.intro-wide .network-icon a{ color: var(--dda-purple-300); }
 .home-section.intro-wide .network-icon a:hover{ color: var(--dda-purple); }
 
-/* 다음 섹션과 간격 가볍게 */
-.home-section.intro-wide + .home-section{ margin-top: .7rem; }
+/* 다음 섹션 간격 */
+.home-section.intro-wide + .home-section{ margin-top:.7rem; }
 
-/* 버튼은 살짝만 떠오르게 */
+/* 버튼 미세 인터랙션 */
 .btn, a.btn{ transition: transform .12s ease; }
 .btn:hover, a.btn:hover{ transform: translateY(-1px); }
+
 
