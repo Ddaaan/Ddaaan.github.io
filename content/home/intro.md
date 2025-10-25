@@ -9,6 +9,9 @@ headless: true
 weight: 10
 
 author: admin
+
+design:
+  css_class: intro-card
 #design:
 #  background:
 #    color: '#090a0b'
