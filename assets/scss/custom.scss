@@ -240,7 +240,7 @@ body.dark .navbar .navbar-toggler-icon { filter: invert(1) brightness(1.2); }
   --pub-btn-bg:rgba(124,58,237,.14);--pub-btn-bd:rgba(167,139,250,.55);--pub-btn-tx:#ede9fe;
   --pub-shadow:0 6px 22px rgba(0,0,0,.18);--pub-shadow-h:0 12px 32px rgba(0,0,0,.28)
 }
-html.light{
+body:not(.dark){
   --pub-bg:#fff;--pub-border:rgba(0,0,0,.08);
   --pub-muted:#374151;--pub-emph:#0f172a;
   --pub-accent:#7c3aed;--pub-accent-2:#6d28d9;
@@ -275,24 +275,24 @@ html.light{
 .home-section#publications{padding-bottom:2.2rem}
 
 /* ============================
-   Publications - Light 모드 가독성 강화
-   ============================ */
-html.light .home-section#publications .stream-item .article-title,
-html.light .home-section#publications .stream-item .article-title a {
+   Publications - Light 모드 가독성 강화
+   ============================ */
+body:not(.dark) .home-section#publications .stream-item .article-title,
+body:not(.dark) .home-section#publications .stream-item .article-title a {
   color: #111827 !important;
   text-shadow: none !important;
 }
 
-html.light .home-section#publications .stream-item .article-metadata,
-html.light .home-section#publications .stream-item .stream-meta,
-html.light .home-section#publications .stream-item .article-style small {
+body:not(.dark) .home-section#publications .stream-item .article-metadata,
+body:not(.dark) .home-section#publications .stream-item .stream-meta,
+body:not(.dark) .home-section#publications .stream-item .article-style small {
   color: #334155 !important;
   opacity: 1 !important;
 }
 
 /* PDF 버튼 색상 명확히 */
-html.light .home-section#publications .stream-item .btn,
-html.light .home-section#publications .stream-item a.btn {
+body:not(.dark) .home-section#publications .stream-item .btn,
+body:not(.dark) .home-section#publications .stream-item a.btn {
   background: #ede9fe !important;
   border-color: #7c3aed !important;
   color: #4c1d95 !important;
@@ -300,8 +300,8 @@ html.light .home-section#publications .stream-item a.btn {
   box-shadow: none !important;
 }
 
-html.light .home-section#publications .stream-item .btn:hover,
-html.light .home-section#publications .stream-item a.btn:hover {
+body:not(.dark) .home-section#publications .stream-item .btn:hover,
+body:not(.dark) .home-section#publications .stream-item a.btn:hover {
   background: #7c3aed !important;
   border-color: #7c3aed !important;
   color: #fff !important;
