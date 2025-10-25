@@ -404,4 +404,10 @@ html.light .awards .btn:hover{
   border-color: rgba(0,0,0,.35);
 }
 
-
+/* Awards 섹션 폭을 프로젝트(논문) 섹션과 동일하게 맞추기 */
+.home-section#awards > .container {
+  max-width: 1280px;
+  padding-left: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
+  padding-right: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
+  margin: 0 auto;
+}

@@ -4,6 +4,7 @@ active: true
 headless: true
 weight: 30
 title: "수상"
+id: awards
 subtitle: ""
 date_format: Jan 2006
 
