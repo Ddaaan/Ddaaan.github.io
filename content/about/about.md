@@ -1,12 +1,15 @@
 ---
-widget: about.avatar
+widget: about
 active: true
 headless: true
 weight: 10
-
 title: ""
-id: top
-author: admin 
+id: profile
+author: admin
+# widget: about.avatar
+# active: true
+# headless: true
+# weight: 10
 
 # author: "admin"
 
