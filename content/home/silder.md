@@ -20,28 +20,155 @@ title: ""
     overflow: hidden;
   }
 
-  /* 슬라이더 */
-  .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
-  /* 높이 ↑ : 필요시 수치만 더 키워도 됨 */
-  .dda-slider .slides{position:relative;height:clamp(200px, 26vw, 420px);} 
-  .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
-  .dda-slider img.active{opacity:1}
-  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px}
-  .dda-slider .prev{left:12px}
-  .dda-slider .next{right:12px}
-  .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center}
-  .dda-slider .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
-  .dda-slider .dot.active{background:#fff}
+  /* ============================
+     슬라이더 (높이 ↓ 버전)
+     ============================ */
+  .dda-slider {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    overflow: hidden;
+  }
 
+  /* 높이 ↓ : 화면 크기에 따라 160~300px로 반응형 */
+  .dda-slider .slides {
+    position: relative;
+    height: clamp(160px, 18vw, 300px);
+  }
+
+  /* 이미지 페이드 전환 */
+  .dda-slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .dda-slider img.active {
+    opacity: 1;
+  }
+
+  /* 컨트롤 버튼 */
+  .dda-slider .ctrl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.35);
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 4;
+  }
+  .dda-slider .prev { left: 12px; }
+  .dda-slider .next { right: 12px; }
+
+  /* 도트 네비게이션 */
+  .dda-slider .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    z-index: 4;
+  }
+  .dda-slider .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+  .dda-slider .dot.active {
+    background: #fff;
+  }
+
+  /* 투명 오버레이 */
+  .dda-slider .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.45));
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .dda-slider .overlay.active { opacity: 1; }
+
+  /* 텍스트 오버레이 */
+  .dda-slider .caption {
+    position: absolute;
+    z-index: 3;
+    bottom: 14%;
+    left: 8%;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+    font-weight: 700;
+  }
+  .dda-slider .caption h2 {
+    font-size: clamp(1rem, 2.2vw, 1.7rem);
+    margin: 0 0 .3rem;
+  }
+  .dda-slider .caption p {
+    font-size: clamp(.8rem, 1.2vw, 1rem);
+    margin: 0;
+    opacity: .9;
+  }
+
+  /* 모바일 대응 */
+  @media (max-width: 640px) {
+    .dda-slider .caption { bottom: 12%; left: 6%; }
+    .dda-slider .caption h2 { font-size: 1.1rem; }
+    .dda-slider .caption p { font-size: .85rem; }
+  }
 </style>
 
 <div class="dda-bleed">
   <div class="dda-slider" id="ddaSlider">
     <div class="slides">
-      <img src="/uploads/slider1.jpg" alt="slide 1" class="active">
-      <img src="/uploads/slider2.jpg" alt="slide 2">
-      <img src="/uploads/slider3.jpg" alt="slide 3">
+      <div class="slide">
+        <img src="/uploads/hero/ai-purple-01.jpg" alt="Beyond Code – Purple Abstract" class="active">
+        <div class="overlay active"></div>
+        <div class="caption">
+          <h2>코드와 상상력의 경계를 넘다</h2>
+          <p>Beyond Code, Into Imagination</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Collaborative Intelligence">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>협력하는 지능</h2>
+          <p>Collaborative Intelligence at the Edge</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Edge–Cloud Bridge">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>엣지와 클라우드를 잇다</h2>
+          <p>Bridging Edge & Cloud for AI</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Create with Curiosity">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h2>호기심으로 만드는 미래</h2>
+          <p>Created by Curiosity</p>
+        </div>
+      </div>
     </div>
+
     <button class="ctrl prev" aria-label="Previous">‹</button>
     <button class="ctrl next" aria-label="Next">›</button>
     <div class="dots"></div>
@@ -52,12 +179,14 @@ title: ""
 (function(){
   const root = document.getElementById('ddaSlider');
   if(!root) return;
-  const imgs = Array.from(root.querySelectorAll('img'));
+  const slides = Array.from(root.querySelectorAll('.slide'));
+  const imgs = slides.map(s => s.querySelector('img'));
+  const overlays = slides.map(s => s.querySelector('.overlay'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 2000;
+  const INTERVAL = 3000;
 
-  imgs.forEach((_, idx)=>{
+  slides.forEach((_, idx)=>{
     const d = document.createElement('span');
     d.className = 'dot' + (idx===0 ? ' active' : '');
     d.addEventListener('click', ()=>go(idx, true));
@@ -66,7 +195,10 @@ title: ""
   const dots = Array.from(dotsWrap.querySelectorAll('.dot'));
 
   function show(idx){
-    imgs.forEach((im,k)=>im.classList.toggle('active', k===idx));
+    imgs.forEach((im,k)=>{
+      im.classList.toggle('active', k===idx);
+      overlays[k].classList.toggle('active', k===idx);
+    });
     dots.forEach((d,k)=>d.classList.toggle('active', k===idx));
   }
   function go(idx, manual=false){
