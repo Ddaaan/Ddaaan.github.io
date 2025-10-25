@@ -24,42 +24,48 @@ title: ""
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
   .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px)}
 
-  /* 각 슬라이드(이미지+오버레이+캡션를 하나로 묶어 페이드) */
-  .dda-slider .slide{
-    position:absolute; inset:0;
-    opacity:0; transition:opacity .6s ease;
-  }
+  /* 슬라이드(이미지+오버레이+캡션 묶음) */
+  .dda-slider .slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
   .dda-slider .slide.active{opacity:1}
 
   /* 이미지 */
   .dda-slider .slide img{
-    position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover;
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
 
-  /* 투명도 오버레이 */
+  /* 더 진한 오버레이 (덜 투명하게) */
   .dda-slider .overlay{
-    position:absolute; inset:0; z-index:2;
-    background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+    position:absolute;inset:0;z-index:2;
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.75));
   }
 
-  /* 텍스트 오버레이 */
+  /* 캡션: 화면 정중앙 배치 + 흰색 */
   .dda-slider .caption{
-    position:absolute; z-index:3;
-    left:8%; bottom:14%;
-    color:#fff; font-weight:700;
-    text-shadow:0 2px 6px rgba(0,0,0,.4);
+    position:absolute;z-index:3;
+    left:50%; top:50%; transform:translate(-50%, -50%);
+    text-align:center; color:#fff; font-weight:700;
+    text-shadow:0 2px 8px rgba(0,0,0,.55);
+    padding:0 1rem; max-width:min(92vw, 900px);
   }
-  .dda-slider .caption h2{margin:0 0 .3rem; font-size:clamp(1rem, 2.2vw, 1.7rem)}
-  .dda-slider .caption p{margin:0; font-size:clamp(.8rem, 1.2vw, 1rem); opacity:.9}
+  .dda-slider .caption h2{
+    margin:0 0 .35rem; font-size:clamp(1.1rem, 2.4vw, 1.9rem);
+  }
+  .dda-slider .caption p{
+    margin:0; font-size:clamp(.9rem, 1.4vw, 1.1rem); opacity:.98;
+  }
 
   /* 컨트롤/도트 */
-  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
+  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.38);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
   .dda-slider .prev{left:12px}
   .dda-slider .next{right:12px}
   .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center;z-index:4}
-  .dda-slider .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
+  .dda-slider .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer}
   .dda-slider .dot.active{background:#fff}
+
+  @media (max-width:640px){
+    .dda-slider .caption{padding:0 .8rem}
+  }
 </style>
 
 <div class="dda-bleed">
@@ -116,7 +122,7 @@ title: ""
   const slides = Array.from(root.querySelectorAll('.slide'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 3000; // 🔄 자동 전환 간격(ms)
+  const INTERVAL = 3000; // 자동 전환 시간(ms)
 
   // 도트 생성
   slides.forEach((_, idx)=>{
