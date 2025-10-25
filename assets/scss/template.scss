@@ -1,365 +1,74 @@
-// Starter Blog Template
-// https://hugoblox.com/hugo-themes/
+/* ==========================================================
+   Base (body, article, footer)
+   ========================================================== */
+body{background:#f7fafc;}
+.article-container{background:#fff;border-radius:15px;}
+.dark .article-container{background:#1f2733;}
+.page-footer{background:#f7fafc;}
+.dark .page-footer{background:#1a202c}
 
-body {
-  background-color: rgb(247, 250, 252);
-}
+/* Avatar & about */
+.avatar{max-width:225px;max-height:225px;height:auto;width:auto;}
+.wg-about .avatar{max-width:200px;max-height:200px;height:auto;width:auto;}
+.wg-about .portrait-title h2{font-size:1rem;}
+.wg-about .portrait-title h3{font-size:.8rem;}
+.dark .portrait-title h3{color:rgba(255,255,255,.9);font-weight:700;}
+.dark .portrait-title h2{color:#fff;font-weight:700;}
+#profile .network-icon{margin-top:.5rem;}
+ul.network-icon .big-icon{font-size:1.5rem;}
 
-.article-container {
-  background-color: #fff;
-  border-radius: 15px;
-}
+/* Section spacing (global) */
+.home-section{padding:1rem 0;}
+.home-section.wg-about-avatar{padding:0;}
+.home-section header{margin-bottom:1em;}
+.home-section>.content{width:45em;max-width:calc(100% - 4em);margin:0 auto;}
+.home-section>.content>:last-child{margin-bottom:0;}
 
-.dark .article-container {
-  background-color: rgb(31, 39, 51);
-}
+/* Cards */
+.card-simple{margin-top:1.8rem;border-radius:15px;}
+.dark .card-simple{background:#1f2733;}
 
-// custom footer color
-.page-footer {
-  background-color: rgb(247, 250, 252);
-}
-
-.dark .page-footer {
-  background-color: rgb(26, 32, 44);
-}
-
-// more rounded cards and larger gap between cards
-.card-simple {
-  margin-top: 1.8rem;
-  border-radius: 15px;
-}
-
-.dark .card-simple {
-  background: rgb(31, 39, 51);
-}
-
-// no navbar shadow
-.navbar {
-  box-shadow: none !important; // 'important' to override dark mode box-shadow too.
-}
-
-// custom section padding
-.home-section {
-  padding: 1rem 0;
-}
-
-.home-section.wg-about-avatar {
-  padding: 0;
-}
-
-#profile .network-icon {
-  margin-top: 0.5rem;
-}
-
-ul.network-icon .big-icon {
-  font-size: 1.5rem;
-}
-
-.dark .portrait-title h3 {
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: bold;
-}
-
-.dark .portrait-title h2 {
-  color: #fff;
-  font-weight: bold;
-}
-
-.home-section > .content {
-  width: 45em;
-  max-width: calc(100% - 4em);
-  margin: 0 auto;
-}
-
-.home-section > .content > :last-child {
-  margin-bottom: 0;
-}
-
-.home-section header {
-  margin-bottom: 1em;
-}
-
-// Narrower container for Hello World sections (primarily Blank widget content).
-@media (min-width: 1200px) {
-  .home-section .container {
-    max-width: 880px;
-  }
-}
-@media (min-width: 992px) {
-  .home-section .container {
-    max-width: 880px;
-  }
-}
-
-// Custom avatar size on homepage
-.avatar {
-  width: auto;
-  height: auto;
-  max-width: 225px;
-  max-height: 225px;
-}
-
-// Prevent stretching on About page with narrow container
-.wg-about .avatar {
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  max-height: 200px;
-}
-
-// Smaller Name and Role text on About page than in homepage `about.avatar` widget
-.wg-about .portrait-title h2 {
-  font-size: 1rem;
-}
-
-.wg-about .portrait-title h3 {
-  font-size: 0.8rem;
-}
-
-
-/* ===== Awards section polish ===== */
-.awards {
-  /* 섹션 여백 살짝 줄이기 */
-  padding-top: 0.5rem;
-
-  /* 카드 기본 */
-  .card {
-    border-radius: 16px;
-    border: 1px solid rgba(180,180,180,.18);
-    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-    box-shadow: 0 2px 10px rgba(0,0,0,.12);
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* 좌측 포인트 라인 */
-  .card::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto 0 0;
-    width: 4px;
-    background: linear-gradient(180deg, #ffd166, #ef476f);
-    opacity: .9;
-  }
-
-  /* hover 효과 */
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,.24);
-    border-color: rgba(255,255,255,.22);
-    background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-  }
-
-  /* 제목/메타 가독성 */
-  .card-title a,
-  .card-title {
-    font-weight: 800;
-    letter-spacing: .1px;
-  }
-  .card-subtitle,
-  .text-muted,
-  .meta,
-  small {
-    opacity: .85 !important;
-  }
-
-  /* 수상명(설명) 강조 */
-  .card p,
-  .card .article-style {
-    margin-top: .4rem;
-    font-size: .98rem;
-  }
-  .card p strong {
-    background: linear-gradient(90deg,#ffd166 0%,#ef476f 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* 버튼(증서 보기) */
-  .btn,
-  a.btn {
-    border-radius: 9999px;
-    padding: .45rem 1rem;
-    font-weight: 700;
-    border: 1px solid rgba(255,255,255,.35);
-    background: rgba(255,255,255,.06);
-    color: #fff;
-    transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
-  }
-  .btn:hover {
-    background: rgba(255,255,255,.14);
-    border-color: rgba(255,255,255,.55);
-    box-shadow: 0 6px 16px rgba(0,0,0,.25);
-    transform: translateY(-1px);
-  }
-
-  /* 카드 간 간격 */
-  .col-12.mb-4,
-  .col-lg-12.mb-4,
-  .mb-4 {
-    margin-bottom: 1.2rem !important;
-  }
-}
-
-/* 라이트 모드 대비 (있으면 자동 적용) */
-html.light .awards .card {
-  background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.01));
-  border-color: rgba(0,0,0,.08);
-}
-html.light .awards .btn {
-  background: rgba(0,0,0,.04);
-  color: #111;
-  border-color: rgba(0,0,0,.18);
-}
-html.light .awards .btn:hover {
-  background: rgba(0,0,0,.08);
-  border-color: rgba(0,0,0,.35);
-}
-
-/* Button hover color swap (uses Bootstrap/Wowchemy buttons) */
-.btn, a.btn {
-  transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .1s ease;
-}
-
-/* 기본 색: primary → hover 시 accent 로 변경 */
-.btn-primary, a.btn.btn-primary {
-  background-color: var(--bs-primary, #4f46e5);
-  border-color: var(--bs-primary, #4f46e5);
-  color: #fff;
-}
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: var(--bs-warning, #f59e0b); /* ← hover 때 바뀔 색 */
-  border-color: var(--bs-warning, #f59e0b);
-  color: #111;
-  transform: translateY(-1px);
-}
-
-/* outline 스타일도 동일하게 */
-.btn-outline-primary:hover,
-a.btn.btn-outline-primary:hover {
-  background-color: var(--bs-warning, #f59e0b);
-  border-color: var(--bs-warning, #f59e0b);
-  color: #111;
-}
-
-
-/* ==================== Light Purple Top Bar & Hero BG ==================== */
-/* 보라 팔레트 */
-:root{
-  --dda-purple-100: rgba(167,139,250,.14);  /* very light */
-  --dda-purple-080: rgba(167,139,250,.10);
-  --dda-purple-060: rgba(139,92,246,.08);
-  --dda-purple-040: rgba(139,92,246,.05);
-}
-
-/* 1) 상단 네비게이션 바 배경을 연보라로 */
-.navbar {
-  background: linear-gradient(180deg, var(--dda-purple-100), var(--dda-purple-080)) !important;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 6px 20px rgba(0,0,0,.12);
-}
-
-/* 스크롤 시에도 유지 (테마가 스크롤-스타일을 덮어쓰는 경우 대비) */
-.navbar.scrolled, .navbar--dark, .navbar--light {
-  background: linear-gradient(180deg, var(--dda-purple-100), var(--dda-purple-080)) !important;
-}
-
-/* 2) 인트로(about) 섹션 뒤 배경을 아주 연한 보라 그라데로 */
-.home-section#about {
-  background: linear-gradient(
-    180deg,
-    var(--dda-purple-060) 0%,
-    var(--dda-purple-040) 40%,
-    transparent 80%
-  ) !important;
-  border-radius: 0 0 18px 18px; /* 아래 모서리 살짝 라운드 */
-}
-
-/* 섹션과 다음 콘텐츠 간 미세 간격 보정 */
-.home-section#about + .home-section { margin-top: .6rem; }
-
-/* 라이트 모드에서도 너무 붉지 않게 살짝만 */
-html.light .navbar {
-  background: linear-gradient(180deg, rgba(139,92,246,.12), rgba(139,92,246,.08)) !important;
-  border-bottom-color: rgba(0,0,0,.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,.08);
-}
-html.light .home-section#about {
-  background: linear-gradient(180deg, rgba(139,92,246,.08), rgba(139,92,246,.05), transparent 80%) !important;
-}
-
+/* Buttons – smooth hover & primary/outline-primary swap */
+.btn,a.btn{transition:background-color .2s ease,border-color .2s ease,color .2s ease,transform .1s ease}
+.btn:hover,a.btn:hover{transform:translateY(-1px)}
+.btn-primary,a.btn.btn-primary{background:var(--bs-primary,#4f46e5);border-color:var(--bs-primary,#4f46e5);color:#fff}
+.btn-primary:hover,.btn-primary:focus{background:var(--bs-warning,#f59e0b);border-color:var(--bs-warning,#f59e0b);color:#111}
+.btn-outline-primary:hover,a.btn.btn-outline-primary:hover{background:var(--bs-warning,#f59e0b);border-color:var(--bs-warning,#f59e0b);color:#111}
 
 /* ==========================================================
-   Intro Purple UI v5
-   - Light: 밝은 네비바(검정 글씨) + 연한 보라 인트로
-   - Dark : 짙은 보라 네비바 + 보라 그라데 인트로
+   Purple Navbar + Intro band (Light & Dark)
    ========================================================== */
-
-/* ---- Brand palette ---- */
 :root{
-  --dda-purple:       #7c3aed;
-  --dda-purple-700:   #6d28d9;
-  --dda-purple-300:   #a78bfa;
-
-  /* default (dark mode base) */
-  --dda-tint-1: rgba(124,58,237,.16);
-  --dda-tint-2: rgba(124,58,237,.12);
-  --dda-hi-1:   rgba(167,139,250,.28);
-  --dda-hi-2:   rgba(124,58,237,.20);
-
-  /* navbar default for dark */
-  --dda-nav-solid: rgba(32,24,64,.88);
-  --dda-nav-grad-top: rgba(124,58,237,.18);
-  --dda-nav-grad-btm: rgba(124,58,237,.12);
+  --dda-purple:#7c3aed;--dda-purple-700:#6d28d9;--dda-purple-300:#a78bfa;
+  --dda-tint-1:rgba(124,58,237,.16);--dda-tint-2:rgba(124,58,237,.12);
+  --dda-hi-1:rgba(167,139,250,.28);--dda-hi-2:rgba(124,58,237,.20);
+  --dda-nav-solid:rgba(32,24,64,.88);
+  --dda-nav-grad-top:rgba(124,58,237,.18);
+  --dda-nav-grad-btm:rgba(124,58,237,.12);
 }
-
-/* ---------- Light mode overrides ---------- */
 html.light{
-  /* intro band 더 연하게 */
-  --dda-tint-1: rgba(139,92,246,.12);
-  --dda-tint-2: rgba(139,92,246,.06);
-  --dda-hi-1:   rgba(196,181,253,.26);
-  --dda-hi-2:   rgba(139,92,246,.16);
-
-  /* NAVBAR : 흰색 기반에 보라 틴트만 살짝 */
-  --dda-nav-solid: rgba(255,255,255,.94);
-  --dda-nav-grad-top: rgba(124,58,237,.10);
-  --dda-nav-grad-btm: rgba(124,58,237,.06);
+  --dda-tint-1:rgba(139,92,246,.12);
+  --dda-tint-2:rgba(139,92,246,.06);
+  --dda-hi-1:rgba(196,181,253,.26);
+  --dda-hi-2:rgba(139,92,246,.16);
+  --dda-nav-solid:rgba(255,255,255,.94);
+  --dda-nav-grad-top:rgba(124,58,237,.10);
+  --dda-nav-grad-btm:rgba(124,58,237,.06);
 }
 
-/* -------------------------------
-   NAVBAR (배경 공통)
--------------------------------- */
-.navbar,
-.navbar.scrolled,
-.navbar--dark,
-.navbar--light{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
+/* Navbar (one definitive block) */
+.navbar,.navbar.scrolled,.navbar--dark,.navbar--light{
+  position:sticky;top:0;z-index:1000;
   background:
-    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
-    var(--dda-nav-solid) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  box-shadow: 0 8px 18px rgba(0,0,0,.10);
-  min-height: 62px;
+    linear-gradient(180deg,var(--dda-nav-grad-top),var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid)!important;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+  box-shadow:0 8px 18px rgba(0,0,0,.1);
+  min-height:62px
 }
-
-/* -------------------------------
-   NAVBAR (라이트 모드 텍스트 강제)
-   - 테마가 .navbar-dark 를 붙여도 덮어쓰도록 강한 선택자 사용
--------------------------------- */
-html.light body .navbar,
-html.light body .navbar * { color: inherit; } /* 기본 상속 */
-
+/* Light text color enforcement */
+html.light body .navbar,html.light body .navbar *{color:inherit}
 html.light body .navbar .navbar-brand,
 html.light body .navbar .navbar-brand *,
 html.light body .navbar .navbar-nav .nav-link,
@@ -367,326 +76,136 @@ html.light body .navbar .nav-link,
 html.light body .navbar .dropdown-item,
 html.light body .navbar .nav-icons .nav-link,
 html.light body .navbar .navbar-text,
-html.light body .navbar a,
-html.light body .navbar a *{
-  color: #111827 !important;          /* 검정 */
-  fill: #111827 !important;           /* SVG 아이콘 대비 */
-  transition: color .15s ease, opacity .15s ease, text-shadow .15s ease;
+html.light body .navbar a,html.light body .navbar a *{
+  color:#111827!important;fill:#111827!important;transition:color .15s ease,opacity .15s ease,text-shadow .15s ease
 }
-
-/* hover/active */
 html.light body .navbar .nav-link:hover,
 html.light body .navbar .dropdown-item:hover,
-html.light body .navbar .nav-icons .nav-link:hover{
-  color: var(--dda-purple-700) !important;
-}
+html.light body .navbar .nav-icons .nav-link:hover{color:var(--dda-purple-700)!important}
 html.light body .navbar .nav-link.active,
-html.light body .navbar .dropdown-item.active{
-  color: var(--dda-purple) !important;
-}
-
-/* 햄버거/토글 아이콘이 SVG/스팬인 경우 대비 */
+html.light body .navbar .dropdown-item.active{color:var(--dda-purple)!important}
 html.light body .navbar .navbar-toggler,
-html.light body .navbar .navbar-toggler-icon{
-  filter: none !important;
-  color: #111827 !important;
-}
+html.light body .navbar .navbar-toggler-icon{filter:none!important;color:#111827!important}
 
-/* -------------------------------
-   NAVBAR (다크 모드 텍스트)
--------------------------------- */
+/* Dark text color */
 html:not(.light) .navbar .nav-link,
 html:not(.light) .navbar .dropdown-item,
 html:not(.light) .navbar .navbar-brand,
-html:not(.light) .navbar .nav-icons .nav-link{
-  color: rgba(255,255,255,.94) !important;
-}
+html:not(.light) .navbar .nav-icons .nav-link{color:rgba(255,255,255,.94)!important}
 html:not(.light) .navbar .nav-link:hover,
-html:not(.light) .navbar .dropdown-item:hover{
-  color: #fff !important;
-  text-shadow: 0 0 12px rgba(167,139,250,.55);
-}
-html:not(.light) .navbar .nav-link.active{
-  color: #fff !important;
-  text-shadow: 0 0 14px rgba(124,58,237,.7);
-}
+html:not(.light) .navbar .dropdown-item:hover{color:#fff!important;text-shadow:0 0 12px rgba(167,139,250,.55)}
+html:not(.light) .navbar .nav-link.active{color:#fff!important;text-shadow:0 0 14px rgba(124,58,237,.7)}
+.navbar .navbar-brand img{filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+.navbar .nav-icons .nav-link{opacity:.95}.navbar .nav-icons .nav-link:hover{opacity:1}
 
-/* 로고 미세 그림자 */
-.navbar .navbar-brand img{ filter: drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
-.navbar .nav-icons .nav-link{ opacity:.95; }
-.navbar .nav-icons .nav-link:hover{ opacity:1; }
-
-/* -------------------------------
-   INTRO(about) : 풀-블리드 보라 밴드
--------------------------------- */
+/* Intro band (About) */
 .home-section.intro-wide,
 .home-section#about.intro-wide,
-.home-section#intro.intro-wide{
-  position: relative;
-  padding: 3rem 0 3.2rem !important;
-  overflow: hidden;
-  background: transparent !important;
-}
-
-/* 보라 밴드(라디얼 하이라이트 + 대각 그라데) */
-.home-section.intro-wide::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:0;
-  background:
-    radial-gradient(900px 600px at 82% 18%, var(--dda-hi-1), transparent 60%),
-    radial-gradient(820px 560px at 10% 88%, var(--dda-hi-2), transparent 65%),
-    linear-gradient(135deg, var(--dda-tint-1) 0%, rgba(124,58,237,.05) 35%, rgba(124,58,237,.02) 65%, transparent 100%);
-}
-
-/* 내용 컨테이너는 배경/테두리 제거 */
-.home-section.intro-wide > .container,
-.home-section#about.intro-wide > .container,
-.home-section#intro.intro-wide > .container{
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* 텍스트/아이콘 보정 */
-.home-section.intro-wide h1,
-.home-section.intro-wide h2{ letter-spacing:.2px; }
-.home-section.intro-wide a{ color: var(--dda-purple); }
-.home-section.intro-wide a:hover{ color: var(--dda-purple-700); }
-.home-section.intro-wide .network-icon a{ color: var(--dda-purple-300); }
-.home-section.intro-wide .network-icon a:hover{ color: var(--dda-purple); }
-
-/* 다음 섹션 간격 */
-.home-section.intro-wide + .home-section{ margin-top:.7rem; }
-
-/* 버튼 작게 띄우기 */
-.btn, a.btn{ transition: transform .12s ease; }
-.btn:hover, a.btn:hover{ transform: translateY(-1px); }
-
+.home-section#intro.intro-wide{position:relative;padding:3rem 0 3.2rem!important;overflow:hidden;background:transparent!important}
+.home-section.intro-wide::before{content:"";position:absolute;inset:0;z-index:0;background:
+  radial-gradient(900px 600px at 82% 18%,var(--dda-hi-1),transparent 60%),
+  radial-gradient(820px 560px at 10% 88%,var(--dda-hi-2),transparent 65%),
+  linear-gradient(135deg,var(--dda-tint-1) 0%,rgba(124,58,237,.05) 35%,rgba(124,58,237,.02) 65%,transparent 100%)}
+.home-section.intro-wide>.container,
+.home-section#about.intro-wide>.container,
+.home-section#intro.intro-wide>.container{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 24px;background:none!important;border:none!important;box-shadow:none!important}
+.home-section#about{background:linear-gradient(180deg,rgba(139,92,246,.08),rgba(139,92,246,.05),transparent 80%)!important;border-radius:0 0 18px 18px}
+.home-section#about+.home-section{margin-top:.6rem}
+.home-section.intro-wide a{color:var(--dda-purple)}
+.home-section.intro-wide a:hover{color:var(--dda-purple-700)}
+.home-section.intro-wide .network-icon a{color:var(--dda-purple-300)}
+.home-section.intro-wide .network-icon a:hover{color:var(--dda-purple)}
 
 /* ==========================================================
-   Layout width + Projects wide + tag chips (safe SCSS)
+   Layout width / gutters (site-wide) + Projects
    ========================================================== */
-
-/* ---------- Global side margins (site-wide) ---------- */
-:root{
-  /* 컨텐츠 최대폭 */
-  --site-max-lg: 1440px;  /* 기본 화면 최대폭 */
-  --site-max-xl: 1600px;  /* 아주 넓은 화면에서 */
-  /* 좌우 패딩(가터) */
-  --site-gutter: 20px;
+:root{--site-max-lg:1440px;--site-max-xl:1600px;--site-gutter:20px}
+.container,.container-lg,.container-xl,.container-xxl,
+.home-section>.container,.navbar>.container,.footer>.container{
+  width:100%;max-width:var(--site-max-lg);
+  padding-left:var(--site-gutter);padding-right:var(--site-gutter)
 }
-
-/* 기본 컨테이너 폭/패딩 (모든 페이지 공통) */
-.container,
-.container-lg, .container-xl, .container-xxl,
-.home-section > .container,
-.navbar > .container,
-.footer > .container {
-  width: 100%;
-  max-width: var(--site-max-lg);
-  padding-left: var(--site-gutter);
-  padding-right: var(--site-gutter);
+@media (min-width:1600px){
+  .container,.container-lg,.container-xl,.container-xxl,
+  .home-section>.container,.navbar>.container,.footer>.container{max-width:var(--site-max-xl)}
 }
+.home-section{padding-left:calc(var(--site-gutter)*.5);padding-right:calc(var(--site-gutter)*.5)}
+.row,.isotope{--bs-gutter-x:1.25rem}
 
-/* 아주 넓은 화면에서 한 단계 더 확장 */
-@media (min-width: 1600px) {
-  .container,
-  .container-lg, .container-xl, .container-xxl,
-  .home-section > .container,
-  .navbar > .container,
-  .footer > .container {
-    max-width: var(--site-max-xl);
-  }
-}
-
-/* 섹션 자체 좌우 여백(패딩)도 살짝 줄이기 */
-.home-section {
-  padding-left: calc(var(--site-gutter) * .5);
-  padding-right: calc(var(--site-gutter) * .5);
-}
-
-/* 카드/그리드 내부 가터 축소(선택) */
-.row, .isotope {
-  --bs-gutter-x: 1.25rem; /* 기본 1.5rem → 살짝 축소 */
-}
-
-/* Markdown/문서 본문 컨테이너도 동일하게 */
-.article-container,
-.docs-article-container,
-.page-body > .container {
-  max-width: var(--site-max-lg);
-  padding-left: var(--site-gutter);
-  padding-right: var(--site-gutter);
-}
-
-/* ----------------------------------------------------------
-   Projects 섹션만 넓게 (cards-grid.md 파일의 섹션 ID는 파일명)
-   ---------------------------------------------------------- */
-
-/* 섹션 컨테이너 자체를 넓힘 */
-.home-section#cards-grid > .container {
-  max-width: 1440px;  /* 필요시 1500~1600으로 조절 가능 */
-}
-
-/* 칩(태그)들이 줄바꿈 안 나게 보정 */
+/* Projects 섹션(카드 너비 넓힘 & 칩 줄바꿈 방지) */
+.home-section#cards-grid>.container{max-width:1440px}
+.home-section#cards-grid .article-tags > * + *{margin-left:.35rem}
 .home-section#cards-grid .btn,
 .home-section#cards-grid .badge,
 .home-section#cards-grid .article-tags .btn,
-.home-section#cards-grid .article-tags .badge {
-  white-space: nowrap;
-  line-height: 1.1;
-}
-
-/* 칩 간 간격 */
-.home-section#cards-grid .article-tags > * + * {
-  margin-left: .35rem;
-}
-
-/* 그리드 간격(선택) */
-.home-section#cards-grid .row {
-  row-gap: 1.25rem;
-  column-gap: 1.25rem;
-}
-
+.home-section#cards-grid .article-tags .badge{white-space:nowrap;line-height:1.1}
+.home-section#cards-grid .row{row-gap:1.25rem;column-gap:1.25rem}
 
 /* ==========================================================
-                      Publications 섹션
+   Publications (Light/Dark 가독성 강화)
    ========================================================== */
-
-.home-section#publications > .container{
-  max-width: 1240px;
-  padding-left:  calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
-  padding-right: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
-}
-
-/* 색 변수 (다크 기본, 라이트에서 덮어쓰기) */
+.home-section#publications>.container{max-width:1240px;padding-left:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5));padding-right:calc(var(--site-gutter) + (var(--bs-gutter-x,1.25rem)*.5))}
 :root{
-  --pub-bg:        rgba(255,255,255,.04);
-  --pub-border:    rgba(255,255,255,.10);
-  --pub-muted:     rgba(255,255,255,.78);
-  --pub-emph:      #ffffff;
-  --pub-accent:    #7c3aed;         /* violet-600 */
-  --pub-accent-2:  #a78bfa;         /* violet-300 */
-  --pub-btn-bg:    rgba(124,58,237,.14);
-  --pub-btn-bd:    rgba(167,139,250,.55);
-  --pub-btn-tx:    #ede9fe;         /* violet-100 */
-  --pub-shadow:    0 6px 22px rgba(0,0,0,.18);
-  --pub-shadow-h:  0 12px 32px rgba(0,0,0,.28);
+  --pub-bg:rgba(255,255,255,.04);--pub-border:rgba(255,255,255,.10);
+  --pub-muted:rgba(255,255,255,.78);--pub-emph:#fff;
+  --pub-accent:#7c3aed;--pub-accent-2:#a78bfa;
+  --pub-btn-bg:rgba(124,58,237,.14);--pub-btn-bd:rgba(167,139,250,.55);--pub-btn-tx:#ede9fe;
+  --pub-shadow:0 6px 22px rgba(0,0,0,.18);--pub-shadow-h:0 12px 32px rgba(0,0,0,.28)
 }
-
-/* ── 라이트 모드 : 대비 강화 + !important로 테마 규칙 제압 ── */
 html.light{
-  --pub-bg:        #ffffff;         /* 완전 화이트 */
-  --pub-border:    rgba(0,0,0,.08);
-  --pub-muted:     #374151;         /* gray-700 (가독성↑) */
-  --pub-emph:      #0f172a;         /* slate-900 */
-  --pub-accent:    #7c3aed;
-  --pub-accent-2:  #6d28d9;
-  --pub-btn-bg:    #e9d5ff;         /* violet-200 (더 진한 배경) */
-  --pub-btn-bd:    #8b5cf6;         /* violet-500 */
-  --pub-btn-tx:    #312e81;         /* indigo-900 */
-  --pub-shadow:    0 8px 18px rgba(0,0,0,.06);
-  --pub-shadow-h:  0 12px 26px rgba(0,0,0,.10);
+  --pub-bg:#fff;--pub-border:rgba(0,0,0,.08);
+  --pub-muted:#374151;--pub-emph:#0f172a;
+  --pub-accent:#7c3aed;--pub-accent-2:#6d28d9;
+  --pub-btn-bg:#e9d5ff;--pub-btn-bd:#8b5cf6;--pub-btn-tx:#312e81;
+  --pub-shadow:0 8px 18px rgba(0,0,0,.06);--pub-shadow-h:0 12px 26px rgba(0,0,0,.10)
 }
-
-/* 섹션 제목 간격 */
-.home-section#publications h2.section-heading{
-  margin-bottom: 1.2rem;
-}
-
-/* 카드 */
+.home-section#publications h2.section-heading{margin-bottom:1.2rem}
 .home-section#publications .stream-item{
-  position: relative;
-  display: block;
-  padding: 18px 20px;
-  margin: 0 0 14px 0;
-  border-radius: 16px;
-  border: 1px solid var(--pub-border);
-  background: linear-gradient(180deg, var(--pub-bg), color-mix(in oklab, var(--pub-bg) 70%, transparent) 140%);
-  box-shadow: var(--pub-shadow);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
-  overflow: hidden;
+  position:relative;display:block;padding:18px 20px;margin:0 0 14px 0;border-radius:16px;
+  border:1px solid var(--pub-border);
+  background:linear-gradient(180deg,var(--pub-bg),color-mix(in oklab,var(--pub-bg) 70%,transparent) 140%);
+  box-shadow:var(--pub-shadow);transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;overflow:hidden
 }
-
-/* 좌측 포인트 바 */
-.home-section#publications .stream-item::before{
-  content:"";
-  position:absolute; inset:0 auto 0 0;
-  width: 4px;
-  background: linear-gradient(180deg, var(--pub-accent-2), var(--pub-accent));
-  opacity:.95;
-}
-
-/* hover */
-.home-section#publications .stream-item:hover{
-  transform: translateY(-2px);
-  box-shadow: var(--pub-shadow-h);
-  border-color: color-mix(in oklab, var(--pub-border) 35%, var(--pub-accent) 65%);
-}
-
-/* 제목(링크 포함) */
+.home-section#publications .stream-item::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,var(--pub-accent-2),var(--pub-accent));opacity:.95}
+.home-section#publications .stream-item:hover{transform:translateY(-2px);box-shadow:var(--pub-shadow-h);border-color:color-mix(in oklab,var(--pub-border) 35%,var(--pub-accent) 65%)}
 .home-section#publications .stream-item .article-title,
-.home-section#publications .stream-item .article-title a{
-  font-weight: 800;
-  letter-spacing: .2px;
-  color: var(--pub-emph) !important;  /* 테마 링크색 제압 */
-  margin-bottom: .35rem;
-  line-height: 1.25;
-  text-decoration: none;
-}
-
-/* 보조 정보(저자/학회/연도) */
+.home-section#publications .stream-item .article-title a{font-weight:800;letter-spacing:.2px;color:var(--pub-emph)!important;margin-bottom:.35rem;line-height:1.25;text-decoration:none}
 .home-section#publications .stream-item .article-metadata,
 .home-section#publications .stream-item .article-style small,
-.home-section#publications .stream-item .stream-meta{
-  color: var(--pub-muted) !important; /* 테마 muted 색 제압 */
-  opacity: 1 !important;             /* 옅어지지 않게 */
-  font-size: .95rem;
-}
-
-/* 버튼(예: PDF) — 테마 .btn-outline-* 제압용 !important 포함 */
+.home-section#publications .stream-item .stream-meta{color:var(--pub-muted)!important;opacity:1!important;font-size:.95rem}
 .home-section#publications .stream-item .btn,
 .home-section#publications .stream-item a.btn{
-  display: inline-flex; align-items: center; gap:.4rem;
-  padding: .42rem .84rem;
-  border-radius: 9999px;
-  border: 1px solid var(--pub-btn-bd) !important;
-  background: var(--pub-btn-bg) !important;
-  color: var(--pub-btn-tx) !important;
-  font-weight: 800;
-  font-size: .92rem;
-  line-height: 1;
-  box-shadow: none !important;
-  text-decoration: none !important;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
+  display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .84rem;border-radius:9999px;
+  border:1px solid var(--pub-btn-bd)!important;background:var(--pub-btn-bg)!important;color:var(--pub-btn-tx)!important;
+  font-weight:800;font-size:.92rem;line-height:1;box-shadow:none!important;text-decoration:none!important;
+  transition:transform .12s ease,box-shadow .12s ease,background .12s ease,border-color .12s ease,color .12s ease
 }
-
-/* 버튼 hover — 공통 보라 하이라이트 */
-.home-section#publications .stream-item .btn:hover{
-  transform: translateY(-1px);
-  border-color: var(--pub-accent) !important;
-  background: color-mix(in oklab, var(--pub-btn-bg) 20%, var(--pub-accent) 80%) !important;
-  color: #fff !important;
-  box-shadow: 0 6px 16px rgba(124,58,237,.25) !important;
-}
-
-/* 아이콘 크기 */
+.home-section#publications .stream-item .btn:hover{transform:translateY(-1px);border-color:var(--pub-accent)!important;background:color-mix(in oklab,var(--pub-btn-bg) 20%,var(--pub-accent) 80%)!important;color:#fff!important;box-shadow:0 6px 16px rgba(124,58,237,.25)!important}
 .home-section#publications .stream-item .btn i,
-.home-section#publications .stream-item .btn svg{
-  font-size: .95em;
-}
+.home-section#publications .stream-item .btn svg{font-size:.95em}
+.home-section#publications .stream-item .btn-links{margin-top:.6rem}
+.home-section#publications{padding-bottom:2.2rem}
 
-/* 버튼 영역 위 여백 */
-.home-section#publications .stream-item .btn-links{
-  margin-top: .6rem;
+/* ==========================================================
+   Awards (flattened – CSS only)
+   ========================================================== */
+.awards{padding-top:.5rem}
+.awards .card{
+  border-radius:16px;border:1px solid rgba(180,180,180,.18);
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+  position:relative;overflow:hidden
 }
-
-/* 섹션 아래 여백 */
-.home-section#publications{ padding-bottom: 2.2rem; }
+.awards .card::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(180deg,#ffd166,#ef476f);opacity:.9}
+.awards .card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.24);border-color:rgba(255,255,255,.22);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.04))}
+.awards .card-title,.awards .card-title a{font-weight:800;letter-spacing:.1px}
+.awards .card-subtitle,.awards .text-muted,.awards .meta,.awards small{opacity:.85!important}
+.awards .card p,.awards .card .article-style{margin-top:.4rem;font-size:.98rem}
+.awards .card p strong{background:linear-gradient(90deg,#ffd166 0%,#ef476f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.awards .btn,.awards a.btn{border-radius:9999px;padding:.45rem 1rem;font-weight:700;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.06);color:#fff;transition:transform .12s ease,box-shadow .12s ease,background .12s ease,border-color .12s ease}
+.awards .btn:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.55);box-shadow:0 6px 16px rgba(0,0,0,.25);transform:translateY(-1px)}
+.awards .col-12.mb-4,.awards .col-lg-12.mb-4,.awards .mb-4{margin-bottom:1.2rem!important}
+html.light .awards .card{background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));border-color:rgba(0,0,0,.08)}
+html.light .awards .btn{background:rgba(0,0,0,.04);color:#111;border-color:rgba(0,0,0,.18)}
+html.light .awards .btn:hover{background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.35)}
