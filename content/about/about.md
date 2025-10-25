@@ -4,8 +4,12 @@ active: true
 headless: true
 weight: 10
 
-author: "admin"
+title: ""
+id: top
+author: admin 
 
-design:
-  show_title: false
+# author: "admin"
+
+# design:
+#   show_title: false
 ---
