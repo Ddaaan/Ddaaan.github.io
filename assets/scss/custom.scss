@@ -411,3 +411,24 @@ html.light .awards .btn:hover{
   padding-right: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
   margin: 0 auto;
 }
+
+/* 라이트 모드: 수상(Awards) 카드 텍스트를 검정으로 */
+html.light .awards .card-title,
+html.light .awards .card-title a,
+html.light .awards .card-subtitle,
+html.light .awards .text-muted,
+html.light .awards .meta,
+html.light .awards small,
+html.light .awards .card p,
+html.light .awards .card .article-style {
+  color: #111 !important;
+  opacity: 1 !important;
+}
+
+/* 굵게 표시된 문구도 보라 그라데이션 대신 검정으로 */
+html.light .awards .card p strong {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: #111 !important;
+}
