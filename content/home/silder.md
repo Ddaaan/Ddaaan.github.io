@@ -121,57 +121,48 @@ title: ""
     opacity: .9;
   }
 
-  /* 모바일 대응 */
-  @media (max-width: 640px) {
-    .dda-slider .caption { bottom: 12%; left: 6%; }
-    .dda-slider .caption h2 { font-size: 1.1rem; }
-    .dda-slider .caption p { font-size: .85rem; }
-  }
 </style>
 
-<div class="dda-bleed">
-  <div class="dda-slider" id="ddaSlider">
-    <div class="slides">
-      <div class="slide">
-        <img src="/uploads/hero/ai-purple-01.jpg" alt="Beyond Code – Purple Abstract" class="active">
-        <div class="overlay active"></div>
-        <div class="caption">
-          <h2>코드와 상상력의 경계를 넘다</h2>
-          <p>Beyond Code, Into Imagination</p>
-        </div>
-      </div>
 
-      <div class="slide">
-        <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Collaborative Intelligence">
-        <div class="overlay"></div>
-        <div class="caption">
-          <h2>협력하는 지능</h2>
-          <p>Collaborative Intelligence at the Edge</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Edge–Cloud Bridge">
-        <div class="overlay"></div>
-        <div class="caption">
-          <h2>엣지와 클라우드를 잇다</h2>
-          <p>Bridging Edge & Cloud for AI</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Create with Curiosity">
-        <div class="overlay"></div>
-        <div class="caption">
-          <h2>호기심으로 만드는 미래</h2>
-          <p>Created by Curiosity</p>
-        </div>
-      </div>
+<div class="slides">
+  <!-- 1. 보라빛 감성: 코드와 상상력 -->
+  <div class="slide">
+    <img src="/uploads/hero/ai-purple-01.jpg" alt="Beyond Code – Purple Abstract" class="active">
+    <div class="overlay active"></div>
+    <div class="caption">
+      <h2>코드와 상상력의 경계를 넘다</h2>
+      <p>Beyond Code, Into Imagination</p>
     </div>
+  </div>
 
-    <button class="ctrl prev" aria-label="Previous">‹</button>
-    <button class="ctrl next" aria-label="Next">›</button>
-    <div class="dots"></div>
+  <!-- 2. AI의 세계: 협력 지능 -->
+  <div class="slide">
+    <img src="/uploads/hero/ai-network-edges-02.jpg" alt="Collaborative Intelligence across devices">
+    <div class="overlay"></div>
+    <div class="caption">
+      <h2>협력하는 지능</h2>
+      <p>Collaborative Intelligence at the Edge</p>
+    </div>
+  </div>
+
+  <!-- 3. 오프로딩/엣지-클라우드 -->
+  <div class="slide">
+    <img src="/uploads/hero/edge-cloud-bridge-03.jpg" alt="Edge–Cloud Offloading Bridge">
+    <div class="overlay"></div>
+    <div class="caption">
+      <h2>엣지와 클라우드를 잇다</h2>
+      <p>Bridging Edge & Cloud for AI</p>
+    </div>
+  </div>
+
+  <!-- 4. 개발자 브랜드: 호기심으로 만든다 -->
+  <div class="slide">
+    <img src="/uploads/hero/purple-city-dawn-04.jpg" alt="Create with Curiosity">
+    <div class="overlay"></div>
+    <div class="caption">
+      <h2>호기심으로 만드는 미래</h2>
+      <p>Created by Curiosity</p>
+    </div>
   </div>
 </div>
 
