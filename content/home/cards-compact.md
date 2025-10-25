@@ -2,7 +2,7 @@
 widget: "blank"
 headless: true
 active: true
-weight: 15
+weight: 17
 title: "Quick Links"
 items:
   - title: "GitHub"

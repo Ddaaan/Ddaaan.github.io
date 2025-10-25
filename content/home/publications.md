@@ -1,7 +1,7 @@
 ---
 widget: collection        # HugoBlox 기본 컬렉션 위젯
 headless: true
-weight: 22
+weight: 15
 title: "Publications"
 subtitle: ""
 
