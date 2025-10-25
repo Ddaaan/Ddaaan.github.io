@@ -1,5 +1,5 @@
 ---
-widget: education
+widget: experience
 active: true
 
 weight: 20
