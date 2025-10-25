@@ -7,10 +7,11 @@ widget: experience
 headless: true
 
 # Order that this section appears on the page.
-weight: 20
+weight: 30
 
-title: Experience
+title: 경력
 subtitle:
+slug: "experience"
 
 # Date format for experience
 #   Refer to https://docs.hugoblox.com/customization/#date-format

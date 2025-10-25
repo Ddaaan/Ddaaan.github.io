@@ -9,8 +9,9 @@ headless: true
 # Order that this section appears on the page.
 weight: 40
 
-title: '🏆 Awards'
+title: '🏆 수상'
 subtitle: ''
+slug: "accomplishments"
 
 # Date format
 date_format: Jan 2006

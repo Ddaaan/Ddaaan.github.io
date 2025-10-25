@@ -1,48 +1,42 @@
 main:
-  - name: Home
+  # ── 상단 메인 메뉴
+  - name: 홈
     url: /
     weight: 10
+    identifier: home
 
-  - name: About
-    url: about/
+  - name: 소개
+    url: /about/
     weight: 20
+    identifier: about
 
-  - name: Projects
-    url: projects/
+  - name: 프로젝트
+    url: /project/
     weight: 30
+    identifier: projects
 
-  - name: Contact
-    url: "#contact"     
+  - name: 수상
+    url: /about/#accomplishments 
     weight: 40
+    identifier: awards
 
-  # ── About 의 하위 메뉴들
-  - name: Education
-    url: about/#education          
-    parent: About
+  - name: 연락처
+    url: "/about/contact/"
+    weight: 50
+    identifier: contact
+
+  # ── '소개' 드롭다운 항목들
+  - name: 학력
+    url: /about/education/
+    parent: about
     weight: 21
 
-  - name: Experience
-    url: about/#experience        
-    parent: About
+  - name: 경력
+    url: /about/experience/
+    parent: about
     weight: 22
 
-  - name: Awards
-    url: about/#accomplishments  
-    parent: About
+  - name: 이력서 (PDF)
+    url: /files/resume.pdf
+    parent: about
     weight: 23
-
-  - name: Résumé (PDF)
-    url: files/resume.pdf        
-    parent: About
-    weight: 24
-
-  # ── Projects 의 하위 메뉴들
-  - name: Web
-    url: projects/#web
-    parent: Projects
-    weight: 31
-
-  - name: Embedded
-    url: projects/#embedded
-    parent: Projects
-    weight: 32

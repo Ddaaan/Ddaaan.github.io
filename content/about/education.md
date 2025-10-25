@@ -1,3 +1,10 @@
+---
+title: "학력"
+type: page
+weight: 20
+slug: "education"
+---
+
 <!-- ---
 # An instance of the Experience widget.
 # Documentation: https://docs.hugoblox.com/page-builder/
