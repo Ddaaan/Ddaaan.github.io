@@ -1,5 +1,4 @@
 ---
+type: widget_page
 title: "소개"
-type: page
-weight: 10
 ---

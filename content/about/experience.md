@@ -5,11 +5,11 @@ widget: experience
 
 # This file represents a page section.
 headless: true
-
+active: true
 # Order that this section appears on the page.
 weight: 30
 
-title: 경력
+title: 경험
 subtitle:
 slug: "experience"
 

@@ -16,7 +16,7 @@ main:
     identifier: projects
 
   - name: 수상
-    url: /about/#accomplishments 
+    url: /about/accomplishments 
     weight: 40
     identifier: awards
 
@@ -27,16 +27,21 @@ main:
 
   # ── '소개' 드롭다운 항목들
   - name: 학력
-    url: /about/education/
+    url: /about/#education
     parent: about
     weight: 21
 
   - name: 경력
-    url: /about/experience/
+    url: /about/#work
     parent: about
     weight: 22
 
-  - name: 이력서 (PDF)
-    url: /files/resume.pdf
+  - name: 경험
+    url: /about/#experience
     parent: about
     weight: 23
+
+  # - name: 이력서 (PDF)
+  #   url: /files/resume.pdf
+  #   parent: about
+  #   weight: 23

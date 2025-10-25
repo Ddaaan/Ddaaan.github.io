@@ -1,8 +1,11 @@
 ---
-title: "학력"
-type: page
+widget: experience
+headless: true
+active: true
+
 weight: 20
-slug: "education"
+title: 학력
+widget_id: education
 ---
 
 <!-- ---
