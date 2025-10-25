@@ -8,7 +8,7 @@ featured:
 tags: ["LLM","Jetson","Quantization"]
 links:
   - name: PDF
-    url: "/uploads/jetson-quant-llm"
+    url: "/uploads/jetson-quant-llm.pdf"
     icon: file-pdf
     icon_pack: fas
 ---
