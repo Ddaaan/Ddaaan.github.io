@@ -33,30 +33,38 @@ title: ""
     position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
 
-  /* 더 진한 오버레이 (덜 투명하게) */
+  /* ✅ 진한 오버레이 */
   .dda-slider .overlay{
     position:absolute;inset:0;z-index:2;
-    background:
-      linear-gradient(180deg, rgba(0,0,0,.60), rgba(0,0,0,.75));
+    background:linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.80));
   }
 
-  /* 캡션: 화면 정중앙 배치 + 흰색 */
+  /* ✅ 중앙 배치 + 흰색 텍스트 */
   .dda-slider .caption{
     position:absolute;z-index:3;
     left:50%; top:50%; transform:translate(-50%, -50%);
-    text-align:center; color:#fff; font-weight:700;
-    text-shadow:0 2px 8px rgba(0,0,0,.55);
+    text-align:center; color:#fff;
+    font-weight:700;
+    text-shadow:0 3px 12px rgba(0,0,0,.65);
     padding:0 1rem; max-width:min(92vw, 900px);
   }
+
   .dda-slider .caption h2{
-    margin:0 0 .35rem; font-size:clamp(1.1rem, 2.4vw, 1.9rem);
+    margin:0 0 .4rem;
+    font-size:clamp(1.3rem, 2.6vw, 2rem);
+    color:#fff !important;          /* 완전 흰색 고정 */
+    text-shadow:0 3px 12px rgba(0,0,0,.75);
   }
+
   .dda-slider .caption p{
-    margin:0; font-size:clamp(.9rem, 1.4vw, 1.1rem); opacity:.98;
+    margin:0;
+    font-size:clamp(.9rem, 1.4vw, 1.1rem);
+    color:#f9f9f9 !important;       /* 약간 밝은 회백색 */
+    opacity:1;
   }
 
   /* 컨트롤/도트 */
-  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.38);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
+  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
   .dda-slider .prev{left:12px}
   .dda-slider .next{right:12px}
   .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center;z-index:4}
@@ -124,7 +132,6 @@ title: ""
   let i = 0, timer = null;
   const INTERVAL = 3000; // 자동 전환 시간(ms)
 
-  // 도트 생성
   slides.forEach((_, idx)=>{
     const d = document.createElement('span');
     d.className = 'dot' + (idx===0 ? ' active' : '');
@@ -152,7 +159,6 @@ title: ""
   function stop(){ if (timer) { clearInterval(timer); timer = null; } }
   function restart(){ start(); }
 
-  // 호버 시 일시정지
   root.addEventListener('mouseenter', stop);
   root.addEventListener('mouseleave', start);
 
