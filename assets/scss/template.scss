@@ -557,11 +557,135 @@ html:not(.light) .navbar .nav-link.active{
 
 
 /* ==========================================================
-   Publications 섹션을 Projects 카드와 좌우 라인 맞추기
+                      Publications 섹션
    ========================================================== */
 
 .home-section#publications > .container{
-  max-width: 1300px;
+  max-width: 1240px;
   padding-left:  calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
   padding-right: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
 }
+
+/* 색 변수 (다크가 기본, 라이트에서 덮어쓰기) */
+:root{
+  --pub-bg:        rgba(255,255,255,.04);
+  --pub-border:    rgba(255,255,255,.10);
+  --pub-muted:     rgba(255,255,255,.72);
+  --pub-emph:      #ffffff;
+  --pub-accent:    #7c3aed;     
+  --pub-accent-2:  #a78bfa;  
+  --pub-btn-bg:    rgba(124,58,237,.10);
+  --pub-btn-bd:    rgba(167,139,250,.45);
+  --pub-btn-tx:    #dcd7fe;
+  --pub-shadow:    0 6px 22px rgba(0,0,0,.18);
+  --pub-shadow-h:  0 12px 32px rgba(0,0,0,.28);
+}
+html.light{
+  --pub-bg:        rgba(124,58,237,.05);
+  --pub-border:    rgba(0,0,0,.10);
+  --pub-muted:     #4b5563; 
+  --pub-emph:      #0f172a;    
+  --pub-accent:    #7c3aed;
+  --pub-accent-2:  #6d28d9;
+  --pub-btn-bg:    rgba(124,58,237,.08);
+  --pub-btn-bd:    rgba(124,58,237,.35);
+  --pub-btn-tx:    #1f2937;  
+  --pub-shadow:    0 6px 18px rgba(0,0,0,.08);
+  --pub-shadow-h:  0 10px 26px rgba(0,0,0,.14);
+}
+
+/* 섹션 제목 간격 살짝 */
+.home-section#publications h2.section-heading{
+  margin-bottom: 1.2rem;
+}
+
+/* 리스트 아이템을 카드처럼 */
+.home-section#publications .stream-item{
+  position: relative;
+  display: block;
+  padding: 18px 20px;
+  margin: 0 0 14px 0;
+  border-radius: 16px;
+  border: 1px solid var(--pub-border);
+  background:
+    linear-gradient(180deg, var(--pub-bg), transparent 140%);
+  box-shadow: var(--pub-shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+  overflow: hidden;
+}
+
+/* 좌측 보라 포인트 바 */
+.home-section#publications .stream-item::before{
+  content:"";
+  position:absolute; inset:0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--pub-accent-2), var(--pub-accent));
+  opacity:.95;
+}
+
+/* hover 상승 효과 */
+.home-section#publications .stream-item:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--pub-shadow-h);
+  border-color: color-mix(in oklab, var(--pub-border) 40%, var(--pub-accent) 60%);
+}
+
+/* 제목 타이포 */
+.home-section#publications .stream-item .article-title{
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: var(--pub-emph);
+  margin-bottom: .35rem;
+  line-height: 1.25;
+}
+
+/* 저자·학회·연도 등 보조 정보 */
+.home-section#publications .stream-item .article-metadata,
+.home-section#publications .stream-item .article-style small,
+.home-section#publications .stream-item .stream-meta{
+  color: var(--pub-muted);
+  opacity: .92;
+  font-size: .94rem;
+}
+
+/* 링크 버튼(예: PDF) – 칩 스타일 */
+.home-section#publications .stream-item .btn,
+.home-section#publications .stream-item a.btn{
+  display: inline-flex; align-items: center; gap:.35rem;
+  padding: .35rem .7rem;
+  border-radius: 9999px;
+  border: 1px solid var(--pub-btn-bd);
+  background: var(--pub-btn-bg);
+  color: var(--pub-btn-tx);
+  font-weight: 700;
+  font-size: .86rem;
+  line-height: 1;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
+}
+.home-section#publications .stream-item .btn:hover{
+  transform: translateY(-1px);
+  border-color: var(--pub-accent);
+  background: color-mix(in oklab, var(--pub-btn-bg) 40%, var(--pub-accent) 60%);
+  box-shadow: 0 6px 16px rgba(124,58,237,.25);
+  color: #fff;
+}
+
+/* 아이콘 크기 미세 보정 */
+.home-section#publications .stream-item .btn i,
+.home-section#publications .stream-item .btn svg{
+  font-size: .9em;
+}
+
+/* 항목 사이 여백(버튼 영역 포함) */
+.home-section#publications .stream-item .btn-links{
+  margin-top: .55rem;
+}
+
+/* 모바일에서 여백/폰트 약간 키움 */
+@media (max-width: 640px){
+  .home-section#publications .stream-item{ padding:16px 16px; }
+  .home-section#publications .stream-item .article-title{ font-size:1.125rem; }
+}
+
+/* Publications 섹션 자체의 아래 여백 약간 축소 */
+.home-section#publications{ padding-bottom: 2.2rem; }
