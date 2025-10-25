@@ -180,17 +180,7 @@ html.dark body .navbar .nav-link.active { color:#c4b5fd !important; }
 /* ==========================================================
    Layout width / gutters (site-wide) + Projects
    ========================================================== */
-:root{
-  --site-max-lg: 1100px;  /* 일반 페이지 기본 최대 폭 */
-  --site-max-xl: 1280px;  /* 초대형 화면 */
-  --site-gutter: 16px;    /* 기본 좌우 여백 */
-}
-/* 홈(landing) 페이지만 더 넓게 */
-.home, .page-home {
-  --site-max-lg: 1440px;
-  --site-max-xl: 1600px;
-  --site-gutter: 20px;
-}
+:root{--site-max-lg:1440px;--site-max-xl:1600px;--site-gutter:20px}
 .container,.container-lg,.container-xl,.container-xxl,
 .home-section>.container,.navbar>.container,.footer>.container{
   width:100%;max-width:var(--site-max-lg);
