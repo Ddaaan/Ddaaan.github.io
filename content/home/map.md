@@ -2,7 +2,7 @@
 widget: blank
 headless: true
 active: true
-weight: 2000
+weight: 1000
 title: ""            # ← 제목 숨김
 ---
 
