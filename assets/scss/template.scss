@@ -294,7 +294,7 @@ html.light .home-section#about {
 
 
 /* ==========================================================
-   Purple UI v2 (stronger navbar, tuned light bg)
+   Purple UI v3 (STRONG navbar on light mode)
    ========================================================== */
 
 /* ---- Brand palette ---- */
@@ -303,23 +303,33 @@ html.light .home-section#about {
   --dda-purple-700:   #6d28d9;
   --dda-purple-300:   #a78bfa;
 
-  /* base tints (dark mode 기준) */
+  /* default (dark mode 기준) */
   --dda-tint-1: rgba(124,58,237,.16);
   --dda-tint-2: rgba(124,58,237,.12);
   --dda-hi-1:   rgba(167,139,250,.28);
   --dda-hi-2:   rgba(124,58,237,.20);
+
+  /* navbar용 기본 색(다크 공통) */
+  --dda-nav-solid: rgba(32,24,64,.88);
+  --dda-nav-grad-top: rgba(124,58,237,.18);
+  --dda-nav-grad-btm: rgba(124,58,237,.12);
 }
 
-/* 라이트 모드: 배경을 ‘조금 더 진하게’ */
+/* Light mode – 인트로 배경 더 진하게 + NAVBAR 확실히 진하게 */
 html.light{
-  --dda-tint-1: rgba(139,92,246,.20);  /* ↑ 0.12 → 0.20 */
-  --dda-tint-2: rgba(139,92,246,.14);  /* ↑ 0.08 → 0.14 */
-  --dda-hi-1:   rgba(196,181,253,.40); /* ↑ 0.32 → 0.40 */
-  --dda-hi-2:   rgba(139,92,246,.26);  /* ↑ 0.20 → 0.26 */
+  --dda-tint-1: rgba(139,92,246,.22);   /* ↑ */
+  --dda-tint-2: rgba(139,92,246,.16);   /* ↑ */
+  --dda-hi-1:   rgba(196,181,253,.42);  /* ↑ */
+  --dda-hi-2:   rgba(139,92,246,.28);   /* ↑ */
+
+  /* 라이트 모드 NAVBAR 특화: 거의 솔리드한 보라 */
+  --dda-nav-solid: rgba(113,63,218,.92); /* #713fda */
+  --dda-nav-grad-top: rgba(124,58,237,.85);
+  --dda-nav-grad-btm: rgba(113,63,218,.78);
 }
 
 /* -------------------------------
-   NAVBAR : 더 짙은 대비 + 살짝 테두리
+   NAVBAR : 더 진한 대비 (Light 전용 강화)
 -------------------------------- */
 .navbar,
 .navbar.scrolled,
@@ -329,53 +339,60 @@ html.light{
   top: 0;
   z-index: 1000;
 
-  /* 진한 보라 그라데에 가벼운 유리블러 */
-  background: linear-gradient(180deg, var(--dda-tint-1), var(--dda-tint-2)) !important;
+  /* 기본(다크/공통): 살짝 보라 기운 + 유리블러 */
+  background:
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
-  /* 테두리/그림자 강화 */
   border-bottom: 1px solid rgba(255,255,255,.12);
   box-shadow:
-    0 8px 20px rgba(0,0,0,.18),         /* 외곽 그림자 */
-    inset 0 -1px 0 rgba(255,255,255,.06);/* 안쪽 라인 */
-
-  /* 높이/간격 살짝 키워서 존재감 */
-  min-height: 64px;
+    0 10px 24px rgba(0,0,0,.22),
+    inset 0 -1px 0 rgba(255,255,255,.06);
+  min-height: 66px;
 }
 
+/* 라이트 모드: 명확하게 진한 보라로 고정(투명감 ↓, 대비 ↑) */
 html.light .navbar,
 html.light .navbar.scrolled,
 html.light .navbar--dark,
 html.light .navbar--light{
-  /* 라이트에선 더 또렷한 경계 */
-  border-bottom-color: rgba(0,0,0,.10);
+  background:
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid) !important;
+
+  /* 라이트 배경 위에서 또렷하게 보이도록 경계와 그림자 강화 */
+  border-bottom-color: rgba(47,28,120,.55);
   box-shadow:
-    0 10px 22px rgba(93,63,211,.12),
-    inset 0 -1px 0 rgba(0,0,0,.06);
+    0 14px 28px rgba(113,63,218,.25),
+    inset 0 -1px 0 rgba(255,255,255,.10);
 }
 
-/* 네비 항목 컬러/호버 */
+/* 네비 링크 컬러/호버(라이트에선 밝은 텍스트 유지) */
 .navbar .nav-link,
 .navbar .dropdown-item{
+  color: rgba(255,255,255,.92) !important;
   transition: color .15s ease, opacity .15s ease, text-shadow .15s ease;
 }
 .navbar .nav-link:hover,
 .navbar .dropdown-item:hover{
-  color: var(--dda-purple-300) !important;
-  text-shadow: 0 0 10px rgba(167,139,250,.35);
+  color: #ffffff !important;
+  text-shadow: 0 0 12px rgba(167,139,250,.55);
 }
 .navbar .nav-link.active{
-  color: #fff !important;
-  text-shadow: 0 0 12px rgba(124,58,237,.55);
-}
-html.light .navbar .nav-link.active{
-  color: var(--dda-purple) !important;
-  text-shadow: 0 0 6px rgba(139,92,246,.35);
+  color: #ffffff !important;
+  text-shadow: 0 0 14px rgba(124,58,237,.7);
 }
 
-/* 로고/아이콘 살짝 강조 */
-.navbar .navbar-brand img{ filter: drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
+/* 다크 모드에서도 링크 가독성 유지 */
+html:not(.light) .navbar .nav-link,
+html:not(.light) .navbar .dropdown-item{
+  color: rgba(255,255,255,.94) !important;
+}
+
+/* 로고/아이콘 강화 */
+.navbar .navbar-brand img{ filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
 .navbar .nav-icons .nav-link{ opacity:.95; }
 .navbar .nav-icons .nav-link:hover{ opacity:1; }
 
@@ -417,7 +434,7 @@ html.light .navbar .nav-link.active{
   box-shadow: none !important;
 }
 
-/* 텍스트 보라 톤 보정 */
+/* 텍스트/아이콘 보정 */
 .home-section.intro-wide h1,
 .home-section.intro-wide h2{ letter-spacing:.2px; }
 .home-section.intro-wide a{ color: var(--dda-purple); }
@@ -431,5 +448,3 @@ html.light .navbar .nav-link.active{
 /* 버튼 미세 인터랙션 */
 .btn, a.btn{ transition: transform .12s ease; }
 .btn:hover, a.btn:hover{ transform: translateY(-1px); }
-
-
