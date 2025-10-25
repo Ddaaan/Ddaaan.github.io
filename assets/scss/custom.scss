@@ -477,15 +477,13 @@ html.light .awards .card p strong {
     publication 페이지
 ========================================================== */
 
-/* 퍼블리케이션 페이지 상단의 검색/필터 바 숨기기 */
-.pub-filters,
-#pub-filters,
-#search-query,
-.section-search {
+/* 퍼블리케이션 페이지의 상단 검색창 숨기기 */
+#publications .section-search,
+#publications .search,
+#publications #search-query,
+#publications .form-control.search-query {
   display: none !important;
 }
 
-/* (선택) 위 여백이 크면 살짝 줄이기 */
-.pub-list, .cards-publications, .section-heading {
-  margin-top: 0 !important;
-}
+/* 여백 보정(선택) */
+#publications .section-heading { margin-bottom: 0 !important; }
