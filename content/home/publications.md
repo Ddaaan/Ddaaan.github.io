@@ -1,4 +1,4 @@
----
+<!-- ---
 widget: collection        # HugoBlox 기본 컬렉션 위젯
 headless: true
 weight: 15
@@ -18,4 +18,4 @@ content:
 design:
   view: article           # 카드형: "carousel" / 리스트형: "article"
   columns: "1"
----
+--- -->

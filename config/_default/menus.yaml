@@ -9,11 +9,11 @@ main:
     identifier: about
 
   - name: 프로젝트
-    url: projects/
+    url: project/
     weight: 30
 
   - name: 논문
-    url: publications/
+    url: publication/
     weight: 40
 
   - name: 수상
