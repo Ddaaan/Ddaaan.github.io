@@ -7,7 +7,7 @@ title: ""
 ---
 
 <style>
-  /* 화면 양옆으로 꽉 차게 */
+  /* 화면 양옆으로 꽉 차게 만드는 래퍼(컨테이너 여백 무시) */
   .dda-bleed{
     position: relative;
     left: 50%;
@@ -15,22 +15,21 @@ title: ""
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-    background: transparent;
-    padding: 0;
+    background: transparent; 
+    padding: 0;  
     overflow: hidden;
   }
 
-  /* 슬라이더 (이미지 전용) */
+  /* 슬라이더 */
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
-  .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px)}
+  /* 높이 ↑ : 필요시 수치만 더 키워도 됨 */
+  .dda-slider .slides{position:relative;height:clamp(160px, 18vw, 300px);} 
   .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
   .dda-slider img.active{opacity:1}
-
-  /* 컨트롤/도트 */
-  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px;z-index:4}
+  .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px}
   .dda-slider .prev{left:12px}
   .dda-slider .next{right:12px}
-  .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center;z-index:4}
+  .dda-slider .dots{position:absolute;left:0;right:0;bottom:10px;display:flex;gap:6px;justify-content:center}
   .dda-slider .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
   .dda-slider .dot.active{background:#fff}
 </style>
@@ -54,12 +53,11 @@ title: ""
 (function(){
   const root = document.getElementById('ddaSlider');
   if(!root) return;
-  const imgs = Array.from(root.querySelectorAll('.slides img'));
+  const imgs = Array.from(root.querySelectorAll('img'));
   const dotsWrap = root.querySelector('.dots');
   let i = 0, timer = null;
-  const INTERVAL = 3000;
+  const INTERVAL = 2000;
 
-  // dots 생성
   imgs.forEach((_, idx)=>{
     const d = document.createElement('span');
     d.className = 'dot' + (idx===0 ? ' active' : '');
