@@ -38,13 +38,11 @@ links:
 ---
 
 ## ⚙️ 기술 스택
-| 구분 | 기술 |
-|------|------|
-| **Frontend** | React, Vite, TailwindCSS |
-| **Backend** | Spring Boot (Java 21), JPA |
-| **Database** | MySQL |
-| **Deployment** | Vercel (Frontend), AWS EC2 (Backend) |
-| **Version Control** | GitHub Actions, Docker |
+- **Frontend**: React, Vite, TailwindCSS
+- **Backend**: Spring Boot (Java 21), JPA
+- **Database**: MySQL
+- **Deployment**: Vercel (Frontend), AWS EC2 (Backend)
+- **Version Control**: GitHub Actions, Docker
 
 ---
 
