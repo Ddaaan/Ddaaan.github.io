@@ -1,6 +1,4 @@
 ---
-title: ""
+title: "경험"
 type: widget_page
-design:
-  show_title: false
 ---
