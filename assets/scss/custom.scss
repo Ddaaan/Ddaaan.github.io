@@ -95,10 +95,6 @@ html.dark {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background:
-    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
-    var(--dda-nav-solid) !important;
-  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 8px 18px rgba(0,0,0,.1);
@@ -133,6 +129,9 @@ html:not(.dark) body .navbar .nav-link.active { color:#7c3aed !important; }
 html.dark .navbar,
 html.dark .navbar.scrolled,
 html.dark .navbar--dark {
+  background:
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid) !important;
   border-bottom: 1px solid rgba(255,255,255,.08) !important;  /* 보라 위에서 살짝 밝은 보더 */
   box-shadow: none !important;
   -webkit-backdrop-filter: blur(10px);
