@@ -2,7 +2,7 @@
 widget: blank
 headless: true
 active: true
-weight: 20
+weight: 50
 title: ""
 ---
 
@@ -23,7 +23,7 @@ title: ""
   /* 슬라이더 */
   .dda-slider{position:relative;width:100%;margin:0;border-radius:0;overflow:hidden}
   /* 높이 ↑ : 필요시 수치만 더 키워도 됨 */
-  .dda-slider .slides{position:relative;height:clamp(260px, 34vw, 520px);} 
+  .dda-slider .slides{position:relative;height:clamp(200px, 26vw, 420px);} 
   .dda-slider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s ease}
   .dda-slider img.active{opacity:1}
   .dda-slider .ctrl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.35);border:none;color:#fff;font-size:22px;padding:8px 12px;cursor:pointer;border-radius:8px}
