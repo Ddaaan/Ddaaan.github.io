@@ -33,19 +33,19 @@ title: ""
     position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   }
 
-  /* ✅ 흰색 오버레이 (은은한 밝은 효과) */
+  /* ✅ 검정 오버레이 (사진 어둡게) */
   .dda-slider .overlay{
     position:absolute;inset:0;z-index:2;
-    background:linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.75));
+    background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.85));
   }
 
-  /* ✅ 중앙 흰색 텍스트 */
+  /* 중앙 흰색 텍스트 */
   .dda-slider .caption{
     position:absolute;z-index:3;
     left:50%; top:50%; transform:translate(-50%, -50%);
     text-align:center; color:#fff;
     font-weight:700;
-    text-shadow:0 2px 12px rgba(0,0,0,.45);
+    text-shadow:0 3px 14px rgba(0,0,0,.7);
     padding:0 1rem; max-width:min(92vw, 900px);
   }
 
@@ -53,13 +53,13 @@ title: ""
     margin:0 0 .4rem;
     font-size:clamp(1.3rem, 2.6vw, 2rem);
     color:#fff !important;
-    text-shadow:0 4px 14px rgba(0,0,0,.65);
+    text-shadow:0 4px 16px rgba(0,0,0,.85);
   }
 
   .dda-slider .caption p{
     margin:0;
     font-size:clamp(.9rem, 1.4vw, 1.1rem);
-    color:#f9f9f9 !important;
+    color:#f8f8f8 !important;
     opacity:1;
   }
 
