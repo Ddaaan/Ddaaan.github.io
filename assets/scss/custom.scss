@@ -308,59 +308,6 @@ body:not(.dark) .home-section#publications .stream-item a.btn:hover {
 }
 
 /* ============================
-   Experience 섹션 (제목 중앙 + 윗여백 축소)
-   ============================ */
-
-/* 섹션 자체의 안쪽 여백(윗쪽 줄이기) */
-#experience {
-  padding-top: .4rem !important;
-  padding-bottom: 1.6rem !important;
-}
-
-/* 섹션 폭(프로젝트와 비슷하게) */
-#experience > .container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-/* [수정] 2단 컬럼(제목+카드) 레이아웃을 1단(제목 위, 카드 아래)으로 변경 */
-#experience > .container > .row > [class*="col-"] {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-left: 0; /* 컬럼간 여백 제거 */
-    padding-right: 0; /* 컬럼간 여백 제거 */
-}
-
-/* 제목 영역: 중앙정렬 + 카드와 여백 확보 */
-#experience .section-heading {
-  display: flex;
-  justify-content: center !important;
-  align-items: center;
-  margin-top: 0 !important;
-  margin-bottom: 1.5rem !important; /* 카드와 여백을 주기 위해 .75 -> 1.5로 수정 */
-}
-
-/* 제목 텍스트 스타일 (기존 유지) */
-#experience .section-title,
-#experience h1,
-#experience h2 {
-  text-align: center !important;
-  width: 100%;
-  margin: 0 !important;
-  line-height: 1.2;
-}
-
-/* 카드 그리드 중앙 정렬 (기존 유지) */
-#experience .row,
-#experience .cards,
-#experience .grid,
-#experience .items {
-  justify-content: center !important;
-  margin-top: .25rem !important;
-}
-
-/* ============================
    '경험 더보기' 섹션 (카드에 바짝 붙이기)
    ============================ */
 

@@ -6,6 +6,9 @@ weight: 25
 title: "경험"
 id: experience
 
+design:
+  columns: "1"
+
 items:
   - title: 미국 연수 프로그램
     subtitle: "UNLV AI Workshop · 2025.07"
