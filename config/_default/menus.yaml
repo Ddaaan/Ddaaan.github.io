@@ -5,7 +5,7 @@ main:
     weight: 10
 
   - name: 소개
-    url: about/
+    url: /authors/admin/
     weight: 20
     identifier: about
 
