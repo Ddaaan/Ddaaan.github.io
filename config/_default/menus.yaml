@@ -39,11 +39,6 @@ main:
     parent: about
     weight: 22
 
-  - name: 경험
-    url: about/#experience        
-    parent: about
-    weight: 23
-
   # - name: Résumé (PDF)
   #   url: files/resume.pdf        
   #   parent: About
