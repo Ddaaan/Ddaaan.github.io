@@ -1,14 +1,45 @@
-{{/* Choose OG image: page > site > default */}}
-{{ $og := .Params.og_image
-  | default .Params.image
-  | default (site.Params.og_image)
-  | default (site.Params.marketing.seo.image)
-  | default "images/og-v3.png" }}
+{{/* ==== OG image resolver (page > site > default) ==== */}}
+{{- $og := "" -}}
 
-{{/* Absolute URL is safer for Kakao/Twitter */}}
-{{ $ogAbs := $og | absURL }}
+{{/* 1) 페이지 배열 images: ["/uploads/xxx.png", ...] */}}
+{{- with .Params.images -}}
+  {{- $og = (index . 0) -}}
+{{- end -}}
+
+{{/* 2) 페이지 featured.image */}}
+{{- if and (eq $og "") (.Params.featured.image) -}}
+  {{- $og = .Params.featured.image -}}
+{{- end -}}
+
+{{/* 3) 페이지 개별 키 (호환) */}}
+{{- if and (eq $og "") (.Params.og_image) -}}
+  {{- $og = .Params.og_image -}}
+{{- end -}}
+{{- if and (eq $og "") (.Params.image) -}}
+  {{- $og = .Params.image -}}
+{{- end -}}
+
+{{/* 4) 사이트 전역 기본 */}}
+{{- if and (eq $og "") (site.Params.images) -}}
+  {{- $og = (index site.Params.images 0) -}}
+{{- end -}}
+{{- if and (eq $og "") (site.Params.og_image) -}}
+  {{- $og = site.Params.og_image -}}
+{{- end -}}
+{{- if and (eq $og "") (site.Params.marketing.seo.image) -}}
+  {{- $og = site.Params.marketing.seo.image -}}
+{{- end -}}
+
+{{/* 5) 최종 기본값 (레포에 존재하는 파일로 바꿔도 됨) */}}
+{{- if eq $og "" -}}
+  {{- $og = "images/og-v3.png" -}}
+{{- end -}}
+
+{{/* 절대 URL로 변환 (카카오/트위터 호환) */}}
+{{- $ogAbs := $og | absURL -}}
 
 <meta property="og:image" content="{{ $ogAbs }}">
+<meta property="og:image:secure_url" content="{{ $ogAbs }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
