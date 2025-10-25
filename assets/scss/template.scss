@@ -566,44 +566,42 @@ html:not(.light) .navbar .nav-link.active{
   padding-right: calc(var(--site-gutter) + (var(--bs-gutter-x, 1.25rem) * .5));
 }
 
-/* 색 변수 (다크가 기본, 라이트에서 덮어쓰기) */
+/* 색 변수 (다크 기본, 라이트에서 덮어쓰기) */
 :root{
   --pub-bg:        rgba(255,255,255,.04);
   --pub-border:    rgba(255,255,255,.10);
-  --pub-muted:     rgba(255,255,255,.72);
+  --pub-muted:     rgba(255,255,255,.78);
   --pub-emph:      #ffffff;
-  --pub-accent:    #7c3aed;        /* violet-600 */
-  --pub-accent-2:  #a78bfa;        /* violet-300 */
-  --pub-btn-bg:    rgba(124,58,237,.10);
-  --pub-btn-bd:    rgba(167,139,250,.45);
-  --pub-btn-tx:    #dcd7fe;        /* violet-200 */
+  --pub-accent:    #7c3aed;         /* violet-600 */
+  --pub-accent-2:  #a78bfa;         /* violet-300 */
+  --pub-btn-bg:    rgba(124,58,237,.14);
+  --pub-btn-bd:    rgba(167,139,250,.55);
+  --pub-btn-tx:    #ede9fe;         /* violet-100 */
   --pub-shadow:    0 6px 22px rgba(0,0,0,.18);
   --pub-shadow-h:  0 12px 32px rgba(0,0,0,.28);
 }
 
-/* ── 라이트 모드 : 대비 강화(글자 진하게, 버튼 가독성 ↑) ── */
+/* ── 라이트 모드 : 대비 강화 + !important로 테마 규칙 제압 ── */
 html.light{
-  /* 카드 배경을 거의 화이트로, 아주 은근한 보라 틴트 */
-  --pub-bg:        rgba(255,255,255,.96);
-  --pub-border:    rgba(0,0,0,.10);
-  --pub-muted:     #475569;        /* slate-600 */
-  --pub-emph:      #0f172a;        /* slate-900 */
-  --pub-accent:    #7c3aed;        /* violet-600 */
-  --pub-accent-2:  #6d28d9;        /* violet-700 */
-  /* 버튼은 연보라 배경 + 진한 텍스트로 뚜렷하게 */
-  --pub-btn-bg:    #ede9fe;        /* violet-100 */
-  --pub-btn-bd:    #c4b5fd;        /* violet-300 */
-  --pub-btn-tx:    #312e81;        /* indigo-900 */
-  --pub-shadow:    0 8px 18px rgba(0,0,0,.08);
-  --pub-shadow-h:  0 12px 26px rgba(0,0,0,.14);
+  --pub-bg:        #ffffff;         /* 완전 화이트 */
+  --pub-border:    rgba(0,0,0,.08);
+  --pub-muted:     #374151;         /* gray-700 (가독성↑) */
+  --pub-emph:      #0f172a;         /* slate-900 */
+  --pub-accent:    #7c3aed;
+  --pub-accent-2:  #6d28d9;
+  --pub-btn-bg:    #e9d5ff;         /* violet-200 (더 진한 배경) */
+  --pub-btn-bd:    #8b5cf6;         /* violet-500 */
+  --pub-btn-tx:    #312e81;         /* indigo-900 */
+  --pub-shadow:    0 8px 18px rgba(0,0,0,.06);
+  --pub-shadow-h:  0 12px 26px rgba(0,0,0,.10);
 }
 
-/* 섹션 제목 간격 살짝 */
+/* 섹션 제목 간격 */
 .home-section#publications h2.section-heading{
   margin-bottom: 1.2rem;
 }
 
-/* 리스트 아이템을 카드처럼 */
+/* 카드 */
 .home-section#publications .stream-item{
   position: relative;
   display: block;
@@ -617,7 +615,7 @@ html.light{
   overflow: hidden;
 }
 
-/* 좌측 보라 포인트 바 */
+/* 좌측 포인트 바 */
 .home-section#publications .stream-item::before{
   content:"";
   position:absolute; inset:0 auto 0 0;
@@ -626,65 +624,69 @@ html.light{
   opacity:.95;
 }
 
-/* hover 상승 효과 */
+/* hover */
 .home-section#publications .stream-item:hover{
   transform: translateY(-2px);
   box-shadow: var(--pub-shadow-h);
-  border-color: color-mix(in oklab, var(--pub-border) 40%, var(--pub-accent) 60%);
+  border-color: color-mix(in oklab, var(--pub-border) 35%, var(--pub-accent) 65%);
 }
 
-/* 제목 타이포 */
-.home-section#publications .stream-item .article-title{
+/* 제목(링크 포함) */
+.home-section#publications .stream-item .article-title,
+.home-section#publications .stream-item .article-title a{
   font-weight: 800;
   letter-spacing: .2px;
-  color: var(--pub-emph);
+  color: var(--pub-emph) !important;  /* 테마 링크색 제압 */
   margin-bottom: .35rem;
   line-height: 1.25;
+  text-decoration: none;
 }
 
-/* 저자·학회·연도 등 보조 정보 */
+/* 보조 정보(저자/학회/연도) */
 .home-section#publications .stream-item .article-metadata,
 .home-section#publications .stream-item .article-style small,
 .home-section#publications .stream-item .stream-meta{
-  color: var(--pub-muted);
-  opacity: .95;
-  font-size: .94rem;
+  color: var(--pub-muted) !important; /* 테마 muted 색 제압 */
+  opacity: 1 !important;             /* 옅어지지 않게 */
+  font-size: .95rem;
 }
 
-/* 링크 버튼(예: PDF) – 칩 스타일 */
+/* 버튼(예: PDF) — 테마 .btn-outline-* 제압용 !important 포함 */
 .home-section#publications .stream-item .btn,
 .home-section#publications .stream-item a.btn{
-  display: inline-flex; align-items: center; gap:.35rem;
-  padding: .38rem .78rem;
+  display: inline-flex; align-items: center; gap:.4rem;
+  padding: .42rem .84rem;
   border-radius: 9999px;
-  border: 1px solid var(--pub-btn-bd);
-  background: var(--pub-btn-bg);
-  color: var(--pub-btn-tx);
-  font-weight: 700;
-  font-size: .9rem;
+  border: 1px solid var(--pub-btn-bd) !important;
+  background: var(--pub-btn-bg) !important;
+  color: var(--pub-btn-tx) !important;
+  font-weight: 800;
+  font-size: .92rem;
   line-height: 1;
+  box-shadow: none !important;
+  text-decoration: none !important;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
 }
 
-/* hover 시 라이트/다크 공통으로 선명한 보라 버튼 */
+/* 버튼 hover — 공통 보라 하이라이트 */
 .home-section#publications .stream-item .btn:hover{
   transform: translateY(-1px);
-  border-color: var(--pub-accent);
-  background: color-mix(in oklab, var(--pub-btn-bg) 30%, var(--pub-accent) 70%);
-  box-shadow: 0 6px 16px rgba(124,58,237,.25);
-  color: #fff;
+  border-color: var(--pub-accent) !important;
+  background: color-mix(in oklab, var(--pub-btn-bg) 20%, var(--pub-accent) 80%) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(124,58,237,.25) !important;
 }
 
-/* 아이콘 크기 미세 보정 */
+/* 아이콘 크기 */
 .home-section#publications .stream-item .btn i,
 .home-section#publications .stream-item .btn svg{
-  font-size: .9em;
+  font-size: .95em;
 }
 
-/* 항목 사이 여백(버튼 영역 포함) */
+/* 버튼 영역 위 여백 */
 .home-section#publications .stream-item .btn-links{
-  margin-top: .55rem;
+  margin-top: .6rem;
 }
 
-/* Publications 섹션 자체의 아래 여백 약간 축소 */
+/* 섹션 아래 여백 */
 .home-section#publications{ padding-bottom: 2.2rem; }
