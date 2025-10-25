@@ -297,3 +297,12 @@ html.light .home-section#publications .stream-item a.btn:hover {
 html.light .awards .card{background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.01));border-color:rgba(0,0,0,.08)}
 html.light .awards .btn{background:rgba(0,0,0,.04);color:#111;border-color:rgba(0,0,0,.18)}
 html.light .awards .btn:hover{background:rgba(0,0,0,.08);border-color:rgba(0,0,0,.35)}
+
+
+/* 홈 - 경험 섹션 타이틀 가운데 정렬 */
+#home-experience .section-heading,
+#home-experience .section-title,
+#home-experience h1,
+#home-experience h2 {
+  text-align: center;
+}
