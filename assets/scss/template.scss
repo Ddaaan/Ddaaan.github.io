@@ -291,3 +291,45 @@ html.light .navbar {
 html.light .home-section#about {
   background: linear-gradient(180deg, rgba(139,92,246,.08), rgba(139,92,246,.05), transparent 80%) !important;
 }
+
+/* ==================== Purple page background ==================== */
+:root{
+  /* 메인 배경용 보라 팔레트 */
+  --dda-bg-deep: #131821;                 /* 기본 다크 바탕 */
+  --dda-bg-grad-a: rgba(124,58,237,.10);   /* 보라 하이라이트 */
+  --dda-bg-grad-b: rgba(124,58,237,0);     /* 투명 페이드 */
+  --dda-bg-top: rgba(55,65,81,.06);        /* 상단 미세 그라데 */
+}
+
+/* 페이지 전체 배경을 보라 계열로 */
+body {
+  background:
+    /* 우측 상단에 은은한 보라 원형광 */
+    radial-gradient(900px 600px at 82% 36%, var(--dda-bg-grad-a), var(--dda-bg-grad-b) 60%),
+    /* 위→아래 아주 옅은 딥네이비 그라데 */
+    linear-gradient(180deg, var(--dda-bg-top), transparent 30%),
+    var(--dda-bg-deep) !important;
+  background-attachment: fixed, fixed, fixed; /* 스크롤 시 자연스럽게 고정 */
+}
+
+/* 섹션들이 불투명 배경을 덮지 않게(배경이 비치도록) */
+.home-section {
+  background: transparent !important;
+}
+
+/* 라이트 모드도 튀지 않게 보정 */
+html.light {
+  --dda-bg-deep: #f6f7fb;
+  --dda-bg-grad-a: rgba(139,92,246,.24);
+  --dda-bg-top: rgba(139,92,246,.06);
+}
+html.light body {
+  background:
+    radial-gradient(900px 600px at 82% 34%, var(--dda-bg-grad-a), transparent 60%),
+    linear-gradient(180deg, var(--dda-bg-top), transparent 30%),
+    var(--dda-bg-deep) !important;
+}
+
+/* (선택) 섹션 간 경계가 너무 떠보이면 아주 얇은 구분선 */
+.home-section + .home-section { border-top: 1px solid rgba(255,255,255,.04); }
+html.light .home-section + .home-section { border-top-color: rgba(0,0,0,.06); }
