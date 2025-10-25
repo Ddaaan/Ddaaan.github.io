@@ -15,7 +15,7 @@ params:
   description: "전북대학교 IT정보공학과 최다은 포트폴리오 | 전북대 LLM·프론트엔드 프로젝트, 논문, 수상"
   keywords: ["전북대학교", "전북대", "JBNU", "최다은", "포트폴리오", "컴퓨터", "AI", "백엔드"]
   images:
-    - "https://ddaaan.github.io/uploads/og-default.png"
+    - "https://ddaaan.github.io/media/og-default.png"
 
 ############################
 ## PAGE OPTIONS
