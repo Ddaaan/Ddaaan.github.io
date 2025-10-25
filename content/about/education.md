@@ -6,6 +6,16 @@ active: true
 weight: 20
 title: 학력
 widget_id: education
+
+experience:
+  - title: 전북대학교
+    company: 공과대학
+    company_url: https://www.jbnu.ac.kr
+    location: 전북, 대한민국
+    date_start: "2021-03"
+    date_end: ""  
+    description: |
+      - IT정보공학과
 ---
 
 <!-- ---
