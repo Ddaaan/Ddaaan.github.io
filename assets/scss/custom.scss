@@ -280,48 +280,71 @@ html.light .home-section#publications .stream-item a.btn:hover {
   color: #fff !important;
 }
 
-/* ===== Experience section = 프로젝트 섹션처럼 가운데 정렬 & 상단 여백 축소 ===== */
+/* ============================
+   Experience 섹션 (제목 중앙 + 윗여백 축소)
+   ============================ */
 
-/* 섹션 폭과 상단 패딩 */
-#experience, section[id*="experience"]{
-  padding-top: 1.2rem !important;
-  padding-bottom: 1.8rem;
+/* 섹션 자체의 안쪽 여백(윗쪽 줄이기) */
+#experience {
+  padding-top: .4rem !important;
+  padding-bottom: 1.6rem !important;
 }
-#experience > .container,
-section[id*="experience"] > .container{
+
+/* 섹션 폭(프로젝트와 비슷하게) */
+#experience > .container {
   max-width: 1280px;
   margin: 0 auto;
 }
 
-/* 제목 가운데 정렬 */
-#experience .section-heading,
-section[id*="experience"] .section-heading{
+/* 제목 영역: 중앙정렬 + 위/아래 여백 최소화 */
+#experience .section-heading {
   display: flex;
   justify-content: center !important;
-  margin-bottom: 1rem;
+  align-items: center;
+  margin-top: 0 !important;
+  margin-bottom: .75rem !important;
 }
 #experience .section-title,
-#experience h1, #experience h2,
-section[id*="experience"] .section-title,
-section[id*="experience"] h1,
-section[id*="experience"] h2{
+#experience h1,
+#experience h2 {
   text-align: center !important;
   width: 100%;
+  margin: 0 !important;
+  line-height: 1.2;
 }
 
-/* 카드 그리드 가운데 정렬 */
-#experience .row, #experience .cards, #experience .grid, #experience .items,
-section[id*="experience"] .row,
-section[id*="experience"] .cards,
-section[id*="experience"] .grid,
-section[id*="experience"] .items{
+/* 카드 그리드 중앙 정렬 */
+#experience .row,
+#experience .cards,
+#experience .grid,
+#experience .items {
   justify-content: center !important;
+  margin-top: .25rem !important;
 }
 
-/* '경험 더보기' 버튼도 가운데 */
-#experience .btn-row, section[id*="experience"] .btn-row{
-  display: flex; justify-content: center;
+/* ============================
+   '경험 더보기' 섹션 (카드에 바짝 붙이기)
+   ============================ */
+
+/* see-all 섹션 자체 간격: 위를 마이너스로 살짝 당겨 카드와 붙임 */
+#see-all {
+  padding-top: 0 !important;
+  padding-bottom: 1.2rem !important;
+  margin-top: -0.6rem !important;    /* 카드와 버튼 사이 간격 줄이기 */
 }
+
+/* 버튼 줄: 가운데 정렬 + 위여백 최소화 */
+#see-all .see-all-row {
+  display: flex;
+  justify-content: center;
+  margin: .6rem 0 0 0 !important;    /* 위여백만 0.6rem, 아래여백 0 */
+}
+
+/* 혹시 테마가 버튼에 margin을 주면 제거 */
+#see-all .see-all-row .btn {
+  margin: 0 !important;
+}
+
 
 
 /* ==========================================================
