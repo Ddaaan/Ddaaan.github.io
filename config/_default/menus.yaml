@@ -65,9 +65,13 @@ main:
     url: publications/
     weight: 40
 
+  - name: 수상
+    url: accomplishments/
+    weight: 50
+
   - name: 연락처
     url: contact/
-    weight: 50
+    weight: 60
 
   # ── About 의 하위 메뉴들
   - name: 학력
@@ -79,11 +83,6 @@ main:
     url: about/#experience        
     parent: about
     weight: 22
-
-  - name: 수상
-    url: about/#accomplishments  
-    parent: about
-    weight: 23
 
   # - name: Résumé (PDF)
   #   url: files/resume.pdf        
