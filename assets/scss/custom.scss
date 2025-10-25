@@ -281,31 +281,31 @@ html.light .home-section#publications .stream-item a.btn:hover {
 }
 
 
-/* 홈 - 경험 섹션 가운데 정렬 */
+/* 홈 - 경험 섹션: 제목과 카드 그리드를 가운데 정렬 */
+#home-experience > .container {
+  max-width: 1280px;       /* 필요시 폭도 맞춰줌 */
+  margin: 0 auto;
+}
+
+/* 제목 라인 가운데 */
 #home-experience .section-heading {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
 }
 #home-experience .section-title,
 #home-experience h1,
 #home-experience h2 {
-  text-align: center;
+  text-align: center !important;
   width: 100%;
 }
 
-/* cards-grid 그리드도 가운데 정렬 (테마/버전에 따라 쓰는 클래스가 달라질 수 있어 전부 대응) */
+/* 카드 그리드 가운데 (cards-grid/row 등 테마별 클래스 모두 케어) */
 #home-experience .cards,
 #home-experience .grid,
 #home-experience .items,
 #home-experience .row {
-  justify-content: center;
+  justify-content: center !important;
 }
-
-/* 여백이 너무 크면 줄이기 (선택) */
-#home-experience {
-  margin-top: 1rem;
-}
-
 
 
 /* ==========================================================
