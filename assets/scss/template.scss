@@ -293,51 +293,64 @@ html.light .home-section#about {
 }
 
 
-/* ============== Intro section only – pastel gradients card ============== */
-/* 파스텔 톤(푸른-보라-핑크)로 은은한 배경 */
-:root{
-  --intro-border: rgba(255,255,255,.14);
-  --intro-surface: rgba(255,255,255,.06);
-}
-html.light{
-  --intro-border: rgba(0,0,0,.10);
-  --intro-surface: rgba(255,255,255,.75);
+/* ==========================================================
+   🎨 Intro section pastel gradient background (universal)
+   ========================================================== */
+
+/* 변수 설정 */
+:root {
+  --intro-border: rgba(255, 255, 255, 0.14);
+  --intro-surface: rgba(255, 255, 255, 0.06);
 }
 
-/* 섹션 여백 */
-.home-section#about.intro-card{
-  padding-top: 2rem;
-  padding-bottom: 2.4rem;
+html.light {
+  --intro-border: rgba(0, 0, 0, 0.1);
+  --intro-surface: rgba(255, 255, 255, 0.75);
 }
 
-/* 컨테이너를 카드처럼 */
-.home-section#about.intro-card > .container{
-  max-width: 1050px;     /* 가운데 폭 */
+/* 공통 intro 카드 적용 (id가 intro든 about이든 자동 대응) */
+.home-section#about,
+.home-section#intro,
+.home-section.intro-card {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+/* 카드 배경 컨테이너 */
+.home-section#about > .container,
+.home-section#intro > .container,
+.home-section.intro-card > .container {
+  max-width: 1080px;
   margin: 0 auto;
-  padding: 28px 28px 34px;
-  border-radius: 22px;
+  padding: 36px 36px 48px;
+  border-radius: 24px;
   border: 1px solid var(--intro-border);
   background:
-    /* 왼쪽 위 하늘색 */
-    radial-gradient(900px 600px at 18% 18%, rgba(147,197,253,.22), transparent 60%),
-    /* 오른쪽 위 민트/연노랑 */
-    radial-gradient(1000px 700px at 86% 16%, rgba(167,243,208,.20), transparent 60%),
-    /* 왼쪽 아래 핑크 */
-    radial-gradient(900px 700px at 12% 92%, rgba(244,114,182,.20), transparent 60%),
-    /* 살짝 하얀 표면감 */
-    linear-gradient(180deg, var(--intro-surface), rgba(255,255,255,0));
-  box-shadow: 0 10px 36px rgba(0,0,0,.18);
+    radial-gradient(800px 600px at 15% 20%, rgba(196, 181, 253, 0.25), transparent 60%),
+    radial-gradient(1000px 700px at 85% 15%, rgba(186, 230, 253, 0.20), transparent 60%),
+    radial-gradient(800px 700px at 12% 90%, rgba(244, 114, 182, 0.18), transparent 70%),
+    linear-gradient(180deg, var(--intro-surface), rgba(255, 255, 255, 0));
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
 
-/* 안의 타이틀과 내용이 너무 옆으로 붙지 않게 */
-.home-section#about.intro-card .article-container,
-.home-section#about.intro-card .row{
-  gap: .25rem;
+/* 라이트 모드용 */
+html.light .home-section#about > .container,
+html.light .home-section#intro > .container,
+html.light .home-section.intro-card > .container {
+  border-color: rgba(0, 0, 0, 0.08);
+  background:
+    radial-gradient(800px 600px at 15% 20%, rgba(196, 181, 253, 0.35), transparent 60%),
+    radial-gradient(1000px 700px at 85% 15%, rgba(186, 230, 253, 0.28), transparent 60%),
+    radial-gradient(800px 700px at 12% 90%, rgba(252, 213, 241, 0.3), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6));
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
 }
 
-/* 라이트 모드용 미세 보정 */
-html.light .home-section#about.intro-card > .container{
-  box-shadow: 0 8px 28px rgba(0,0,0,.10);
+/* 내부 요소 간격 */
+.home-section#about .article-container,
+.home-section#intro .article-container,
+.home-section.intro-card .article-container {
+  gap: 0.25rem;
 }
