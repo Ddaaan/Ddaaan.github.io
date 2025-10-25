@@ -16,17 +16,18 @@ appearance:
 marketing:
   seo:
     site_type: Person
-    org_name: "전북대학교 IT정보공학과"
+    org_name: "전북대"
     description: "전북대 IT정보공학과 최다은 포트폴리오 | 백엔드 개발자"
     image: "images/og-v3.png"
     twitter: "GetResearchDev"
+    keywords: "전북대, 전북대학교, JBNU, IT정보공학과, 최다은, 백엔드, 포트폴리오"
   analytics:
     google_analytics: ''
     baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''
   verification:
-    google: ''
+    google: 'jpefyeQyia-wjVBcYXZuxKAIWlLU3oql400SezYKjdQ'
     baidu: ''
 
 # Site header
@@ -36,18 +37,16 @@ header:
     enable: true
     align: l
     show_logo: true
-    logo:
-      image: "img/logo.png"
-      image_dark: "img/logo_dark.png"
-
     show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: false
+    logo:
+      image: "img/logo.png"
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Daeun CHOI. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -73,7 +72,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/<username>/<repository>'
+    url: 'https://github.com/Ddaaan/Ddaaan.github.io'
     content_dir: content
     branch: main
   avatar:
@@ -111,4 +110,4 @@ extensions:
   academicons:
     enable: false
 
-og_image: "images/og-v3.png"
+og_image: og-default.png
