@@ -51,8 +51,9 @@ ul.network-icon .big-icon { font-size:1.5rem; }
 }
 
 /* ==========================================================
-   Purple Navbar + Intro band (Light & Dark)
-   ========================================================== */
+   Purple Navbar + Intro band (Light & Dark)
+   ========================================================== */
+
 /* 🌙 기본 변수 */
 :root {
   --dda-purple:#7c3aed;
@@ -63,10 +64,10 @@ ul.network-icon .big-icon { font-size:1.5rem; }
   --dda-hi-1:rgba(167,139,250,.28);
   --dda-hi-2:rgba(124,58,237,.20);
 
-  /* 네비바 배경 기본값(다크 기준) */
-  --dda-nav-solid: rgba(16,13,28,.86);
-  --dda-nav-grad-top: rgba(124,58,237,.10);
-  --dda-nav-grad-btm: rgba(12,10,22,0);
+/* 네비바 배경 기본값 (다크 모드 기준 - 더 투명하게) */
+  --dda-nav-solid: rgba(30, 27, 42, 0.85); /* 덜 쨍한 반투명 진보라 */
+  --dda-nav-grad-top: rgba(124, 58, 237, 0.2); /* 은은한 상단 글로우 */
+  --dda-nav-grad-btm: rgba(76, 29, 149, 0.15); /* 은은한 하단 글로우 */
 }
 
 /* ⚙️ Light Mode */
@@ -76,18 +77,18 @@ body:not(.dark) {
   --dda-hi-1:rgba(196,181,253,.26);
   --dda-hi-2:rgba(139,92,246,.16);
 
-  /* 밝은 네비바 (기존 유지) */
-  --dda-nav-solid:rgba(255,255,255,.94);
-  --dda-nav-grad-top:rgba(124,58,237,.10);
-  --dda-nav-grad-btm:rgba(124,58,237,.06);
+  /* 밝은 네비바 (연보라 반투명) */
+  --dda-nav-solid: rgba(245, 243, 255, 0.88); /* 연보라 반투명 */
+  --dda-nav-grad-top: rgba(139, 92, 246, 0.1);  /* 은은한 상단 */
+  --dda-nav-grad-btm: rgba(235, 229, 255, 0.1); /* 은은한 하단 */
 }
 
 /* 🌙 Dark Mode — 네비바를 진한 보라로 */
 body.dark {
   /* 단색 느낌의 진보라 배경 + 은은한 보라 그라디언트 */
-  --dda-nav-solid: #4c1d95;                         /* indigo-900 계열 */
-  --dda-nav-grad-top: rgba(124,58,237,.32);         /* 상단 연보라 글로우 */
-  --dda-nav-grad-btm: rgba(76,29,149,.96);          /* 하단 진보라 */
+  --dda-nav-solid: rgba(30, 27, 42, 0.85); /* 덜 쨍한 반투명 진보라 */
+  --dda-nav-grad-top: rgba(124, 58, 237, 0.22); /* 상단 연보라 글로우 */
+  --dda-nav-grad-btm: rgba(76, 29, 149, 0.2); /* 하단 진보라 */
 }
 
 /* Navbar 공통 */
@@ -95,21 +96,32 @@ body.dark {
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  /* 👇 'backdrop-filter'는 네비바 '뒤'의 콘텐츠를 흐리게 합니다. */
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  box-shadow: 0 8px 18px rgba(0,0,0,.1);
-  min-height: 62px;
+
+  /* 👇 'background' 자체는 반투명이어야 위 효과가 보입니다. */
+  background:
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid) !important;
+    border-bottom: 1px solid rgba(0,0,0,.06);
+    box-shadow: 0 8px 18px rgba(0,0,0,.1);
+    min-height: 62px;
 }
 
 /* ✅ Light mode navbar */
 body:not(.dark) .navbar,
 body:not(.dark) .navbar.scrolled,
 body:not(.dark) .navbar--light {
+  /*    * 👇 [중요!] 기존의 불투명한 background 대신 
+   * 'Navbar 공통'에 있는 반투명 변수(var)를 사용하도록 설정합니다.
+   */
   background:
-    linear-gradient(180deg, rgba(235,229,255,.92) 0%, rgba(247,244,255,.90) 100%),
-    rgba(255,255,255,.90) !important;
-  border-bottom: 1px solid rgba(0,0,0,.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
+    var(--dda-nav-solid) !important;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
 /* ✅ Light mode text/icons */
@@ -122,20 +134,18 @@ body:not(.dark) .navbar .nav-icons .nav-link {
   color:#1e1e1e !important;
   fill:#1e1e1e !important;
 }
-body:not(.dark) body .navbar .nav-link:hover { color:#5b21b6 !important; }
-body:not(.dark) body .navbar .nav-link.active { color:#7c3aed !important; }
+body:not(.dark) .navbar .nav-link:hover { color:#5b21b6 !important; }
+body:not(.dark) .navbar .nav-link.active { color:#7c3aed !important; }
 
 /* 🌙 Dark mode navbar: 보라 배경 + 흰 글씨 */
 body.dark .navbar,
 body.dark .navbar.scrolled,
 body.dark .navbar--dark {
-  background:
-    linear-gradient(180deg, var(--dda-nav-grad-top), var(--dda-nav-grad-btm)),
-    var(--dda-nav-solid) !important;
-  border-bottom: 1px solid rgba(255,255,255,.08) !important;  /* 보라 위에서 살짝 밝은 보더 */
+  /*    * 👇 'Navbar 공통'의 background 규칙이 이미 적용되므로
+   * 여기서 background를 또 설정할 필요가 없습니다. (필요시 재정의)
+   */
+  border-bottom: 1px solid rgba(255,255,255,.08) !important;
   box-shadow: none !important;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
 }
 
 /* 🌙 Dark mode text (흰색) */
@@ -147,12 +157,14 @@ body.dark .navbar a {
 }
 
 /* 다크 모드 hover/active 컬러 보정(보라 톤) */
-body.dark body .navbar .nav-link:hover { color:#c4b5fd !important; }  /* 연보라 */
-body.dark body .navbar .nav-link.active { color:#e9d5ff !important; } /* 더 밝은 보라 */
+body.dark .navbar .nav-link:hover { color:#c4b5fd !important; }  /* 연보라 */
+body.dark .navbar .nav-link.active { color:#e9d5ff !important; } /* 더 밝은 보라 */
 
 /* 햄버거/토글 아이콘이 어두우면 흰색 보정 */
 body.dark .navbar .navbar-toggler,
 body.dark .navbar .navbar-toggler-icon { filter: invert(1) brightness(1.2); }
+
+
 
 /* ==========================================================
    Intro band
