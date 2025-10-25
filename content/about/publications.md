@@ -9,9 +9,9 @@ id: publications
 content:
   filters:
     folders: ["publication"]
-  count: 10
-  sort_by: "date"
+  sort_by: "weight"
   sort_ascending: false
+  count: 20
 
 design:
   view: card
