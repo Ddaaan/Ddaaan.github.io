@@ -1,5 +1,6 @@
 ---
 title: "이기종 Jetson 플랫폼 기반 경량 LLM 성능 분석 연구"
+class: "pub"
 date: 2025-05-01
 authors: ["이재연","admin","강동기"]
 show_author: true 
