@@ -1,7 +1,7 @@
 ---
 title: "이기종 Jetson 플랫폼 기반 경량 LLM 성능 분석 연구"
 date: 2025-05-01
-authors: ["이재연","최다은","강동기"]
+authors: ["이재연","admin","강동기"]
 show_author: true 
 publication: "한국통신학회 2025"
 publication_short: "KICS 2025"
