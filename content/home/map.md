@@ -6,7 +6,7 @@ weight: 1000
 title: ""            # ← 제목 숨김
 ---
 
-<h3 style="font-size:1.1rem; margin: 0 0 12px;">📍 위치</h3>
+<h3 style="font-size:1.1rem; margin: 0 0 12px;"></h3>
 
 <div style="width:100%;max-width:1200px;margin:0 auto;">
   <iframe
