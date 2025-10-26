@@ -487,48 +487,70 @@ body:not(.dark) .awards .card p strong {
 }
 
 /* ==========================================================
-   '학력' (Education) / '경력' (Work) 섹션 디자인 수정
+   '학력' / '경력' 카드 내부 폰트/배치 수정
    ========================================================== */
-#education > .container > .row > [class*="col-"],
-#work > .container > .row > [class*="col-"] {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    padding-left: 0;
-    padding-right: 0;
+
+/* 카드 내부 전체적인 패딩을 살짝 조정합니다 */
+.wg-experience .timeline-card {
+    padding: 1.5rem 1.75rem;
 }
 
-#education .section-heading,
-#work .section-heading {
-    display: flex;
-    justify-content: center !important;
-    align-items: center;
-    margin-top: 0 !important;
-    margin-bottom: 1.5rem !important;
+/* 1. 직책/학위 (e.g., "백엔드 개발 인턴", "전북대학교") */
+.wg-experience .timeline-card .card-title,
+.wg-experience .timeline-card .card-title a {
+    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    color: var(--pub-emph);
+    margin-bottom: 0.25rem;
 }
 
-#education .section-heading h1,
-#education .section-heading h2,
-#work .section-heading h1,
-#work .section-heading h2 {
-    text-align: center !important;
-    width: 100%;
-    margin: 0 !important;
+/* 2. 회사명/소속 (e.g., "㈜케이테크", "공과대학") */
+.wg-experience .timeline-card .card-subtitle {
+    font-size: 1.05rem !important;
+    font-weight: 600;
+    color: var(--pub-muted);
+    margin-bottom: 0.5rem;
 }
 
-.wg-experience .timeline-point-track {
-    display: none !important;
+/* 3. 날짜 및 장소 (e.g., "12월 2023...") */
+.wg-experience .timeline-meta,
+.wg-experience .timeline-meta small {
+    font-size: 0.9rem !important; /* 👈 날짜 폰트 */
+    color: var(--pub-muted) !important;
+    opacity: 0.8; /* 👈 살짝 더 연하게 */
+    margin-bottom: 1rem;  /* 👈 아래 '설명'과의 간격 */
 }
 
-.wg-experience .timeline-card,
-.wg-experience .timeline-content {
-    margin-left: 0 !important;
-    width: 100% !important; 
+/* 4. 설명 (e.g., "Java 백엔드", "IT정보공학과") */
+.wg-experience .timeline-content,
+.wg-experience .timeline-content p,
+.wg-experience .timeline-content ul {
+    padding-top: 0 !important; /* 위쪽 패딩 제거 (timeline-meta가 margin-bottom을 가짐) */
+    font-size: 1rem;          /* 👈 기본 설명 폰트 크기 */
+    line-height: 1.6;        /* 👈 줄 간격 */
 }
 
-.wg-experience .timeline-item:not(:last-child) {
-  margin-bottom: 1.25rem;
+/* 설명 불릿 리스트 들여쓰기 */
+.wg-experience .timeline-content ul {
+    margin-left: 1.25rem; 
 }
+
+/* --- 라이트 모드 폰트 색상 보정 --- */
+
+body:not(.dark) .wg-experience .timeline-card .card-title,
+body:not(.dark) .wg-experience .timeline-card .card-title a {
+    color: #111827 !important; /* 👈 라이트 모드 제목 (진한 검정) */
+}
+
+body:not(.dark) .wg-experience .timeline-card .card-subtitle {
+    color: #334155 !important; /* 👈 라이트 모드 부제목 (회색) */
+}
+
+body:not(.dark) .wg-experience .timeline-meta,
+body:not(.dark) .wg-experience .timeline-meta small {
+    color: #4b5563 !important; /* 👈 라이트 모드 메타 (연한 회색) */
+}
+
 
 
 /* ==========================================================

@@ -7,10 +7,9 @@ title: "학력"
 id: education 
 
 experience:
-  - title: 전북대학교
-    company: 공과대학
+  - title: IT정보공학
+    company: 전북대학교 공과대학
     company_url: https://www.jbnu.ac.kr
-    location: 전북, 대한민국
     date_start: "2021-03-02"
     date_end: ""  
     description: |
