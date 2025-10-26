@@ -308,6 +308,30 @@ body:not(.dark) .home-section#publications .stream-item a.btn:hover {
 }
 
 /* ============================
+   Experience 섹션 (카드 1/n 너비)
+   ============================ */
+
+/* 카드 그리드를 감싸는 .row (.cards)의 중앙 정렬을 해제 */
+#experience .row,
+#experience .cards,
+#experience .grid,
+#experience .items {
+  justify-content: initial !important; /* 중앙 정렬(center)을 기본값으로 변경 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem; /* 카드 사이의 간격 */
+  margin-top: .25rem !important;
+}
+
+/* '경험' 섹션의 각 카드(card-simple)가 1/n 너비를 갖도록 설정 */
+#experience .card-simple {
+    flex: 1 1 300px; /* (grow:1, shrink:1, basis:300px) */
+    /* * 카드가 최소 300px 너비를 가지려 하되,
+     * 공간이 남으면(grow:1) 1/n로 동일하게 늘어납니다.
+     */
+}
+
+/* ============================
    '경험 더보기' 섹션 (카드에 바짝 붙이기)
    ============================ */
 
@@ -414,16 +438,16 @@ body:not(.dark) .home-section#publications .stream-item a.btn:hover {
 .awards .mb-4{ margin-bottom: 1.2rem !important; }
 
 /* 라이트 모드 미세 조정 */
-html.light .awards .card{
+body:not(.dark) .awards .card{
   background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.01));
   border-color: rgba(0,0,0,.08);
 }
-html.light .awards .btn{
+body:not(.dark) .awards .btn{
   background: rgba(0,0,0,.04);
   color: #111;
   border-color: rgba(0,0,0,.18);
 }
-html.light .awards .btn:hover{
+body:not(.dark) .awards .btn:hover{
   background: rgba(0,0,0,.08);
   border-color: rgba(0,0,0,.35);
 }
@@ -437,20 +461,20 @@ html.light .awards .btn:hover{
 }
 
 /* 라이트 모드: 수상(Awards) 카드 텍스트를 검정으로 */
-html.light .awards .card-title,
-html.light .awards .card-title a,
-html.light .awards .card-subtitle,
-html.light .awards .text-muted,
-html.light .awards .meta,
-html.light .awards small,
-html.light .awards .card p,
-html.light .awards .card .article-style {
+body:not(.dark) .awards .card-title,
+body:not(.dark) .awards .card-title a,
+body:not(.dark) .awards .card-subtitle,
+body:not(.dark) .awards .text-muted,
+body:not(.dark) .awards .meta,
+body:not(.dark) .awards small,
+body:not(.dark) .awards .card p,
+body:not(.dark) .awards .card .article-style {
   color: #111 !important;
   opacity: 1 !important;
 }
 
 /* 굵게 표시된 문구도 보라 그라데이션 대신 검정으로 */
-html.light .awards .card p strong {
+body:not(.dark) .awards .card p strong {
   background: none !important;
   -webkit-background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
