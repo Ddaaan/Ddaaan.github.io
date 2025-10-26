@@ -560,15 +560,21 @@ body:not(.dark) .wg-experience .timeline-meta small {
 }
 
 /* 2) 소개(about) 섹션 본문 - [수정됨] */
-#about p { 
+#about .article-style p { 
   text-align: center;
 }
 
-#about ul {
+#about .article-style ul {
   text-align: center;
-  list-style-position: inside; /* 👈 불릿(점)이 텍스트와 함께 가운데로 가도록 */
-  padding-left: 0; /* 👈 왼쪽 여백 제거 */
+  list-style-position: inside;
+  padding-left: 0;
 }
+#about .article-style li {
+  text-align: center;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 /* 3) 프로젝트 목록 페이지의 설명(카드/문단) */
 #projects p,
 #projects .card-text { 

@@ -8,15 +8,6 @@ sections:
     content:
       title: "교내외 활동"
       items:
-        - title: "UNLV 미국 연수"
-          company: "전북대학교 SW중심대학사업단"
-          company_url: "https://swuniv.jbnu.ac.kr/main/"
-          company_logo: ""
-          location: ""
-          date_start: "2025-07-15"
-          date_end: "2025-08-04"
-          description: |-
-            - UNLV AI Workshop
 
         - title: "학부연구생"
           company: "분산컴퓨팅 연구실"
@@ -28,6 +19,16 @@ sections:
           description: |-
             - 연구 주제: LLM 분산 추론/오프로딩
             - 백엔드/데이터 파이프라인, 실험 자동화
+            
+        - title: "UNLV 미국 연수"
+          company: "전북대학교 SW중심대학사업단"
+          company_url: "https://swuniv.jbnu.ac.kr/main/"
+          company_logo: ""
+          location: ""
+          date_start: "2025-07-15"
+          date_end: "2025-08-04"
+          description: |-
+            - UNLV AI Workshop
 
         - title: "전남교육청 설문조사 홈페이지 구현 및 운영"
           company: "전남교육청"
