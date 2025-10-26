@@ -1,0 +1,32 @@
+main:
+  - name: Home
+    url: /en/
+    weight: 10
+  - name: About
+    url: /en/about/
+    weight: 20
+    identifier: about
+  - name: Experience
+    url: /en/experience/
+    weight: 30
+  - name: Projects
+    url: /en/project/
+    weight: 40
+  - name: Papers         # ← 오타(Papars) 수정
+    url: /en/publication/
+    weight: 50
+  - name: Awards
+    url: /en/accomplishments/
+    weight: 60
+  - name: Contact
+    url: /en/contact/
+    weight: 70
+  # Sub items under About
+  - name: Education
+    url: /en/about/#education
+    parent: about
+    weight: 21
+  - name: Work
+    url: /en/about/#work
+    parent: about
+    weight: 22
