@@ -110,4 +110,4 @@ extensions:
   academicons:
     enable: false
 
-og_image: og-default.png
+og_image: /og-default.png
