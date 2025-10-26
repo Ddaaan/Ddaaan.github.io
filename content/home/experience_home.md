@@ -16,13 +16,18 @@ items:
     link: "/experience/"
 
   - title: 학부연구생
-    subtitle: "LLM 분산 추론/오프로딩 · 2024.03–"
+    subtitle: "분산컴퓨팅연구실 · 2024.03–"
     image: "/uploads/experience/lab.jpg"
     link: "/experience/"
 
   - title: SW 전공 멘토링
     subtitle: "알고리즘 멘토링 · 2023.10–11"
     image: "/uploads/experience/mentor.png"
+    link: "/experience/"
+
+  - title: SW 교육봉사
+    subtitle: "중학교 교육봉사 · 2023.07"
+    image: "/uploads/experience/swclass.png"
     link: "/experience/"
 ---
 {{< cards-grid >}}
