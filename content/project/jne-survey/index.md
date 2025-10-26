@@ -22,7 +22,6 @@ links:
 
 **운영 링크**: [http://jndedu-school-democracy.kr/](http://jndedu-school-democracy.kr/) (현재 호스팅 종료)
 
-{{< figure src="static/project/jne-survey/traffic.png" alt="트레픽통계" >}}
 
 ---
 

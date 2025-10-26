@@ -23,7 +23,6 @@ The platform was developed and operated using Django as the backend framework.
 
 **Service Link**: [http://jndedu-school-democracy.kr/](http://jndedu-school-democracy.kr/) (Hosting terminated)
 
-{{< figure src="static/project/jne-survey/traffic.png" alt="Traffic Statistics" >}}
 
 ---
 
