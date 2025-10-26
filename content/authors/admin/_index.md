@@ -1,5 +1,5 @@
 ---
-images: ["https://ddaaan.github.io/media/og-default.png"]
+images: ["/og-default.png"]
 # Display name
 title: 최다은
 
@@ -9,7 +9,7 @@ superuser: true
 # Role/position
 role: '백엔드 개발자'
 
-avartar: "/og-default.png"
+avatar: "/og-default.png"
 
 # Status emoji
 status:
