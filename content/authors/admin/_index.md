@@ -9,9 +9,11 @@ superuser: true
 # Role/position
 role: '백엔드 개발자'
 
+avartar: "/og-default.png"
+
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🍀
 
 # Organizations/Affiliations
 organizations:
