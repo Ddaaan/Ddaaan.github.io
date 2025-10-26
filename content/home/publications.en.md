@@ -1,12 +1,12 @@
 ---
-widget: collection        # HugoBlox 기본 컬렉션 위젯
+widget: collection        # HugoBlox default collection widget
 headless: true
 weight: 15
-title: "논문"
+title: "Publications"
 subtitle: ""
 
 content:
-  page_type: publication  # content/publication/* 를 자동 수집
+  page_type: publication  # Automatically collects content from content/publication/*
   filters:
     tag: ""
     category: ""
@@ -16,6 +16,6 @@ content:
   sort_ascending: false
 
 design:
-  view: article           # 카드형: "carousel" / 리스트형: "article"
+  view: article           # Card view: "carousel" / List view: "article"
   columns: "1"
 ---
