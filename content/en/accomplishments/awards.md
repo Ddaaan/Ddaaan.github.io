@@ -25,8 +25,6 @@ item:
     date_end: ""
     description: |2-
       **동상**
-    certificate_url: "/uploads/awards/award-2023-icpc-bronze.png"
-    url: "/uploads/awards/award-2023-icpc-bronze.png"
 
   - title: "전북대학교 ACM ICPC 경시대회"
     organization: 전북대학교
@@ -35,8 +33,6 @@ item:
     date_end: ""
     description: |2-
       **금상 (전국대회 출전)**
-    certificate_url: "/uploads/awards/award-2022-icpc-gold.png"
-    url: "/uploads/awards/award-2022-icpc-gold.png"
 
   - title: "2021 동계 기업의 달인되기 프로그램"
     organization: 전북대학교 취업지원과

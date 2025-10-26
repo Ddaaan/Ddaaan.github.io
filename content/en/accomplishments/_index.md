@@ -27,8 +27,6 @@ sections:
           date_end: ""
           description: |-
             **Bronze Award**
-          certificate_url: "/uploads/awards/award-2023-icpc-bronze.png"
-          url: "/uploads/awards/award-2023-icpc-bronze.png"
 
         - title: "Jeonbuk National University ACM ICPC Programming Contest"
           organization: "Jeonbuk National University"
@@ -37,8 +35,6 @@ sections:
           date_end: ""
           description: |-
             **Gold Award (Advanced to National Finals)**
-          certificate_url: "/uploads/awards/award-2022-icpc-gold.png"
-          url: "/uploads/awards/award-2022-icpc-gold.png"
 
         - title: "2021 Winter 'Become a Master of Enterprise' Program"
           organization: "Jeonbuk National University Career Support Center"
