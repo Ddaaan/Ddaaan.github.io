@@ -43,7 +43,7 @@ AI와 데이터 시스템, 그리고 **엣지 환경에서의 LLM 연구**에 �
 - 💡 관심 분야: LLM Offloading, Edge AI, Backend System  
 - 🧠 주요 프로젝트: `전남교육청 설문조사페이지`, `소상공인을 위한 플랫폼 NearDeal`, `LLM 기반 통합 데이터 기반 분석/리포트 생성 시스템`
 - 🌍 Portfolio: [https://ddaaan.github.io](https://ddaaan.github.io)  
-- 📫 Contact: [de2572@naver.com](mailto:daeunchoi.dev@gmail.com)
+- 📫 Contact: [de2572@naver.com](mailto:de2572@naver.com)
 
 ---
 
