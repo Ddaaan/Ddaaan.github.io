@@ -1,7 +1,8 @@
 ---
 title: "Performance Analysis of Lightweight LLMs on Heterogeneous Jetson Platforms"
 date: 2025-05-01
-authors: ["Daeun-Choi", "Jaeyeon-Lee", "Dongki-Kang"]
+authors: ["admin", "jaeyeon-lee", "dongki-kang"]
+show_author: true 
 publication: "Korean Institute of Communications and Information Sciences (KICS) 2025"
 publication_short: "KICS 2025"
 featured:
