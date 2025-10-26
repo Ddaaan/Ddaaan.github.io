@@ -599,3 +599,168 @@ body:not(.dark) .wg-experience .timeline-meta small {
   text-align: justify; 
   text-justify: inter-word; 
 }
+
+/* ==========================================================
+   Publication 페이지 디자인 개선
+   ========================================================== */
+
+/* 전체 페이지 컨테이너에 약간의 스타일 추가 */
+.pub {
+  /* background-color: var(--pub-bg); */ /* 배경색을 원하면 주석 해제 */
+}
+
+/* 1. 제목 스타일 */
+.pub .article-header h1 {
+  font-size: 2.4rem; /* 제목 크기 키우기 */
+  font-weight: 800;
+  margin-bottom: 0.5rem; /* 아래 저자/날짜와의 간격 */
+  color: var(--pub-emph); /* 다크/라이트 모드 제목 색상 */
+}
+
+/* 2. 저자 및 날짜 */
+.pub .article-header .article-metadata div {
+  font-size: 0.95rem;
+  color: var(--pub-muted); /* 부드러운 색상 */
+  margin-bottom: 1.5rem; /* 아래 PDF 버튼과의 간격 */
+}
+
+/* 라이트 모드 저자/날짜 색상 보정 */
+body:not(.dark) .pub .article-header .article-metadata div {
+  color: #4b5563 !important;
+}
+
+/* 3. PDF 등 링크 버튼 스타일 */
+.pub .article-header .btn-links .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .42rem .84rem;
+  border-radius: 9999px;
+  border: 1px solid var(--pub-btn-bd) !important;
+  background: var(--pub-btn-bg) !important;
+  color: var(--pub-btn-tx) !important;
+  font-weight: 800;
+  font-size: .92rem;
+  line-height: 1;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
+}
+
+.pub .article-header .btn-links .btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--pub-accent) !important;
+  background: color-mix(in oklab, var(--pub-btn-bg) 20%, var(--pub-accent) 80%) !important;
+  color: #fff !important;
+  box-shadow: 0 6px 16px rgba(124,58,237,.25) !important;
+}
+
+/* 라이트 모드 PDF 버튼 색상 보정 */
+body:not(.dark) .pub .article-header .btn-links .btn {
+  background: #ede9fe !important;
+  border-color: #7c3aed !important;
+  color: #4c1d95 !important;
+  font-weight: 700 !important;
+}
+
+body:not(.dark) .pub .article-header .btn-links .btn:hover {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #fff !important;
+}
+
+/* 4. '초록(Abstract)' 섹션 스타일 */
+.pub .abstract {
+  background-color: color-mix(in oklab, var(--pub-bg) 80%, transparent);
+  border-left: 4px solid var(--pub-accent);
+  padding: 1.5rem 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.pub .abstract h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--pub-emph);
+}
+
+.pub .abstract p {
+  line-height: 1.7;
+  color: var(--pub-muted);
+}
+
+/* 라이트 모드 초록 색상 보정 */
+body:not(.dark) .pub .abstract {
+  background-color: #f9fafb;
+  border-left-color: #a78bfa;
+}
+
+body:not(.dark) .pub .abstract h2 {
+  color: #1f2937;
+}
+
+body:not(.dark) .pub .abstract p {
+  color: #4b5563;
+}
+
+/* 5. '발행기관(Publication)' 섹션 */
+.pub .article-container .article-style > p:has(strong:contains("Publication")) {
+  font-size: 1rem;
+  color: var(--pub-muted);
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: color-mix(in oklab, var(--pub-bg) 70%, transparent);
+  border-radius: 8px;
+}
+
+.pub .article-container .article-style > p strong:contains("Publication") {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--pub-emph);
+}
+
+/* 라이트 모드 발행기관 색상 보정 */
+body:not(.dark) .pub .article-container .article-style > p:has(strong:contains("Publication")) {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+body:not(.dark) .pub .article-container .article-style > p strong:contains("Publication") {
+  color: #1f2937;
+}
+
+/* 6. 태그(Tags) 스타일 */
+.pub .article-tags .tag-xs {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  background-color: var(--pub-btn-bg);
+  color: var(--pub-btn-tx);
+  border: 1px solid var(--pub-btn-bd);
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pub .article-tags .tag-xs:hover {
+  background-color: var(--pub-accent);
+  color: white;
+  border-color: var(--pub-accent);
+}
+
+/* 라이트 모드 태그 색상 보정 */
+body:not(.dark) .pub .article-tags .tag-xs {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  color: #5b21b6;
+}
+
+body:not(.dark) .pub .article-tags .tag-xs:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+  color: white;
+}
