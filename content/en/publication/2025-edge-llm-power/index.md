@@ -2,7 +2,7 @@
 title: "Energy Consumption Analysis for LLM Training in Edge Environments"
 class: "pub"
 date: 2025-05-01
-authors: ["admin", "jaeyeon-lee", "dongki-kang"]
+authors: ["jaeyeon-lee", "admin", "dongki-kang"]
 show_author: true
 publication: "Korean Institute of Communications and Information Sciences (KICS) 2025"
 publication_short: "KICS 2025"
