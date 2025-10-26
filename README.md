@@ -7,6 +7,11 @@ AI와 데이터 시스템, 그리고 **엣지 환경에서의 LLM 연구**에 �
 
 ---
 
+## 📸 미리보기
+![Portfolio Screenshot](.//portfolio-preview.jpg)
+
+---
+
 ## 🖥️ 포트폴리오 사이트
 > 개인 프로젝트, 연구, 수상 이력, 활동 등을 한눈에 볼 수 있는 포트폴리오입니다.
 
@@ -41,11 +46,6 @@ AI와 데이터 시스템, 그리고 **엣지 환경에서의 LLM 연구**에 �
 - 🧠 주요 프로젝트: `전남교육청 설문조사페이지`, `소상공인을 위한 플랫폼 NearDeal`, `LLM 기반 통합 데이터 기반 분석/리포트 생성 시스템`
 - 🌍 Portfolio: [https://ddaaan.github.io](https://ddaaan.github.io)  
 - 📫 Contact: [de2572@naver.com](mailto:daeunchoi.dev@gmail.com)
-
----
-
-## 📸 미리보기
-![Portfolio Screenshot](.//portfolio-preview.jpg)
 
 ---
 
