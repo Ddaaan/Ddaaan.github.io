@@ -3,7 +3,7 @@ title: "엣지 환경에서 LLM 학습을 위한 전력 소비 분석 연구"
 class: "pub"
 translationKey: "pub-edge-llm-power-2025"
 date: 2025-05-01
-authors: ["admin","jl","dk"]
+authors: ["admin","jaeyeon-lee", "dongki-kang"]
 show_author: true
 publication: "한국통신학회 2025"
 publication_short: "KICS 2025"

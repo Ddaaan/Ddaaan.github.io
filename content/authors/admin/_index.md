@@ -8,7 +8,7 @@ superuser: true
 
 # Role/position
 role: 'Backend Developer'
-
+translationKey: "author-admin"
 avatar: "/og-default.png"
 
 # Status emoji
