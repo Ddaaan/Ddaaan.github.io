@@ -486,6 +486,54 @@ body:not(.dark) .awards .card p strong {
   text-justify: inter-word;
 }
 
+/* ==========================================================
+   '학력' (Education) / '경력' (Work) 섹션 디자인 수정
+   ========================================================== */
+#education > .container > .row > [class*="col-"],
+#work > .container > .row > [class*="col-"] {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#education .section-heading,
+#work .section-heading {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+#education .section-heading h1,
+#education .section-heading h2,
+#work .section-heading h1,
+#work .section-heading h2 {
+    text-align: center !important;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.wg-experience .timeline-point-track {
+    display: none !important;
+}
+
+.wg-experience .timeline-card,
+.wg-experience .timeline-content {
+    margin-left: 0 !important;
+    width: 100% !important; 
+}
+
+.wg-experience .timeline-item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+
+/* ==========================================================
+   본문들 중앙 정렬
+   ========================================================== */
 
 /* 1) 프로젝트 상세 페이지 본문 */
 .article-style p,
