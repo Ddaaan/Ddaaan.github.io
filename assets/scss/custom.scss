@@ -490,12 +490,10 @@ body:not(.dark) .awards .card p strong {
    '학력' / '경력' 카드 내부 폰트/배치 수정
    ========================================================== */
 
-/* 카드 내부 전체적인 패딩을 살짝 조정합니다 */
 .wg-experience .timeline-card {
     padding: 1.5rem 1.75rem;
 }
 
-/* 1. 직책/학위 (e.g., "백엔드 개발 인턴", "전북대학교") */
 .wg-experience .timeline-card .card-title,
 .wg-experience .timeline-card .card-title a {
     font-size: 1.2rem !important;
@@ -504,7 +502,6 @@ body:not(.dark) .awards .card p strong {
     margin-bottom: 0.25rem;
 }
 
-/* 2. 회사명/소속 (e.g., "㈜케이테크", "공과대학") */
 .wg-experience .timeline-card .card-subtitle {
     font-size: 1.05rem !important;
     font-weight: 600;
@@ -512,22 +509,20 @@ body:not(.dark) .awards .card p strong {
     margin-bottom: 0.5rem;
 }
 
-/* 3. 날짜 및 장소 (e.g., "12월 2023...") */
 .wg-experience .timeline-meta,
 .wg-experience .timeline-meta small {
-    font-size: 0.9rem !important; /* 👈 날짜 폰트 */
+    font-size: 0.9rem !important;
     color: var(--pub-muted) !important;
-    opacity: 0.8; /* 👈 살짝 더 연하게 */
-    margin-bottom: 1rem;  /* 👈 아래 '설명'과의 간격 */
+    opacity: 0.8;
+    margin-bottom: 1rem;
 }
 
-/* 4. 설명 (e.g., "Java 백엔드", "IT정보공학과") */
 .wg-experience .timeline-content,
 .wg-experience .timeline-content p,
 .wg-experience .timeline-content ul {
-    padding-top: 0 !important; /* 위쪽 패딩 제거 (timeline-meta가 margin-bottom을 가짐) */
-    font-size: 1rem;          /* 👈 기본 설명 폰트 크기 */
-    line-height: 1.6;        /* 👈 줄 간격 */
+    padding-top: 0 !important;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* 설명 불릿 리스트 들여쓰기 */
@@ -554,18 +549,12 @@ body:not(.dark) .wg-experience .timeline-meta small {
 
 
 /* ==========================================================
-   본문들 중앙 정렬
+   본문들 정렬
    ========================================================== */
 
 /* 1) 프로젝트 상세 페이지 본문 */
 .article-style p,
 .article-style li { 
-  text-align: justify; 
-  text-justify: inter-word; 
-}
-
-/* 2) 소개(about) 섹션 본문 */
-#about p { 
   text-align: justify; 
   text-justify: inter-word; 
 }
