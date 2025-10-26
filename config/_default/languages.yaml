@@ -7,13 +7,19 @@ ko:
   languageCode: ko-kr
   languageName: "한국어"
   weight: 1
+  contentDir: "content"
   title: "최다은 포트폴리오"
+  params:
+    description: "백엔드 개발자 최다은의 포트폴리오"
 
 en:
   languageCode: en-us
   languageName: "English"
   weight: 2
+  contentDir: "content/en"
   title: "Daeun's Portfolio"
+  params:
+    description: "Portfolio of Backend Developer Daeun Choi"
 
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   #contentDir: content/en
