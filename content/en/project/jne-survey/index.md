@@ -3,7 +3,7 @@ title: "Development and Operation of Jeonnam Office of Education Survey Website"
 date: 2024-08-01
 summary: "A Django-based web platform commissioned by the Jeollanam-do Office of Education, enabling integrated management of school democracy surveys with statistical and administrative functions."
 featured:
-  image: "uploads/jne/featured.jpg"
+  image: "uploads/jne-survey/featured.jpg"
   alt: "Main Page of Jeonnam Education Survey Website"
 tags: ["Django", "MySQL", "Nginx", "Ubuntu", "Fullstack"]
 links:

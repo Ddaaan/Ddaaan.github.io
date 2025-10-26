@@ -3,7 +3,7 @@ title: "NearDeal: Hyperlocal O2O Platform for Local Businesses"
 date: 2025-03-01
 summary: "A real-time sales-boosting platform for small businesses — a neighborhood affiliate store management and coupon system built with React, Spring, and MySQL."
 featured:
-  image: "uploads/neardeal/main.png"
+  image: "uploads/neardeal/featured.jpg"
   alt: "NearDeal Main Interface"
 tags: ["React", "Spring Boot", "MySQL", "Vercel"]
 links:
