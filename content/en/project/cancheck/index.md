@@ -17,8 +17,6 @@ links:
 CanCheck is an Android application designed to help visually impaired users identify canned beverages.  
 It uses the smartphone camera to detect cans in real-time through an object detection model (YOLOv5), then announces the detected label via TTS (Text-to-Speech) audio output.
 
-{{< figure src="uploads/cancheck/featured.jpg" alt="App Interface Screenshot" >}}
-
 ---
 
 ## 🌟 Key Features
