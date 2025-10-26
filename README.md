@@ -45,7 +45,7 @@ AI, 데이터 시스템, 그리고 엣지 환경에서의 LLM 연구에 관심�
 ---
 
 ## 📸 Preview
-![Portfolio Screenshot](./uploads/portfolio-preview.jpg)
+![Portfolio Screenshot](./portfolio-preview.jpg)
 
 ---
 
