@@ -3,7 +3,7 @@ title: "전남교육청 설문조사 홈페이지 구현 및 운영"
 date: 2024-08-01
 summary: "전라남도교육청 의뢰 프로젝트로, 학교 민주주의 설문조사 시스템 구축 및 통계·관리 기능을 포함한 Django 기반 웹 서비스"
 featured:
-  image: "uploads/jne/featured.jpg"
+  image: "uploads/jne-survey/featured.jpg"
   alt: "전남교육청 설문조사 메인 화면"
 tags: ["Django","MySQL","Nginx","Ubuntu","Fullstack"]
 links:

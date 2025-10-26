@@ -3,7 +3,7 @@ title: "지역 하이퍼 로컬 O2O 플랫폼 (NearDeal)"
 date: 2025-03-01
 summary: "소상공인을 위한 실시간 매출 부스팅 플랫폼 — React, Spring, MySQL 기반의 동네 제휴 매장 관리 및 쿠폰 시스템"
 featured:
-  image: "uploads/neardeal/main.png"
+  image: "uploads/neardeal/featured.jpg"
   alt: "NearDeal 서비스 메인화면"
 tags: ["React","Spring Boot","MySQL","Vercel"]
 links:
