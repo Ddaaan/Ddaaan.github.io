@@ -1,6 +1,7 @@
 ---
 title: "엣지 환경에서 LLM 학습을 위한 전력 소비 분석 연구"
 class: "pub"
+translationKey: "pub-edge-llm-power-2025"
 date: 2025-05-01
 authors: ["admin","jl","dk"]
 show_author: true

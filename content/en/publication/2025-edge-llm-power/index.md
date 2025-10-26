@@ -1,6 +1,7 @@
 ---
 title: "Energy Consumption Analysis for LLM Training in Edge Environments"
 class: "pub"
+translationKey: "pub-edge-llm-power-2025"
 date: 2025-05-01
 authors: ["jaeyeon-lee", "admin", "dongki-kang"]
 show_author: true
