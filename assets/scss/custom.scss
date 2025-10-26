@@ -316,19 +316,18 @@ body:not(.dark) .home-section#publications .stream-item a.btn:hover {
 #experience .cards,
 #experience .grid,
 #experience .items {
-  justify-content: initial !important; /* 중앙 정렬(center)을 기본값으로 변경 */
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem; /* 카드 사이의 간격 */
   margin-top: .25rem !important;
 }
 
-/* '경험' 섹션의 각 카드(card-simple)가 1/n 너비를 갖도록 설정 */
-#experience .card-simple {
-    flex: 1 1 300px; /* (grow:1, shrink:1, basis:300px) */
-    /* * 카드가 최소 300px 너비를 가지려 하되,
-     * 공간이 남으면(grow:1) 1/n로 동일하게 늘어납니다.
-     */
+#experience .row > [class*="col-"],
+#experience .cards > [class*="col-"] {
+    flex-grow: 1 !important; /* 👈 남는 공간을 모두 채우도록 강제 */
+    flex-basis: 300px !important;
+    
+    max-width: none !important; 
 }
 
 /* ============================
