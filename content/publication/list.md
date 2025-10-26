@@ -1,16 +1,15 @@
 ---
-widget: publication
+widget: portfolio
 active: true
 headless: true
 weight: 10
-title: ""
+title: "Publications"
 id: publications
 
 content:
   filters:
-    folders: ["publication"]
-
+    folders: ["publication"]   # collect from content/en/publication/**
 design:
-  view: card                  # card/compact/minimal/list 중 택1
+  view: showcase               # showcase grid (like projects)
   columns: 1
 ---
