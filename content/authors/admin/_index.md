@@ -7,7 +7,7 @@ title: 최다은
 superuser: true
 
 # Role/position
-role: '백엔드 개발자'
+role: 'Backend Developer'
 
 avatar: "/og-default.png"
 
@@ -71,9 +71,16 @@ social:
 #email: ""
 ---
 
-백엔드 개발자 최다은입니다. <br><br>
+## 💻 백엔드 개발자 최다은입니다.
 
-학력 : 전북대학교 IT정보공학과 <br>
-메일주소 : de2572@naver.com
+사용자에게 안정적이고 효율적인 서비스를 제공하기 위해 **서버 구조와 데이터 흐름을 설계**하는 일을 좋아합니다.  
+Django와 Spring Boot를 중심으로 백엔드 개발을 진행하며, **Docker와 Nginx를 활용한 배포 환경 구성**에도 익숙합니다.
+
+현재 **전북대학교 IT정보공학과**에 재학 중이며,  
+**분산 컴퓨팅 연구실 학부연구생**으로서 엣지 디바이스와 서버 간 협력 추론(LLM Offloading)에 관한 실험과 연구를 진행하고 있습니다.
+
+새로운 기술을 배우는 것뿐 아니라, **지식을 사람들과 나누며 함께 성장하는 과정**을 소중히 생각합니다.
+
+
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/resume.pdf" "newtab" >}}Download{{< /staticref >}} my resumé as a PDF.
