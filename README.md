@@ -6,8 +6,6 @@ AI와 데이터 시스템, 그리고 **엣지 환경에서의 LLM 연구**에 �
 다양한 **웹 서비스 및 인공지능 프로젝트**를 직접 설계하고 구현하고 있습니다.
 
 ---
-
-## 📸 미리보기
 ![Portfolio Screenshot](.//portfolio-preview.jpg)
 
 ---
