@@ -52,7 +52,6 @@ links:
 - **MySQL + JPA**로 효율적인 데이터 관리
 - **Vercel 배포 자동화**로 프론트엔드 변경 즉시 반영
 
-{{< figure src="uploads/neardeal/featured.jpg" alt="NearDeal UI 미리보기" >}}
 
 ---
 

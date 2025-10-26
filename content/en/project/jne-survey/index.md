@@ -39,9 +39,6 @@ The platform was developed and operated using Django as the backend framework.
 - Real-time statistics by school, region, and education level  
 - Visualize and export statistics by question or category  
 
-{{< figure src="static/project/jne-survey/main.png" alt="Main Page" >}}
-{{< figure src="static/project/jne-survey/webpage.png" alt="Survey Participation Page" >}}
-
 ---
 
 ## ⚙️ Tech Stack

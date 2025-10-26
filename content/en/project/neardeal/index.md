@@ -53,7 +53,6 @@ It enables merchants to issue coupons or event promotions during **off-peak hour
 - Efficient data management with **MySQL + JPA**  
 - **Automated frontend deployment** through Vercel CI/CD  
 
-{{< figure src="uploads/neardeal/featured.jpg" alt="NearDeal UI Preview" >}}
 
 ---
 

@@ -21,8 +21,6 @@ links:
 This system provides an **end-to-end data analysis service** that allows users to upload their data and perform **search, automatic preprocessing, preview, RAG-based chatbot Q&A, and automatic Korean report generation**.  
 By integrating Streamlit and Flask, it delivers both a user-friendly interface and powerful backend analytical capabilities.
 
-{{< figure src="uploads/capston/featured.jpg" alt="Service Interface" >}}
-
 ---
 
 ## 🌟 Key Features

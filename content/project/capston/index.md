@@ -20,7 +20,6 @@ links:
 ## 💡 프로젝트 개요
 사용자가 데이터를 업로드하면, 이를 기반으로 **검색, 자동 전처리, 미리보기, RAG 챗봇 질의응답, 한글 보고서 자동 생성**까지 End-to-End로 제공하는 데이터 분석 서비스입니다. Streamlit과 Flask를 연동하여 사용자 친화적인 UI와 강력한 백엔드 분석 기능을 동시에 구현했습니다.
 
-{{< figure src="uploads/capston/featured.jpg" alt="서비스 화면" >}}
 
 ---
 

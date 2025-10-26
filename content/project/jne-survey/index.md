@@ -38,9 +38,6 @@ links:
 - 학교별, 지역별, 학교급별 통계 실시간 조회
 - 문항별·파트별 통계 시각화 및 데이터 다운로드 기능
 
-{{< figure src="static/project/jne-survey/main.png" alt="메인화면" >}}
-{{< figure src="static/project/jne-survey/webpage.png" alt="설문조사 참여 화면" >}}
-
 ---
 
 ## ⚙️ 기술 스택
