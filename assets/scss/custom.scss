@@ -310,24 +310,30 @@ body:not(.dark) .home-section#publications .stream-item a.btn:hover {
 /* ============================
    Experience 섹션 (카드 1/n 너비)
    ============================ */
-
-/* 카드 그리드를 감싸는 .row (.cards)의 중앙 정렬을 해제 */
-#experience .row,
-#experience .cards,
-#experience .grid,
-#experience .items {
+#experience .items.cards.row {
+  /* 테마의 justify-content: center; 를 덮어씌웁니다. */
+  justify-content: flex-start !important; /* 중앙 정렬 해제 */
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem; /* 카드 사이의 간격 */
   margin-top: .25rem !important;
 }
 
-#experience .row > [class*="col-"],
-#experience .cards > [class*="col-"] {
-    flex-grow: 1 !important; /* 👈 남는 공간을 모두 채우도록 강제 */
-    flex-basis: 300px !important;
-    
-    max-width: none !important; 
+/* * [수정] 
+ * 위에서 선택한 .items.cards.row 의 '직계 자식'인
+ * .col- (컬럼) 들만 선택합니다.
+ */
+#experience .items.cards.row > [class*="col-"] {
+  /* 1. 1/n 너비를 갖도록 flex-grow 설정 */
+    flex-grow: 1 !important; 
+    flex-basis: 300px !important; /* 최소 너비 (모바일 대응) */
+ 
+    /* 2. 'col-lg-4' 등이 가진 max-width를 제거 (필수!) */
+    max-width: none !important;
+
+    /* 3. 'gap' 속성을 사용하므로, .col-가 가진 padding을 제거 */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 /* ============================
